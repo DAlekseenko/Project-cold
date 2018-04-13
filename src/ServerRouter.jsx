@@ -10,12 +10,8 @@ const router = express.Router();
 
 router.get('*', (req, res) => {
 
-    console.log('req');
-
     const Layout = LayoutFactory.getLayout();
-    
-    console.log(Layout)
-    
+
     const context = {
         pageTitleSetter: (title) => {
             Layout.setTitle(title)

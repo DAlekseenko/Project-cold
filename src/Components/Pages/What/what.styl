@@ -1,0 +1,70 @@
+@import "../../../StylusCSS/mixins"
+.what
+{
+  padding-bottom: 160px;
+  color: #fff;
+  background: url(/images/what-bg.jpg) 0 0 repeat;
+}
+.what__title
+{
+  margin-top: 113px;
+}
+.what__text
+{
+  margin-bottom: 45px;
+}
+
+.for
+{
+  padding: 60px 0 100px;
+  background: #ffd500;
+}
+.for__text
+{
+  margin-bottom: 45px;
+
+}
+.for__list
+{
+  margin: 0;
+  padding: 0;
+  width: 945px;
+  flex();
+}
+.for__item
+  font-size: 18px;
+  line-height: 1;
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  text-align: center;
+  vertical-align: top;
+  text-transform: uppercase;
+  border: 5px solid #242733;
+  border-radius: 15px;
+  &:before
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 10px auto 0;
+
+.for__item--1:before
+{
+  background-position: 0 -50px;
+}
+.for__item--2:before
+{
+  background-position: -100px -50px;
+}
+.for__item--3:before
+{
+  background-position: -200px -50px;
+}
+.for__item--4:before
+{
+  background-position: 0 -150px;
+}
+.for__item--5:before
+{
+  background-position: -100px -150px;
+}

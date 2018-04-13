@@ -1,0 +1,128 @@
+@import "../../../StylusCSS/mixins"
+
+.header {
+  height: 734px;
+  background: url(/images/header-bg.jpg) 50% 0 no-repeat;
+}
+
+.header__logo {
+  float: left;
+  margin-top: 70px;
+}
+
+.header__phone {
+  float: right;
+  margin-top: 80px;
+}
+
+.header__phone-number {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.header__title
+  position: relative;
+  margin-top: 230px;
+  margin-bottom: 45px;
+  &:before
+    position: absolute;
+    bottom: -235px;
+    left: 521px;
+    width: 235px;
+    height: 234px;
+    background-position: -300px 0;
+
+.header__text {
+  font-size: 24px;
+  display: inline-block;
+  margin-bottom: 30px;
+  padding: 4px 8px;
+  color: #fff;
+  background: #242733;
+}
+
+.header__button {
+  width: 310px;
+}
+
+.logo
+  font-size: 36px;
+  font-weight: 100;
+  font-style: italic;
+  &:before
+    width: 34px;
+    height: 28px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    vertical-align: middle;
+    background-position: 0 0;
+
+.logo--white
+  color: #fff;
+  &:before
+    background-position: -50px 0;
+
+.header-title__line1 {
+  font-size: 30px;
+  font-weight: 700;
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.header-title__line2 {
+  font-size: 68px;
+  font-weight: 900;
+  line-height: 1;
+  display: block;
+  padding: 0 3px;
+  color: #242733;
+  background: #ffd500;
+}
+
+.header-title__line3 {
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1;
+  display: block;
+  margin-top: 3px;
+  padding: 0 3px;
+  color: #fff;
+  background: #242733;
+}
+
+.which {
+  padding-bottom: 80px;
+}
+
+.which__list {
+  margin-bottom: 30px;
+}
+
+.which__manufacturers {
+  margin-bottom: 35px;
+}
+
+.manufacturers__title
+  position: relative;
+  margin-bottom: 25px;
+  margin-left: 20px;
+  padding: 2px 10px;
+  background: #f6f6f6;
+  &:before
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 5px;
+    height: 100%;
+    content: '';
+    background: #241a01;
+
+.clients__list
+  margin-top 10px
+
+.clients__list
+.manufacturers__images
+  flex()

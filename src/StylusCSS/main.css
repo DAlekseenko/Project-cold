@@ -1,7 +1,139 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@font-face {
+  font-family: 'webAgoraSansPro';
+  font-weight: 900;
+  font-style: normal;
+  src: url("/fonts/pfagorasanspro-black-webfont.woff") format('woff');
 }
-a {
-  color: #00b7ff;
+@font-face {
+  font-family: 'webAgoraSansPro';
+  font-weight: 700;
+  font-style: normal;
+  src: url("/fonts/pfagorasanspro-bold-webfont.woff");
+}
+@font-face {
+  font-family: 'webAgoraSansPro';
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/pfagorasanspro-reg-webfont.woff");
+}
+@font-face {
+  font-family: 'webAgoraSansPro';
+  font-weight: 300;
+  font-style: normal;
+  src: url("/fonts/pfagorasanspro-light-webfont.woff");
+}
+@font-face {
+  font-family: 'webAgoraSansPro';
+  font-weight: 100;
+  font-style: normal;
+  src: url("/fonts/pfagorasanspro-thin-webfont.woff");
+}
+@font-face {
+  font-family: 'webAgoraSansPro';
+  font-weight: 100;
+  font-style: italic;
+  src: url("/fonts/pfagorasanspro-thinital-webfont.woff");
+}
+@import "~normalize.css";
+.header__title:before,
+.logo:before,
+.for__item:before,
+.advantages__item--grey-right:before,
+.advantages__item--grey-left:before,
+.consultation__up:before {
+  display: inline-block;
+  content: '';
+  vertical-align: top;
+  background: url("/images/icons.png");
+}
+.list,
+.menu,
+.how__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.jobs__line:after,
+.job__images:after {
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  content: '';
+}
+html {
+  font-family: 'webAgoraSansPro', sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  min-width: 960px;
+  color: #242733;
+}
+.l-clearfix:before,
+.list:before,
+.menu:before,
+.how__list:before,
+.l-wrap:before,
+.jobs__item:before,
+.advantages__line:before {
+  display: table;
+  content: ' ';
+}
+.l-clearfix:after,
+.list:after,
+.menu:after,
+.how__list:after,
+.l-wrap:after,
+.jobs__item:after,
+.advantages__line:after {
+  display: table;
+  content: ' ';
+  clear: both;
+}
+.l-clearfix,
+.list,
+.menu,
+.how__list,
+.l-wrap,
+.jobs__item,
+.advantages__line * {
+  zoom: 1;
+}
+.l-wrap {
+  width: 960px;
+  margin: auto;
+  padding: 0 10px;
+}
+.l-hidden {
+  display: none;
+}
+h2 {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 72px;
+  text-transform: uppercase;
+}
+.list {
+  padding-left: 60px;
+}
+.list__item {
+  line-height: 1.5;
+  position: relative;
+  margin-bottom: 25px;
+  padding-left: 40px;
+}
+.list__item:before {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  content: '';
+  border-radius: 50%;
+  background: #e9e9ea;
+}
+.list--yellow .list__item:before {
+  background: #ffd500;
+}
+.list--dark .list__item:before {
+  background: #242733;
 }

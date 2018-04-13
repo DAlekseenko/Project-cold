@@ -53,6 +53,7 @@ module.exports = {
     devServer: {
         port: 3333,
         inline:true,
+        headers: {'Access-Control-Allow-Origin': '*'}
     },
     module: {
         rules: [

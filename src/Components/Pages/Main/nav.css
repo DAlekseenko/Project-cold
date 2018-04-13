@@ -1,0 +1,88 @@
+.main-menu {
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  right: 0;
+  left: 0;
+  color: #fff;
+  background: #242733;
+}
+.menu {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 48px;
+}
+.menu__item {
+  float: left;
+}
+.menu__item--phone {
+  display: none;
+}
+a {
+  color: inherit;
+}
+.menu__href {
+  display: inline-block;
+  padding: 0 16px;
+  position: relative;
+  text-decoration: none;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+}
+.menu__href:not(.active):before,
+.menu__href:not(.active):after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 2px;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.menu__href:not(.active):before {
+  top: 0;
+  left: 0;
+  transform: rotate(90deg);
+  transform-origin: 0 0;
+}
+.menu__href:not(.active):after {
+  right: 0;
+  bottom: 0;
+  transform: rotate(90deg);
+  transform-origin: 100% 100%;
+}
+.menu__href:not(.active):hover:before {
+  left: 50%;
+  opacity: 0.5;
+  transform: rotate(0deg) translateX(-50%);
+  width: 80%;
+}
+.menu__href:not(.active):hover:after {
+  right: 50%;
+  opacity: 0.5;
+  transform: rotate(0deg) translateX(50%);
+  width: 80%;
+}
+.menu__href.active {
+  color: #ffd500;
+}
+.menu__href.active:before,
+.menu__href.active:after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 2px;
+  background-color: #ffd500;
+  opacity: 0.8;
+}
+.menu__href.active:before {
+  top: 0;
+  left: 10%;
+  width: 80%;
+}
+.menu__href.active:after {
+  right: 10%;
+  bottom: 0;
+  width: 80%;
+}
