@@ -9,9 +9,9 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import './StylusCSS/main'
 import routes from './routes';
-import {combineReducers} from 'redux'
+import rootReducer from "./rootReducer";
 const store = createStore(
-    combineReducers({}), window.__INITIAL_STATE__, applyMiddleware(thunk)
+   rootReducer, window.__INITIAL_STATE__, applyMiddleware(thunk)
 );
 
 const AppRouter = () => {

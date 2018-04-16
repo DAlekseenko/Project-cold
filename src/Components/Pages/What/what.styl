@@ -1,36 +1,35 @@
 @import "../../../StylusCSS/mixins"
-.what
-{
-  padding-bottom: 160px;
+.what {
+  padding-bottom: 75px;
   color: #fff;
   background: url(/images/what-bg.jpg) 0 0 repeat;
 }
-.what__title
-{
+
+.what__title {
   margin-top: 113px;
 }
-.what__text
-{
+
+.what__text {
   margin-bottom: 45px;
 }
 
-.for
-{
+.for {
   padding: 60px 0 100px;
   background: #ffd500;
 }
-.for__text
-{
+
+.for__text {
   margin-bottom: 45px;
 
 }
-.for__list
-{
+
+.for__list {
   margin: 0;
   padding: 0;
   width: 945px;
   flex();
 }
+
 .for__item
   font-size: 18px;
   line-height: 1;
@@ -48,23 +47,134 @@
     height: 100px;
     margin: 10px auto 0;
 
-.for__item--1:before
-{
+.for__item--1:before {
   background-position: 0 -50px;
 }
-.for__item--2:before
-{
+
+.for__item--2:before {
   background-position: -100px -50px;
 }
-.for__item--3:before
-{
+
+.for__item--3:before {
   background-position: -200px -50px;
 }
-.for__item--4:before
-{
+
+.for__item--4:before {
   background-position: 0 -150px;
 }
-.for__item--5:before
-{
+
+.for__item--5:before {
   background-position: -100px -150px;
+}
+
+.advantages__title {
+  font-size: 56px;
+  text-align: center;
+}
+
+.advantages__uptitle {
+  font-size: 105px;
+  display: inline-block;
+  height: 70px;
+  margin-bottom: 40px;
+  padding: 15px 20px;
+  color: #fff;
+  background: #242733;
+}
+
+//.advantages__line {
+//  margin-bottom: 40px;
+//}
+
+.advantages__item {
+  float: left;
+  width: 50%;
+  height: 264px;
+  padding: 10px 0;
+}
+
+.advantages__item--grey-right, .advantages__item--grey-left {
+  position: relative;
+  color: #fff;
+  background: #242733;
+}
+
+.advantages__item--grey-right:before {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 284px solid #242733;
+  top: 0;
+  left: -150px;
+  border-left: 150px solid transparent;
+}
+.advantages__item--grey-left:before {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border-bottom: 284px solid #242733;
+  top:0;
+  right:-150px;
+  border-right: 150px solid transparent;
+}
+
+.advantages__content {
+  width: 360px;
+}
+
+.advantages__content--right {
+  float: right;
+  margin-right: 115px;
+}
+
+.advantages__content--left {
+  float: left;
+  margin-left: 115px;
+}
+
+.advantages__name {
+  font-size: 36px;
+  font-weight: 100;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.advantages__text {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.guarantee {
+  padding-bottom: 60px;
+  color: #fff;
+  background: #242733;
+}
+
+.guarantee__title {
+  font-size: 45px;
+  line-height: 1;
+  margin-top: 60px;
+  margin-bottom: 24px;
+  padding-left: 20px;
+}
+
+.guarantee__uptitle {
+  font-size: 60px;
+  line-height: 40px;
+  display: inline-block;
+  height: 40px;
+  margin-left: -20px;
+  padding: 10px 20px;
+  color: #242733;
+  background: #ffd500;
+}
+
+.guarantee__text {
+  margin-left: 20px;
+}
+
+.guarantee__text p {
+  padding-bottom: 10px;
 }

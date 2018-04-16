@@ -7,6 +7,8 @@ import manifest from '../public/assets/manifest'
 import LayoutFactory from './Layout/LayoutFactory'
 import Router from './ServerRouter'
 import nocache from './express/nocache'
+import bodyParser from 'body-parser'
+
 
 const app = express();
 const mode = (process.env.NODE_ENV && process.env.NODE_ENV.replace(/[^A-Z]/ig, '')) || 'production';
@@ -14,6 +16,11 @@ const PORT = process.env.PORT || 3003;
 LayoutFactory.setManifest(manifest).setProd(mode === 'production');
 
 app.use(cookieParser());
+
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.json());
 
 app.use(morgan('combined'));
 

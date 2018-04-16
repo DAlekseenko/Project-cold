@@ -20,15 +20,6 @@ export default class Main extends Component {
                         <li className="menu__item">
                             <NavLink to="/prices" className="menu__href">Стоимость</NavLink>
                         </li>
-                        <li className="menu__item">
-                            <NavLink to="/how" className="menu__href">Как мы работаем </NavLink>
-                        </li>
-                        <li className="menu__item menu__item--contacts">
-                            <NavLink to="/contacts" className="menu__href">Контакты</NavLink>
-                        </li>
-                        <li className="menu__item menu__item--phone">
-                            <span className="menu__href menu__href--active">8 (000) 000-00-00</span>
-                        </li>
                     </ul>
                 </nav>
             </div>

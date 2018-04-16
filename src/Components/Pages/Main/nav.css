@@ -11,6 +11,8 @@
   font-size: 20px;
   font-weight: 300;
   line-height: 48px;
+  width: 70%;
+  margin: auto;
 }
 .menu__item {
   float: left;

@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import PageLayout from "../../Decorators/PageLayout";
 import './mainPage'
 import PageComponent from "../../Decorators/PageComponent";
+import FormFeedback  from "../Partials/FormFeedback";
+import propTypes from "prop-types";
 
 export class MainPage extends PageComponent {
     render() {
@@ -130,6 +132,30 @@ export class MainPage extends PageComponent {
                                      className="manufacturers__image"/>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>,
+            <div key={4} className="consultation wide-bg" id="consultation">
+                <div className="consultation__wrap l-wrap">
+                    <h2 className="consultation__title">
+                        Получите бесплатную
+                        <span className="consultation__subtitle">
+                        консультацию
+                    </span>
+                    </h2>
+                    <div className="consultation__text">
+                        <p>
+                            ЭКСПЕРТА по сервисному обслуживанию вашей системы
+                        </p>
+                    </div>
+                    <div className="consultation__form">
+                        <FormFeedback
+                            formClass="form"
+                            inputWrapClass="form__line"
+                            inputClass="form__input"
+                            buttonWrapClass="form__button"
+                            buttonClass="i-button i-button--yellow"
+                        />
                     </div>
                 </div>
             </div>
