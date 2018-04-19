@@ -10,7 +10,7 @@ export default new class LayoutFactory {
     isProd = false;
 
     devUrl = DEV_WEBPACK_SERVER;
-    prodUrl = '';
+    prodUrl = 'https://infinite-bayou-55251.herokuapp.com/';
 
     setProd(mode) {
         this.isProd = mode;

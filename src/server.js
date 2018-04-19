@@ -8,7 +8,7 @@ import LayoutFactory from './Layout/LayoutFactory'
 import Router from './ServerRouter'
 import nocache from './express/nocache'
 import bodyParser from 'body-parser'
-
+import fs from 'fs';
 
 const app = express();
 const mode = (process.env.NODE_ENV && process.env.NODE_ENV.replace(/[^A-Z]/ig, '')) || 'production';
@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-app.use(morgan('combined'));
+//app.use(morgan('combined', {stream: fs.createWriteStream(__dirname + '/../logs/info.log', {flags: 'a'})}));
 
 // Сжимаем файлы
 app.use(compress());
@@ -36,5 +36,6 @@ app.use('*', nocache);
 app.use('/', Router);
 
 app.listen(PORT, () => {
+    console.log(mode);
     console.log(`Server listening on port: ${PORT}`);
 });
