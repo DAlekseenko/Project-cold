@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-//app.use(morgan('combined', {stream: fs.createWriteStream(__dirname + '/../logs/info.log', {flags: 'a'})}));
+app.use(morgan('combined', {stream: fs.createWriteStream(__dirname + '/../logs/info.log', {flags: 'a'})}));
 
 // Сжимаем файлы
 app.use(compress());

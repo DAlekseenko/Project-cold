@@ -3,5 +3,5 @@ node_modules
 *.log
 src/StylusCss/*.css
 *.local
-assets/
+
 dist/
