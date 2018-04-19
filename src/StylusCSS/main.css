@@ -186,9 +186,7 @@
   background: #000;
   background: rgba(0,0,0,0.7);
 }
-.header__title:before,
 .logo:before,
-.for__item:before,
 .advantages__item--grey-right:before,
 .advantages__item--grey-left:before,
 .consultation__up:before {
@@ -198,7 +196,6 @@
   background: url("/images/icons.png");
 }
 .list,
-.menu,
 .how__list {
   margin: 0;
   padding: 0;
