@@ -1,0 +1,7 @@
+{
+  "publicPath": "/assets/",
+  "url": "https://infinite-bayou-55251.herokuapp.com/",
+  "mode": "production",
+  "cssName": "styles-[hash].css",
+  "jsName": "bundle-[hash].js"
+}

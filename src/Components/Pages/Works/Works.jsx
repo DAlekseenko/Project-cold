@@ -1,7 +1,7 @@
 import React from 'react';
 import PageLayout from "../../Decorators/PageLayout";
 import PageComponent from "../../Decorators/PageComponent";
-import './works'
+
 
 export class Works extends PageComponent {
     render() {

@@ -1,18 +1,17 @@
 const webpack = require('webpack');
-const path = require('path');
+
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 
-const mode = process.env.NODE_ENV && process.env.NODE_ENV || 'development';
-const publicPath = mode === 'production' ? '/assets/' : 'http://localhost:3333/assets/';
+const config = require('./config')
 
+const mode = config.get('mode');
+const publicPath = config.get('publicPath');
+const cssName = config.get('cssName');
+const jsName = config.get('jsName');
 
-console.log('/***' +  process.env.NODE_ENV  + '****/');
-
-const cssName = mode === 'production' ? 'styles-[hash].css' : 'styles.css';
-const jsName = mode === 'production' ? 'bundle-[hash].js' : 'bundle.js';
-
+console.log('/***' + mode + '****/');
 
 const plugins = [
     new webpack.DefinePlugin({
@@ -52,7 +51,7 @@ module.exports = {
 
     devServer: {
         port: 3333,
-        inline:true,
+        inline: true,
         headers: {'Access-Control-Allow-Origin': '*'}
     },
     module: {

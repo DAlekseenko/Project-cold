@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PageLayout from "../../Decorators/PageLayout";
 import PageComponent from "../../Decorators/PageComponent";
-import './what'
+
 
 export class What extends PageComponent {
     render() {

@@ -8,21 +8,30 @@ import LayoutFactory from './Layout/LayoutFactory'
 import Router from './ServerRouter'
 import nocache from './express/nocache'
 import bodyParser from 'body-parser'
-import fs from 'fs';
+
+import config from '../config';
+
+import logger from '../libs/log';
 
 const app = express();
-const mode = (process.env.NODE_ENV && process.env.NODE_ENV.replace(/[^A-Z]/ig, '')) || 'production';
-const PORT = process.env.PORT || 3003;
-LayoutFactory.setManifest(manifest).setProd(mode === 'production');
+
+const PORT = config.get('PORT');
+
+LayoutFactory
+    .setManifest(manifest)
+    .setProd(config.get('mode') === 'production')
+    .setProdUrl(config.get('url'));
 
 app.use(cookieParser());
 
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+
 app.use(bodyParser.json());
 
-//app.use(morgan('combined', {stream: fs.createWriteStream(__dirname + '/../logs/info.log', {flags: 'a'})}));
+app.use(morgan('combined', {stream: logger.stream}));
+
 
 // Сжимаем файлы
 app.use(compress());
@@ -33,9 +42,9 @@ app.use(express.static('public', {
 }));
 
 app.use('*', nocache);
+
 app.use('/', Router);
 
 app.listen(PORT, () => {
-    console.log(mode);
-    console.log(`Server listening on port: ${PORT}`);
+    logger.info(`Server listening on port: ${PORT}`);
 });

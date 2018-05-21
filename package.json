@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "export NODE_ENV=production && node app.js",
+    "heroku": "export NODE_ENV=heroku && node app.js",
     "dev": "webpack-dev-server --mode development --colors --content-base public --watch --devtool cheap-module-inline-source-map",
     "build": " NODE_ENV=production  webpack -p",
     "nodemon": "export NODE_ENV=development && nodemon app.js"
@@ -12,6 +13,7 @@
     "npm": "5.8.x"
   },
   "dependencies": {
+    "app-root-path": "^2.0.1",
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "babel-cli": "^6.26.0",
@@ -31,6 +33,7 @@
     "history": "^4.7.2",
     "immutable": "^3.8.2",
     "morgan": "~1.9.0",
+    "nconf": "^0.10.0",
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.1",
     "pug": "2.0.0-beta11",
@@ -43,7 +46,7 @@
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "serve-favicon": "~2.4.5",
-    "winston": "^2.4.1"
+    "winston": "^2.4.2"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",

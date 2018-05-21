@@ -1,0 +1,6 @@
+{
+  "PORT": 3003,
+  "url": "http://localhost:3333/",
+  "publicPath": "http://localhost:3333/assets/",
+  "mode": "development"
+}
