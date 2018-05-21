@@ -1,9 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 import PageLayout from "../../Decorators/PageLayout";
-import './mainPage'
+
 import PageComponent from "../../Decorators/PageComponent";
 import FormFeedback  from "../Partials/FormFeedback";
-import propTypes from "prop-types";
 
 export class MainPage extends PageComponent {
     render() {

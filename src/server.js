@@ -8,12 +8,15 @@ import LayoutFactory from './Layout/LayoutFactory'
 import Router from './ServerRouter'
 import nocache from './express/nocache'
 import bodyParser from 'body-parser'
+import config from '../config';
+
+import logger from '../libs/log';
 
 
 const app = express();
-const mode = (process.env.NODE_ENV && process.env.NODE_ENV.replace(/[^A-Z]/ig, '')) || 'production';
-const PORT = process.env.PORT || 3003;
-LayoutFactory.setManifest(manifest).setProd(mode === 'production');
+const PORT = config.get('PORT');
+
+LayoutFactory.setManifest(manifest).setProd(config.get('NODE_ENV') === 'production');
 
 app.use(cookieParser());
 
@@ -22,7 +25,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-app.use(morgan('combined'));
+app.use(morgan('combined', {stream: logger.stream}));
 
 // Сжимаем файлы
 app.use(compress());
@@ -36,5 +39,5 @@ app.use('*', nocache);
 app.use('/', Router);
 
 app.listen(PORT, () => {
-    console.log(`Server listening on port: ${PORT}`);
+    logger.info(`Server listening on port: ${PORT}`);
 });

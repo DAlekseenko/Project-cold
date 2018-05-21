@@ -1,10 +1,10 @@
 const webpack = require('webpack');
-const path = require('path');
+
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 
-const mode = process.env.NODE_ENV && process.env.NODE_ENV || 'development';
+const mode = process.env.NODE_ENV && process.env.NODE_ENV;
 const publicPath = mode === 'production' ? '/assets/' : 'http://localhost:3333/assets/';
 
 

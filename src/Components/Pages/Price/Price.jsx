@@ -1,7 +1,6 @@
 import React from 'react';
 import PageLayout from "../../Decorators/PageLayout";
 import PageComponent from "../../Decorators/PageComponent";
-import './price'
 
 export class Price extends PageComponent {
 
