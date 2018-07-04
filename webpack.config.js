@@ -11,8 +11,6 @@ const publicPath = config.get('publicPath');
 const cssName = config.get('cssName');
 const jsName = config.get('jsName');
 
-console.log('/***' + mode + '****/');
-
 const plugins = [
     new webpack.DefinePlugin({
         NODE_ENV: JSON.stringify(mode)

@@ -16,7 +16,7 @@ import logger from '../libs/log';
 const app = express();
 
 const PORT = config.get('PORT');
-
+console.log(manifest);
 LayoutFactory
     .setManifest(manifest)
     .setProd(config.get('mode') === 'production')

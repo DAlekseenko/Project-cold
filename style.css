@@ -6,6 +6,7 @@
 
     src: url('fonts/pfagorasanspro-black-webfont.woff');
 }
+
 @font-face {
     font-family: 'webAgoraSansPro';
     font-weight: 700;
@@ -13,6 +14,7 @@
 
     src: url('fonts/pfagorasanspro-bold-webfont.woff');
 }
+
 @font-face {
     font-family: 'webAgoraSansPro';
     font-weight: 400;
@@ -20,6 +22,7 @@
 
     src: url('fonts/pfagorasanspro-reg-webfont.woff');
 }
+
 @font-face {
     font-family: 'webAgoraSansPro';
     font-weight: 300;
@@ -27,6 +30,7 @@
 
     src: url('fonts/pfagorasanspro-light-webfont.woff');
 }
+
 @font-face {
     font-family: 'webAgoraSansPro';
     font-weight: 100;
@@ -34,6 +38,7 @@
 
     src: url('fonts/pfagorasanspro-thin-webfont.woff');
 }
+
 @font-face {
     font-family: 'webAgoraSansPro';
     font-weight: 100;
@@ -41,30 +46,26 @@
 
     src: url('fonts/pfagorasanspro-thinital-webfont.woff');
 }
-.header__title:before, .logo:before, .for__item:before, .advantages__item--grey-right:before, .advantages__item--grey-left:before, .consultation__up, .fancybox-close
-{
-    display: inline-block;
 
+.header__title:before, .logo:before, .for__item:before, .consultation__up, .fancybox-close {
+    display: inline-block;
     content: '';
     vertical-align: top;
-
     background: url(../images/icons.png);
 }
 
-.list, .menu, .how__list
-{
+.list, .menu, .how__list {
     margin: 0;
     padding: 0;
 
     list-style: none;
 }
 
-.clients__list, .manufacturers__images, .for__list, .jobs__line, .job__images
-{
+.clients__list, .manufacturers__images, .for__list, .jobs__line, .job__images {
     text-align: justify;
 }
-.clients__list:after, .manufacturers__images:after, .for__list:after, .jobs__line:after, .job__images:after
-{
+
+.clients__list:after, .manufacturers__images:after, .for__list:after, .jobs__line:after, .job__images:after {
     display: inline-block;
 
     width: 100%;
@@ -76,16 +77,14 @@
 /* ==========================================================================
  *  Browse Happy prompt
  * ========================================================================== */
-.message
-{
+.message {
     padding: 10px;
 
     color: #333;
     border: 1px solid #ccc;
 }
 
-.browsehappy
-{
+.browsehappy {
     margin: 0 0;
     padding: 1em 0;
 
@@ -98,8 +97,7 @@
 /* ==========================================================================
  * Оформление
  * ========================================================================== */
-html
-{
+html {
     font-family: 'webAgoraSansPro', sans-serif;
     font-size: 24px;
     font-weight: 100;
@@ -109,23 +107,20 @@ html
     color: #242733;
 }
 
-body
-{
+body {
     padding-top: 48px;
 
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: none;
-       -moz-text-size-adjust: none;
-            text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    text-size-adjust: none;
 }
 
-a
-{
+a {
     color: inherit;
 }
 
-h2
-{
+h2 {
     font-size: 60px;
     font-weight: 900;
     line-height: 72px;
@@ -133,12 +128,11 @@ h2
     text-transform: uppercase;
 }
 
-.list
-{
+.list {
     padding-left: 60px;
 }
-.list__item
-{
+
+.list__item {
     line-height: 1.5;
 
     position: relative;
@@ -146,8 +140,8 @@ h2
     margin-bottom: 25px;
     padding-left: 40px;
 }
-.list__item:before
-{
+
+.list__item:before {
     position: absolute;
     top: 10px;
     left: 0;
@@ -162,27 +156,25 @@ h2
     border-radius: 50%;
     background: #e9e9ea;
 }
-.list--yellow .list__item:before
-{
+
+.list--yellow .list__item:before {
     background: #ffd500;
 }
-.list--dark .list__item:before
-{
+
+.list--dark .list__item:before {
     background: #242733;
 }
 
 /* ==========================================================================
  * Layout
  * ========================================================================== */
-.l-wrap
-{
+.l-wrap {
     width: 960px;
     margin: auto;
     padding: 0 10px;
 }
 
-.l-hidden
-{
+.l-hidden {
     display: none;
 }
 
@@ -193,30 +185,26 @@ h2
 .how__list:after,
 .l-wrap:after,
 .jobs__item:after,
-.advantages__line:after
-{
-  /* 1 */
+.advantages__line:after {
+    /* 1 */
     display: table;
 
     content: ' ';
-  /* 2 */
+    /* 2 */
 }
 
-.l-clearfix:after, .list:after, .menu:after, .how__list:after, .l-wrap:after, .jobs__item:after, .advantages__line:after
-{
+.l-clearfix:after, .list:after, .menu:after, .how__list:after, .l-wrap:after, .jobs__item:after, .advantages__line:after {
     clear: both;
 }
 
-.l-clearfix, .list, .menu, .how__list, .l-wrap, .jobs__item, .advantages__line
-{
+.l-clearfix, .list, .menu, .how__list, .l-wrap, .jobs__item, .advantages__line {
     *zoom: 1;
 }
 
 /* ==========================================================================
  * Кнопки
  * ========================================================================== */
-.i-button
-{
+.i-button {
     font-family: 'webAgoraSansPro', sans-serif;
     font-weight: 100;
 
@@ -230,8 +218,8 @@ h2
     border: 0;
     outline: none;
 }
-.i-button--callack
-{
+
+.i-button--callack {
     font-size: 24px;
     font-weight: 400;
 
@@ -240,13 +228,13 @@ h2
     color: #242733;
     border: 2px solid #242733;
 }
-.i-button--callack:hover
-{
+
+.i-button--callack:hover {
     color: #fff;
     background: #242733;
 }
-.i-button--yellow
-{
+
+.i-button--yellow {
     font-size: 21px;
 
     margin-top: 0;
@@ -260,29 +248,29 @@ h2
     background: #e8a804;
     background: -webkit-gradient(linear, left top, left bottom, from(#fcc701), to(#e8a804));
     background: -webkit-linear-gradient(top, #fcc701 0%, #e8a804 100%);
-    background:         linear-gradient(to bottom, #fcc701 0%, #e8a804 100%);
+    background: linear-gradient(to bottom, #fcc701 0%, #e8a804 100%);
     -webkit-box-shadow: inset 0 -1px 0 0 #d9c262;
-            box-shadow: inset 0 -1px 0 0 #d9c262;
+    box-shadow: inset 0 -1px 0 0 #d9c262;
 }
-.i-button--yellow:hover
-{
+
+.i-button--yellow:hover {
     background: #fcc701;
     background: -webkit-gradient(linear, left top, left bottom, from(#fcc701), to(#fbbf24));
     background: -webkit-linear-gradient(top, #fcc701 0%, #fbbf24 100%);
-    background:         linear-gradient(to bottom, #fcc701 0%, #fbbf24 100%);
+    background: linear-gradient(to bottom, #fcc701 0%, #fbbf24 100%);
 }
-.i-button--yellow:active
-{
+
+.i-button--yellow:active {
     margin-top: 3px;
 
     border-bottom: 0;
     background: #fcc701;
     background: -webkit-gradient(linear, left top, left bottom, from(#e8a804), to(#fcc701));
     background: -webkit-linear-gradient(top, #e8a804 0%, #fcc701 100%);
-    background:         linear-gradient(to bottom, #e8a804 0%, #fcc701 100%);
+    background: linear-gradient(to bottom, #e8a804 0%, #fcc701 100%);
 }
-.i-button--yellow-small
-{
+
+.i-button--yellow-small {
     font-size: 18px;
 
     margin-top: 0;
@@ -296,30 +284,30 @@ h2
     background: #e8a804;
     background: -webkit-gradient(linear, left top, left bottom, from(#fcc701), to(#e8a804));
     background: -webkit-linear-gradient(top, #fcc701 0%, #e8a804 100%);
-    background:         linear-gradient(to bottom, #fcc701 0%, #e8a804 100%);
+    background: linear-gradient(to bottom, #fcc701 0%, #e8a804 100%);
     -webkit-box-shadow: inset 0 -1px 0 0 #d9c262;
-            box-shadow: inset 0 -1px 0 0 #d9c262;
+    box-shadow: inset 0 -1px 0 0 #d9c262;
     text-shadow: 1px 1px 0 #fff;
 }
-.i-button--yellow-small:hover
-{
+
+.i-button--yellow-small:hover {
     background: #fcc701;
     background: -webkit-gradient(linear, left top, left bottom, from(#fcc701), to(#fbbf24));
     background: -webkit-linear-gradient(top, #fcc701 0%, #fbbf24 100%);
-    background:         linear-gradient(to bottom, #fcc701 0%, #fbbf24 100%);
+    background: linear-gradient(to bottom, #fcc701 0%, #fbbf24 100%);
 }
-.i-button--yellow-small:active
-{
+
+.i-button--yellow-small:active {
     margin-top: 2px;
 
     border-bottom: 0;
     background: #fcc701;
     background: -webkit-gradient(linear, left top, left bottom, from(#e8a804), to(#fcc701));
     background: -webkit-linear-gradient(top, #e8a804 0%, #fcc701 100%);
-    background:         linear-gradient(to bottom, #e8a804 0%, #fcc701 100%);
+    background: linear-gradient(to bottom, #e8a804 0%, #fcc701 100%);
 }
-.i-button--black
-{
+
+.i-button--black {
     font-size: 18px;
 
     margin-top: 0;
@@ -331,56 +319,55 @@ h2
     background: #272a37;
     background: -webkit-gradient(linear, left top, left bottom, from(#35394c), to(#272a37));
     background: -webkit-linear-gradient(top, #35394c 0%, #272a37 100%);
-    background:         linear-gradient(to bottom, #35394c 0%, #272a37 100%);
+    background: linear-gradient(to bottom, #35394c 0%, #272a37 100%);
 }
-.i-button--black:hover
-{
+
+.i-button--black:hover {
     background: #35394c;
     background: -webkit-gradient(linear, left top, left bottom, from(#35394c), to(#3c4155));
     background: -webkit-linear-gradient(top, #35394c 0%, #3c4155 100%);
-    background:         linear-gradient(to bottom, #35394c 0%, #3c4155 100%);
+    background: linear-gradient(to bottom, #35394c 0%, #3c4155 100%);
 }
-.i-button--black:active
-{
+
+.i-button--black:active {
     margin-top: 2px;
 
     border-bottom: 0;
     background: #272a37;
     background: -webkit-gradient(linear, left top, left bottom, from(#272a37), to(#35394c));
     background: -webkit-linear-gradient(top, #272a37 0%, #35394c 100%);
-    background:         linear-gradient(to bottom, #272a37 0%, #35394c 100%);
+    background: linear-gradient(to bottom, #272a37 0%, #35394c 100%);
 }
 
 /* ==========================================================================
  * Формы
  * ========================================================================== */
-.form__line
-{
+.form__line {
     position: relative;
 
     margin-bottom: 30px;
 }
-.form__line--inline
-{
+
+.form__line--inline {
     float: left;
 
     width: 282px;
     margin: 0 20px 0 0;
 }
-.form__button
-{
+
+.form__button {
     max-width: 310px;
     margin-top: 35px;
 }
-.form__button--inline
-{
+
+.form__button--inline {
     float: right;
 
     width: 282px;
     margin: 0;
 }
-.form__input
-{
+
+.form__input {
     font-family: 'webAgoraSansPro', sans-serif;
     font-weight: 100;
 
@@ -390,12 +377,12 @@ h2
     border: 1px solid #ccc;
     outline: none;
 }
-.form__input--error
-{
+
+.form__input--error {
     border-color: red;
 }
-.form label.error
-{
+
+.form label.error {
     font-size: 18px;
 
     position: absolute;
@@ -417,8 +404,7 @@ h2
 /* ==========================================================================
  * Основные стили
  * ========================================================================== */
-.main-menu
-{
+.main-menu {
     position: fixed;
     z-index: 500;
     top: 0;
@@ -429,56 +415,54 @@ h2
     background: #242733;
 }
 
-.menu
-{
+.menu {
     font-size: 20px;
     font-weight: 300;
     line-height: 48px;
 }
-.menu__item
-{
+
+.menu__item {
     float: left;
 }
-.menu__item--phone
-{
+
+.menu__item--phone {
     display: none;
 }
-.menu__href
-{
+
+.menu__href {
     display: inline-block;
 
     padding: 0 16px;
 
     text-decoration: none;
 }
-.menu__href:hover, .menu__href--active
-{
+
+.menu__href:hover, .menu__href--active {
     background: #61636c;
 }
 
 /* ==========================================================================
  * header
  * ========================================================================== */
-.header
-{
+.header {
     height: 734px;
 
     background: url(../images/header-bg.jpg) 50% 0 no-repeat;
 }
-.header__logo
-{
+
+.header__logo {
     float: left;
 
     margin-top: 70px;
 }
-.header__phone
-{
+
+.header__phone {
     float: right;
 
     margin-top: 45px;
 }
-.header__phone-number
-{
+
+.header__phone-number {
     font-size: 24px;
     font-weight: 300;
 
@@ -486,15 +470,15 @@ h2
 
     letter-spacing: 1px;
 }
-.header__title
-{
+
+.header__title {
     position: relative;
 
     margin-top: 230px;
     margin-bottom: 45px;
 }
-.header__title:before
-{
+
+.header__title:before {
     position: absolute;
     bottom: -235px;
     left: 521px;
@@ -504,8 +488,8 @@ h2
 
     background-position: -300px 0;
 }
-.header__text
-{
+
+.header__text {
     font-size: 24px;
 
     display: inline-block;
@@ -516,19 +500,18 @@ h2
     color: #fff;
     background: #242733;
 }
-.header__button
-{
+
+.header__button {
     width: 310px;
 }
 
-.logo
-{
+.logo {
     font-size: 36px;
     font-weight: 100;
     font-style: italic;
 }
-.logo:before
-{
+
+.logo:before {
     width: 34px;
     height: 28px;
     margin-right: 5px;
@@ -538,17 +521,16 @@ h2
 
     background-position: 0 0;
 }
-.logo--white
-{
+
+.logo--white {
     color: #fff;
 }
-.logo--white:before
-{
+
+.logo--white:before {
     background-position: -50px 0;
 }
 
-.header-title__line1
-{
+.header-title__line1 {
     font-size: 30px;
     font-weight: 700;
 
@@ -558,8 +540,8 @@ h2
 
     color: #fff;
 }
-.header-title__line2
-{
+
+.header-title__line2 {
     font-size: 68px;
     font-weight: 900;
     line-height: 1;
@@ -571,8 +553,8 @@ h2
     color: #242733;
     background: #ffd500;
 }
-.header-title__line3
-{
+
+.header-title__line3 {
     font-size: 72px;
     font-weight: 900;
     line-height: 1;
@@ -589,8 +571,7 @@ h2
 /* ==========================================================================
  * clients
  * ========================================================================== */
-.clients
-{
+.clients {
     padding: 20px 0;
 
     border-bottom: 17px solid #f0f0f0;
@@ -599,21 +580,19 @@ h2
 /* ==========================================================================
  * which
  * ========================================================================== */
-.which
-{
+.which {
     padding-bottom: 80px;
 }
-.which__list
-{
+
+.which__list {
     margin-bottom: 30px;
 }
-.which__manufacturers
-{
+
+.which__manufacturers {
     margin-bottom: 35px;
 }
 
-.manufacturers__title
-{
+.manufacturers__title {
     position: relative;
 
     margin-bottom: 25px;
@@ -622,8 +601,8 @@ h2
 
     background: #f6f6f6;
 }
-.manufacturers__title:before
-{
+
+.manufacturers__title:before {
     position: absolute;
     top: 0;
     left: -20px;
@@ -639,46 +618,44 @@ h2
 /* ==========================================================================
  * what
  * ========================================================================== */
-.what
-{
+.what {
     padding-bottom: 160px;
 
     color: #fff;
     background: url(../images/what-bg.jpg) 0 0 repeat;
 }
-.what__title
-{
+
+.what__title {
     margin-top: 113px;
 }
-.what__text
-{
+
+.what__text {
     margin-bottom: 60px;
 }
 
 /* ==========================================================================
  * for
  * ========================================================================== */
-.for
-{
+.for {
     padding: 60px 0 100px;
 
     background: #ffd500;
 }
-.for__text
-{
+
+.for__text {
     margin-bottom: 55px;
 
     text-align: center;
 }
-.for__list
-{
+
+.for__list {
     margin: 0;
     padding: 0;
 
     letter-spacing: none;
 }
-.for__item
-{
+
+.for__item {
     font-size: 18px;
     line-height: 1;
 
@@ -694,47 +671,46 @@ h2
     border: 10px solid #242733;
     border-radius: 15px;
 }
-.for__item:before
-{
+
+.for__item:before {
     display: block;
 
     width: 100px;
     height: 100px;
     margin: 10px auto 0;
 }
-.for__item--1:before
-{
+
+.for__item--1:before {
     background-position: 0 -50px;
 }
-.for__item--2:before
-{
+
+.for__item--2:before {
     background-position: -100px -50px;
 }
-.for__item--3:before
-{
+
+.for__item--3:before {
     background-position: -200px -50px;
 }
-.for__item--4:before
-{
+
+.for__item--4:before {
     background-position: 0 -150px;
 }
-.for__item--5:before
-{
+
+.for__item--5:before {
     background-position: -100px -150px;
 }
 
 /* ==========================================================================
  * jobs
  * ========================================================================== */
-.jobs__title
-{
+.jobs__title {
     font-size: 60px;
     line-height: 1;
 
     margin-bottom: 80px;
 }
-.jobs__subtitle
-{
+
+.jobs__subtitle {
     font-size: 48px;
 
     display: block;
@@ -744,12 +720,12 @@ h2
 
     background: #ffd500;
 }
-.jobs__item
-{
+
+.jobs__item {
     margin-bottom: 30px;
 }
-.jobs__half
-{
+
+.jobs__half {
     display: inline-block;
 
     width: 48%;
@@ -758,8 +734,7 @@ h2
     vertical-align: top;
 }
 
-.job__title
-{
+.job__title {
     font-size: 30px;
     font-weight: 900;
 
@@ -773,16 +748,16 @@ h2
     color: #fff;
     background: #242733;
 }
-.job__title-subline
-{
+
+.job__title-subline {
     position: absolute;
     bottom: -32px;
     left: 15px;
 
     color: #242733;
 }
-.job__subtitle
-{
+
+.job__subtitle {
     font-size: 24px;
     font-weight: 900;
 
@@ -791,37 +766,36 @@ h2
 
     text-transform: uppercase;
 }
-.job__text
-{
+
+.job__text {
     margin-bottom: 40px;
     padding: 0 20px;
 }
-.job__text p
-{
+
+.job__text p {
     margin-bottom: 10px;
 }
-.job__image
-{
+
+.job__image {
     display: inline-block;
 }
 
 /* ==========================================================================
  * diagnostic
  * ========================================================================== */
-.diagnostic
-{
+.diagnostic {
     height: 734px;
 
     color: #fff;
     background: url(../images/diagnostic-bg.jpg) 50% 100% no-repeat;
 }
-.diagnostic__title
-{
+
+.diagnostic__title {
     margin-top: 110px;
     margin-bottom: 30px;
 }
-.diagnostic__subtitle
-{
+
+.diagnostic__subtitle {
     font-size: 65px;
 
     display: block;
@@ -832,26 +806,25 @@ h2
     color: #fff;
     background: #242733;
 }
-.diagnostic__text
-{
+
+.diagnostic__text {
     margin-bottom: 40px;
 }
-.diagnostic__form
-{
+
+.diagnostic__form {
     width: 420px;
 }
 
 /* ==========================================================================
  * advantages
  * ========================================================================== */
-.advantages__title
-{
+.advantages__title {
     font-size: 56px;
 
     text-align: center;
 }
-.advantages__uptitle
-{
+
+.advantages__uptitle {
     font-size: 105px;
 
     display: inline-block;
@@ -863,27 +836,27 @@ h2
     color: #fff;
     background: #242733;
 }
-.advantages__line
-{
+
+.advantages__line {
     margin-bottom: 40px;
 }
-.advantages__item
-{
+
+.advantages__item {
     float: left;
 
     width: 50%;
     height: 264px;
     padding: 28px 0 0;
 }
-.advantages__item--grey-right, .advantages__item--grey-left
-{
+
+.advantages__item--grey-right, .advantages__item--grey-left {
     position: relative;
 
     color: #fff;
     background: #1f2230;
 }
-.advantages__item--grey-right:before, .advantages__item--grey-left:before
-{
+
+.advantages__item--grey-right:before, .advantages__item--grey-left:before {
     position: absolute;
     top: 0;
     left: -75px;
@@ -893,31 +866,31 @@ h2
 
     background-position: -550px 0;
 }
-.advantages__item--grey-left:before
-{
+
+.advantages__item--grey-left:before {
     right: -75px;
     left: auto;
 
     background-position: -700px 0;
 }
-.advantages__content
-{
+
+.advantages__content {
     width: 360px;
 }
-.advantages__content--right
-{
+
+.advantages__content--right {
     float: right;
 
     margin-right: 115px;
 }
-.advantages__content--left
-{
+
+.advantages__content--left {
     float: left;
 
     margin-left: 115px;
 }
-.advantages__name
-{
+
+.advantages__name {
     font-size: 36px;
     font-weight: 100;
 
@@ -925,8 +898,8 @@ h2
 
     text-transform: uppercase;
 }
-.advantages__text
-{
+
+.advantages__text {
     font-size: 18px;
     line-height: 27px;
 }
@@ -934,15 +907,14 @@ h2
 /* ==========================================================================
  * guarantee
  * ========================================================================== */
-.guarantee
-{
+.guarantee {
     padding-bottom: 60px;
 
     color: #fff;
     background: #242733;
 }
-.guarantee__title
-{
+
+.guarantee__title {
     font-size: 45px;
     line-height: 1;
 
@@ -950,8 +922,8 @@ h2
     margin-bottom: 24px;
     padding-left: 20px;
 }
-.guarantee__uptitle
-{
+
+.guarantee__uptitle {
     font-size: 60px;
     line-height: 40px;
 
@@ -964,27 +936,26 @@ h2
     color: #242733;
     background: #ffd500;
 }
-.guarantee__text
-{
+
+.guarantee__text {
     margin-left: 20px;
 }
-.guarantee__text p
-{
+
+.guarantee__text p {
     padding-bottom: 10px;
 }
 
 /* ==========================================================================
  * prices
  * ========================================================================== */
-.prices__hr
-{
+.prices__hr {
     height: 4px;
 
     border: none;
     background: #f0f0f0;
 }
-.prices__tab
-{
+
+.prices__tab {
     display: inline-block;
 
     margin-bottom: 15px;
@@ -995,22 +966,22 @@ h2
 
     border-bottom: 1px dashed #242733;
 }
-.prices__tab:first-child
-{
+
+.prices__tab:first-child {
     margin-right: 226px;
 }
-.prices__tab--active, .prices__tab:hover
-{
+
+.prices__tab--active, .prices__tab:hover {
     padding-bottom: 7px;
 
     border-bottom: none;
 }
-.prices__table
-{
+
+.prices__table {
     margin-bottom: 70px;
 }
-.prices__table th
-{
+
+.prices__table th {
     font-weight: 100;
 
     padding: 15px 60px;
@@ -1019,26 +990,25 @@ h2
 
     border-bottom: 2px solid #f7f7f7;
 }
-.prices__table td
-{
+
+.prices__table td {
     padding: 15px 60px;
 }
-.prices__order
-{
+
+.prices__order {
     margin-bottom: 75px;
 }
-.prices__text
-{
+
+.prices__text {
     margin-bottom: 30px;
     padding-top: 10px;
 }
-.prices__list
-{
+
+.prices__list {
     margin-bottom: 50px;
 }
 
-.prices-order
-{
+.prices-order {
     overflow: hidden;
 
     padding: 13px 40px 13px 60px;
@@ -1046,14 +1016,14 @@ h2
     color: #fff;
     background: #242733;
 }
-.prices-order__text
-{
+
+.prices-order__text {
     float: left;
 
     width: 540px;
 }
-.prices-order__button
-{
+
+.prices-order__button {
     float: right;
 
     width: 192px;
@@ -1063,21 +1033,20 @@ h2
 /* ==========================================================================
  * how
  * ========================================================================== */
-.how
-{
+.how {
     padding-bottom: 150px;
 
     background: #ffd500;
 }
-.how__title
-{
+
+.how__title {
     margin-top: 145px;
     margin-bottom: 80px;
 
     text-align: center;
 }
-.how__list
-{
+
+.how__list {
     display: block;
 
     padding-top: 117px;
@@ -1086,22 +1055,21 @@ h2
     background-repeat: no-repeat;
     background-position: 0 -300px;
 }
-.how__item
-{
+
+.how__item {
     float: left;
 
     width: 156.5px;
 }
 
-.how-item
-{
+.how-item {
     width: 135px;
     margin: auto;
 
     text-align: center;
 }
-.how-item__title
-{
+
+.how-item__title {
     font-size: 16px;
     line-height: 50px;
 
@@ -1111,24 +1079,23 @@ h2
 
     color: #fff;
 }
-.how-item__title span
-{
+
+.how-item__title span {
     line-height: 1.2;
 
     display: inline-block;
 
     vertical-align: middle;
 }
-.how-item__text
-{
+
+.how-item__text {
     font-size: 18px;
 }
 
 /* ==========================================================================
  * map
  * ========================================================================== */
-.map
-{
+.map {
     height: 600px;
     padding-top: 220px;
 
@@ -1136,8 +1103,8 @@ h2
 
     background: url(../images/map-bg.jpg) 50% 100% no-repeat;
 }
-.map__text
-{
+
+.map__text {
     display: inline-block;
 
     margin-bottom: 40px;
@@ -1148,15 +1115,15 @@ h2
     color: #fff;
     background: #242733;
 }
-.map__text--phone
-{
+
+.map__text--phone {
     font-size: 30px;
 
     margin-bottom: 5px;
     padding: 7px 30px;
 }
-.map__button
-{
+
+.map__button {
     width: 310px;
     margin: auto;
 }
@@ -1164,14 +1131,13 @@ h2
 /* ==========================================================================
  * consultation
  * ========================================================================== */
-.consultation
-{
+.consultation {
     height: 730px;
 
     background: url(../images/consultation-bg.jpg) 50% 100% no-repeat;
 }
-.consultation__title
-{
+
+.consultation__title {
     font-size: 65px;
     line-height: 1;
 
@@ -1183,8 +1149,8 @@ h2
     color: #fff;
     background: #242733;
 }
-.consultation__subtitle
-{
+
+.consultation__subtitle {
     display: block;
 
     text-indent: 20px;
@@ -1192,8 +1158,8 @@ h2
     color: #242733;
     background: #ffd500;
 }
-.consultation__text
-{
+
+.consultation__text {
     font-size: 30px;
 
     margin-bottom: 40px;
@@ -1204,12 +1170,12 @@ h2
     color: #fff;
     background: #242733;
 }
-.consultation__form
-{
+
+.consultation__form {
     width: 470px;
 }
-.consultation__up
-{
+
+.consultation__up {
     display: block;
 
     width: 56px;
@@ -1222,30 +1188,29 @@ h2
     background-color: rgba(255, 255, 255, .1);
     background-position: -100px 0;
 }
-.consultation__up:hover
-{
+
+.consultation__up:hover {
     background-color: rgba(255, 255, 255, .3);
 }
 
 /* ==========================================================================
  * footer
  * ========================================================================== */
-.footer
-{
+.footer {
     padding: 30px 0 40px;
 
     color: #fff;
     background: #242733;
 }
-.footer__logo
-{
+
+.footer__logo {
     float: left;
 
     width: 25%;
     margin-top: 20px;
 }
-.footer__text
-{
+
+.footer__text {
     font-size: 18px;
 
     float: left;
@@ -1254,8 +1219,8 @@ h2
 
     text-align: center;
 }
-.footer__phone
-{
+
+.footer__phone {
     float: left;
 
     width: 25%;
@@ -1267,8 +1232,7 @@ h2
 /* ==========================================================================
  * modal
  * ========================================================================== */
-.modal
-{
+.modal {
     display: none;
 
     width: 790px;
@@ -1279,31 +1243,29 @@ h2
     color: #fff;
     background: #242733;
 }
-.modal__text
-{
+
+.modal__text {
     font-size: 30px;
 
     margin-bottom: 30px;
 }
-.modal__form
-{
+
+.modal__form {
     width: 470px;
     margin: auto;
 }
-.modal__button
-{
+
+.modal__button {
     margin-right: auto;
     margin-left: auto;
 }
 
-.fancybox-skin
-{
+.fancybox-skin {
     border-radius: 6px;
     background: transparent;
 }
 
-.fancybox-close
-{
+.fancybox-close {
     position: absolute;
     z-index: 8040;
     top: 15px;
@@ -1320,32 +1282,30 @@ h2
 /* ==========================================================================
  * wide-bg
  * ========================================================================== */
-@media only screen and (min-width: 1580px)
-{
-    .wide-bg
-    {
+@media only screen and (min-width: 1580px) {
+    .wide-bg {
         -webkit-background-size: 100% auto;
-                background-size: 100% auto;
+        background-size: 100% auto;
     }
 }
-.lt-ie9 h2
-{
+
+.lt-ie9 h2 {
     font-size: 50px;
 }
-.lt-ie9 .header-title__line2
-{
+
+.lt-ie9 .header-title__line2 {
     font-size: 60px;
 }
-.lt-ie9 .header-title__line3
-{
+
+.lt-ie9 .header-title__line3 {
     font-size: 60px;
 }
-.lt-ie9 .diagnostic__subtitle
-{
+
+.lt-ie9 .diagnostic__subtitle {
     font-size: 55px;
 }
-.lt-ie9 .advantages__name
-{
+
+.lt-ie9 .advantages__name {
     font-size: 30px;
 }
 

@@ -8,4 +8,3 @@ export default (Component) => (props) =>
         <Component {...props} />
         <Footer/>
     </div>
-

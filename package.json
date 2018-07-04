@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "export NODE_ENV=production && node app.js",
-    "heroku": "export NODE_ENV=heroku && node app.js",
-    "dev": "webpack-dev-server --mode development --colors --content-base public --watch --devtool cheap-module-inline-source-map",
-    "build": " NODE_ENV=production  webpack -p",
+    "dev": "export NODE_ENV=development &&  webpack-dev-server --mode development --colors --content-base public --watch --devtool cheap-module-inline-source-map",
+    "build": "export NODE_ENV=production && webpack -p",
     "nodemon": "export NODE_ENV=development && nodemon app.js"
   },
   "engines": {
