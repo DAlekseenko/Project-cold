@@ -21,7 +21,6 @@ const PORT = config.get('PORT');
 LayoutFactory.setUrl(config.get('url'))
 
 if (config.get('mode') === 'production') {
-    console.log(config.get('url'));
     LayoutFactory
         .setJsFile(manifest['main.js'])
         .setCssFile(manifest['main.css'])
@@ -52,5 +51,6 @@ app.use('*', nocache);
 app.use('/', Router);
 
 app.listen(PORT, () => {
+    logger.info(`Server listening on port: ${config.get('url')}`);
     logger.info(`Server listening on port: ${PORT}`);
 });
