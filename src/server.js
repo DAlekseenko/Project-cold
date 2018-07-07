@@ -21,6 +21,7 @@ const PORT = config.get('PORT');
 LayoutFactory.setUrl(config.get('url'))
 
 if (config.get('mode') === 'production') {
+    console.log(config.get('url'));
     LayoutFactory
         .setJsFile(manifest['main.js'])
         .setCssFile(manifest['main.css'])
