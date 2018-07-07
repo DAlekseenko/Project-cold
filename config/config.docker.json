@@ -1,0 +1,7 @@
+{
+  "publicPath": "/assets/",
+  "url": "http://localhost:3003/",
+  "mode": "production",
+  "cssName": "styles-[hash].css",
+  "jsName": "bundle-[hash].js"
+}

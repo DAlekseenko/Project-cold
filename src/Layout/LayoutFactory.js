@@ -1,48 +1,34 @@
-const DEV_WEBPACK_SERVER = 'http://localhost:3333';
-
 import Layout from './Layout'
 
 export default new class LayoutFactory {
-    /** @var {Array} */
-    manifest = null;
 
-    /** @var boolean */
-    isProd = false;
+    url = '';
 
-    devUrl = DEV_WEBPACK_SERVER;
+    cssFile = 'assets/styles.css';
 
-    prodUrl = null;
+    jsFile = 'assets/bundle.js';
 
-    setProd(mode) {
-        this.isProd = mode;
-        return this;
-    }
-
-    setManifest(manifest) {
-        this.manifest = manifest;
-        return this;
-    }
-
-    setProdUrl(url) {
-        this.prodUrl = url;
-        return this;
-    }
-
-    setDevUrl(url) {
-        this.devUrl = url;
+    setUrl(url) {
+        this.url = url;
         return this;
     }
 
     getCssFile() {
-        return this.isProd ?
-            `${this.prodUrl + this.manifest['main.css']}` :
-            `${this.devUrl}/assets/styles.css`;
+        return this.url + this.cssFile
     }
 
     getJsFile() {
-        return this.isProd ?
-            `${this.prodUrl + this.manifest['main.js']}` :
-            `${this.devUrl}/assets/bundle.js`;
+        return this.url + this.jsFile
+    }
+
+    setJsFile(fileName) {
+        this.jsFile = fileName;
+        return this;
+    }
+
+    setCssFile(fileName) {
+        this.cssFile = fileName;
+        return this;
     }
 
     /**

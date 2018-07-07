@@ -16,10 +16,6 @@ export default class Layout {
         this.store = store;
     }
 
-    setProdMode() {
-        this.isProd = true;
-    }
-
     setTitle(title) {
         this.title = title;
     }

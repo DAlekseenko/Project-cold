@@ -16,11 +16,16 @@ import logger from '../libs/log';
 const app = express();
 
 const PORT = config.get('PORT');
-console.log(manifest);
-LayoutFactory
-    .setManifest(manifest)
-    .setProd(config.get('mode') === 'production')
-    .setProdUrl(config.get('url'));
+
+
+LayoutFactory.setUrl(config.get('url'))
+
+if (config.get('mode') === 'production') {
+    LayoutFactory
+        .setJsFile(manifest['main.js'])
+        .setCssFile(manifest['main.css'])
+}
+
 
 app.use(cookieParser());
 
