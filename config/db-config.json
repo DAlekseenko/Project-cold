@@ -1,0 +1,11 @@
+{
+  "mongoose": {
+    "prefix": "mongodb://",
+    "port": 27017,
+    "host":"localhost",
+    "base":"admin",
+    "options": {
+      "useNewUrlParser": true
+    }
+  }
+}
