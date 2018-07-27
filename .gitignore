@@ -3,6 +3,8 @@ node_modules
 *.log
 src/StylusCss/*.css
 *.local
-
+index.htm
+style.css
 dist/
 config/db-secret.json
+config/mail-config.json
