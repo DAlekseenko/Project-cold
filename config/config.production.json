@@ -1,7 +1,9 @@
 {
+  "PORT": 3003,
   "publicPath": "/assets/",
   "url": "https://infinite-bayou-55251.herokuapp.com/",
   "mode": "production",
   "cssName": "styles-[hash].css",
-  "jsName": "bundle-[hash].js"
+  "jsName": "bundle-[hash].js",
+  "mailTo": "5080701@list.ru"
 }

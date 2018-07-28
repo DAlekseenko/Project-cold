@@ -6,17 +6,22 @@ import routes from './routes';
 import {renderRoutes} from "react-router-config";
 import LayoutFactory from "./Layout/LayoutFactory";
 import {Provider} from "react-redux";
-import {createStore, applyMiddleware} from 'redux'
-import thunk from 'redux-thunk'
+import {createStore} from 'redux'
+
 import rootReducer from "./rootReducer";
+import logger from "../libs/log"
+import Custom from "../models/custom"
+import {preparePhone} from "../libs/helper"
+import mailer from '../libs/mailer'
+import config from '../config';
 
-
-export const store = createStore(rootReducer, applyMiddleware(thunk));
-const router = express.Router();
+const router = express.Router({})
 
 router.get('*', (req, res) => {
 
     const Layout = LayoutFactory.getLayout();
+
+    const store = createStore(rootReducer);
 
     const context = {
         pageTitleSetter: (title) => {
@@ -25,7 +30,6 @@ router.get('*', (req, res) => {
             res.status(404)
         }
     };
-
     const content = renderToString(
         <Provider store={store}>
             <StaticRouter location={req.url} context={context}>
@@ -36,9 +40,30 @@ router.get('*', (req, res) => {
     res.end(Layout.render(content));
 });
 
-router.post('/request-call', (req, res) => {
-    console.log(req.body);
-    res.end('Все отлично');
-});
+router.post('/request-call', async (req, res) => {
+
+    const {phone, name} = req.body
+
+    const mailOptions = {
+        from: 'account.condish@yandex.ru',
+        to: config.get('mailTo'),
+        subject: 'Заявка с сайта кондиционеров',
+        html: 'Перезвоните мне пожалуйста!\n\n' +
+        'Телефон: <b>' + phone + '</b>\n\n' +
+        'Имя: <b>'+name + '</b>'
+    }
+
+    try {
+        /** TODO  Обработать ошибку нормально  **/
+        const custom = new Custom({name, phone: preparePhone(phone)})
+        await custom.save()
+        await mailer.sendMail(mailOptions)
+        res.end('Ваша заявка успешно принята!')
+    } catch (e) {
+        logger.error(e)
+        res.end('Ошибка на сервере! Повторите позжее...')
+    }
+})
+
 
 export default router;

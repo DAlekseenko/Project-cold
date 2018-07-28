@@ -10,11 +10,13 @@ import thunk from 'redux-thunk';
 import './StylusCSS/main'
 import routes from './routes';
 import rootReducer from "./rootReducer";
-const store = createStore(
-   rootReducer, window.__INITIAL_STATE__, applyMiddleware(thunk)
-);
 
 const AppRouter = () => {
+
+    const store = createStore(
+        rootReducer, window.__INITIAL_STATE__, applyMiddleware(thunk)
+    );
+
     return (
         <Provider store={store}>
             <BrowserRouter>

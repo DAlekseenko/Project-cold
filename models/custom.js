@@ -1,4 +1,5 @@
 import mongoose from '../libs/db';
+import logger from "../libs/log"
 
 
 const schema = mongoose.Schema({
@@ -17,3 +18,4 @@ const schema = mongoose.Schema({
 });
 
 export default mongoose.model('Custom', schema)
+

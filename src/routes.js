@@ -1,7 +1,7 @@
 import MainPage from './Components/Pages/MainPage/MainPage'
 import What from './Components/Pages/What/What'
 import Works from './Components/Pages/Works/Works'
-import {NotFound} from './Components/Pages/NotFound/NotFound'
+import NotFound from './Components/Pages/NotFound/NotFound'
 import Price from "./Components/Pages/Price/Price";
 
 const routes = [

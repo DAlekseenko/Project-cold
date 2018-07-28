@@ -38,7 +38,7 @@ if (mode === 'production') {
 module.exports = {
     entry: ['babel-polyfill', './src/client.js'],
     resolve: {
-        modules: ['node_modules'],
+        modules: ['node_modules','src'],
         extensions: ['.json', '.js', '.jsx', '.styl']
     },
     output: {

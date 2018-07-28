@@ -9,7 +9,6 @@ import Router from './ServerRouter'
 import nocache from './express/nocache'
 import bodyParser from 'body-parser'
 
-
 import config from '../config';
 
 import logger from '../libs/log';
@@ -49,7 +48,6 @@ app.use('*', nocache);
 app.use('/', Router);
 
 app.listen(PORT, async () => {
-
     logger.info(`Server url: ${config.get('url')}`);
     logger.info(`Server listening on port: ${PORT}`);
 });

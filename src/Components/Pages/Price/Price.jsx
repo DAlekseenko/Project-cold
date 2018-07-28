@@ -1,8 +1,18 @@
 import React from 'react';
 import PageLayout from "../../Decorators/PageLayout";
 import PageComponent from "../../Decorators/PageComponent";
+import Modal from '../../UI/Modal';
 
 export class Price extends PageComponent {
+
+    state = {
+        isOpen: false
+    }
+
+    onToggle = () => {
+        this.setState({isOpen: !this.state.isOpen})
+    }
+
 
     render() {
         return (
@@ -56,14 +66,14 @@ export class Price extends PageComponent {
                             <div className="prices-order">
                                 <div className="prices-order__text">
                                     <p>
-                                        Оставьте заявку на проведение предварительной диагностики и определения
-                                        необходимых
-                                        работ
+                                        Оставьте заявку на проведение предварительной диагностики<br/>
+                                        и определения необходимых работ
                                     </p>
                                 </div>
-                                <div className="prices-order__button">
-                                    <a href="#callback" className="i-button i-button--yellow-small fancybox">ОСТАВИТЬ
-                                        ЗАЯВКУ</a>
+                                <div className="prices-order__button" onClick={this.onToggle}>
+                                    <span className="i-button i-button--yellow-small">
+                                        ОСТАВИТЬ ЗАЯВКУ
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -102,18 +112,20 @@ export class Price extends PageComponent {
                             <div className="prices-order">
                                 <div className="prices-order__text">
                                     <p>
-                                        Оставьте заявку для получения консультации нашего эксперта и точный расчет
-                                        необходимых работ
+                                        Оставьте заявку для получения консультации нашего эксперта
+                                        и точный расчет необходимых работ
                                     </p>
                                 </div>
                                 <div className="prices-order__button">
-                                    <a href="#callback" className="i-button i-button--yellow-small fancybox">ОСТАВИТЬ
-                                        ЗАЯВКУ</a>
+                                    <span className="i-button i-button--yellow-small" onClick={this.onToggle}>
+                                        ОСТАВИТЬ ЗАЯВКУ
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <Modal isOpen={this.state.isOpen} toggleModal={this.onToggle}/>
             </div>)
     }
 }

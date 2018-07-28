@@ -1,24 +1,36 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import PageLayout from "../../Decorators/PageLayout";
 
 import PageComponent from "../../Decorators/PageComponent";
-import FormFeedback  from "../Partials/FormFeedback";
+import FormFeedback from "../../UI/FormFeedback";
+import Modal from '../../UI/Modal';
 
 export class MainPage extends PageComponent {
+
+
+    state = {
+        isOpen: false
+    }
+
+    onToggle = () => {
+        this.setState({isOpen: !this.state.isOpen})
+    }
+
     render() {
-        return [
-            <header key={1} className="header wide-bg" id="header">
+        return <Fragment>
+            <header className="header wide-bg" id="header">
                 <div className="header__wrap l-wrap">
                     <div className="header__logo">
-                        <div className="logo">Название компании</div>
+                        <div className="logo">Проект Холод</div>
                     </div>
                     <div className="header__phone">
                         <div className="header__phone-number">
-                            8 (000) 000-00-00
+                            +7 (903) 508-07-01
                         </div>
-                        <a href="#callback" className="i-button i-button--callack fancybox">
+                        <Modal isOpen={this.state.isOpen} toggleModal={this.onToggle}/>
+                        <span className="i-button i-button--callack" onClick={this.onToggle}>
                             Заказать звонок
-                        </a>
+                        </span>
                     </div>
                     <div className="header__title">
                         <h1 className="header-title">
@@ -42,8 +54,7 @@ export class MainPage extends PageComponent {
                     </div>
                 </div>
             </header>
-            ,
-            <div key={2} className="clients__wrap l-wrap">
+            <div className="clients__wrap l-wrap">
                 <div className="clients__list">
                     <img src="/images/clients/1.png" alt="Clients" className="clients__image"/>
                     <img src="/images/clients/2.png" alt="Clients" className="clients__image"/>
@@ -54,8 +65,7 @@ export class MainPage extends PageComponent {
                     <img src="/images/clients/7.png" alt="Clients" className="clients__image"/>
                 </div>
             </div>
-            ,
-            <div key={3} className="which">
+            <div className="which">
                 <div className="which__wrap l-wrap">
                     <h2 className="which__title">
                         КАКИЕ СИСТЕМЫ МЫ ОБСЛУЖИВАЕМ
@@ -133,8 +143,8 @@ export class MainPage extends PageComponent {
                         </div>
                     </div>
                 </div>
-            </div>,
-            <div key={4} className="consultation wide-bg" id="consultation">
+            </div>
+            <div className="consultation wide-bg" id="consultation">
                 <div className="consultation__wrap l-wrap">
                     <h2 className="consultation__title">
                         Получите бесплатную
@@ -158,7 +168,7 @@ export class MainPage extends PageComponent {
                     </div>
                 </div>
             </div>
-        ];
+        </Fragment>
     }
 }
 

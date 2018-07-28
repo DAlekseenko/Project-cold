@@ -1,13 +1,13 @@
 import {REQUEST_CALL, START, SUCCESS, FAIL} from '../CONSTANT'
 import {Record} from 'immutable'
 
-const ReducerState = Record({
+const feedbackState = Record({
     successMessage: null,
     errors: null,
     loading: false
 });
 
-export default (state = new ReducerState(), action = {}) => {
+export default (state = new feedbackState(), action = {}) => {
     switch (action.type) {
         case REQUEST_CALL + START:
             return state

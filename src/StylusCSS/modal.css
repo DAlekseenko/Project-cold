@@ -1,0 +1,33 @@
+.ReactModal__Content ReactModal__Content--after-open {
+  width: 790px;
+  padding: 50px 70px 70px;
+  text-align: center;
+  color: #fff;
+  background: #242733;
+}
+.modal__text {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.modal__form {
+  width: 470px;
+  margin: auto;
+}
+.modal__button {
+  margin-right: auto;
+  margin-left: auto;
+}
+.fancybox-skin {
+  border-radius: 6px;
+  background: transparent;
+}
+.fancybox-close {
+  position: absolute;
+  z-index: 8040;
+  top: 15px;
+  right: 15px;
+  width: 27px;
+  height: 27px;
+  cursor: pointer;
+  background-position: -200px 0;
+}

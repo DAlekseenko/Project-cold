@@ -2,6 +2,8 @@
 @import "~normalize.css"
 @import "button"
 @import "form"
+@import "modal"
+@import "ie-style.styl"
 @import "../Components/Pages/MainPage/mainPage"
 @import "../Components/Pages/Main/nav";
 @import "../Components/Pages/Main/footer";
@@ -11,12 +13,21 @@
 
 
 .logo,
-.consultation__up
+.header__title,
+.logo,
+.for__item
   &:before
-    display: inline-block;
-    content: '';
-    vertical-align: top;
-    background: url(/images/icons.png);
+    display: inline-block
+    content: ''
+    vertical-align: top
+    background-image: url(/images/icons.png)
+
+.consultation__up,
+.modal-close
+  display: inline-block
+  content: ''
+  vertical-align: top
+  background: url(/images/icons.png)
 
 .list,
 .how__list

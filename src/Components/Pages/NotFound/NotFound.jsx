@@ -1,9 +1,12 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
-export const NotFound = () => {
-         return(<div>
-                    <h1>404 : Not Found</h1>
-                </div>)
+import PageLayout from "../../Decorators/PageLayout"
 
-};
+export const NotFound = () => (
+    <div className="which">
+        <div className="which__wrap l-wrap" style={{marginTop: 50, marginBottom: -78}}>
+            <h1>404 :( Page Not Found</h1>
+        </div>
+    </div>
+)
 
+export default PageLayout(NotFound)

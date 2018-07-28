@@ -1,8 +1,21 @@
 {
-  "PORT": 3003,
+  "PORT": 3000,
   "publicPath": "/assets/",
-  "url": "http://localhost:8080",
+  "url": "0.0.0.0:3000",
   "mode": "production",
   "cssName": "styles-[hash].css",
-  "jsName": "bundle-[hash].js"
+  "jsName": "bundle-[hash].js",
+  "mailTo": "dalekseenko88@gmail.com",
+  "mongo": {
+    "prefix": "mongodb://",
+    "port": 27017,
+    "host": "mongoDB",
+    "base": "admin",
+    "options": {
+      "useNewUrlParser": true,
+      "reconnectTries": 30,
+      "reconnectInterval": 500,
+      "bufferMaxEntries": 0
+    }
+  }
 }
