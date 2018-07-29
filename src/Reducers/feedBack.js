@@ -15,7 +15,6 @@ export default (state = new feedbackState(), action = {}) => {
                 .set('successMessage', null)
                 .set('errors', null);
         case REQUEST_CALL + SUCCESS:
-            console.log(action.payload);
             return state
                 .set('successMessage', action.payload)
                 .set('loading', false);

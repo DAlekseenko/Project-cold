@@ -54,10 +54,9 @@ router.post('/request-call', async (req, res) => {
     }
 
     try {
-        /** TODO  Обработать ошибку нормально  **/
-        const custom = new Custom({name, phone: preparePhone(phone)})
-        await custom.save()
         await mailer.sendMail(mailOptions)
+        const custom = await new Custom({name, phone: preparePhone(phone)})
+        await custom.save()
         res.end('Ваша заявка успешно принята!')
     } catch (e) {
         logger.error(e)

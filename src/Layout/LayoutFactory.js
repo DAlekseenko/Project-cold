@@ -3,9 +3,7 @@ import Layout from './Layout'
 export default new class LayoutFactory {
 
     url = '';
-
     cssFile = 'assets/styles.css';
-
     jsFile = 'assets/bundle.js';
 
     setUrl(url) {
@@ -30,11 +28,10 @@ export default new class LayoutFactory {
         this.cssFile = fileName;
         return this;
     }
-
     /**
      * @return {Layout}
      */
     getLayout() {
-        return new Layout(this.getJsFile(), this.getCssFile())
+        return new Layout(this.getJsFile(), this.getCssFile(), this.url)
     }
 }

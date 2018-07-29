@@ -1,7 +1,7 @@
 {
   "PORT": 3000,
   "publicPath": "/assets/",
-  "url": "0.0.0.0:3000",
+  "url": "http://projectcold.ru",
   "mode": "production",
   "cssName": "styles-[hash].css",
   "jsName": "bundle-[hash].js",
@@ -9,7 +9,7 @@
   "mongo": {
     "prefix": "mongodb://",
     "port": 27017,
-    "host": "mongoDB",
+    "host": "mongo",
     "base": "admin",
     "options": {
       "useNewUrlParser": true,

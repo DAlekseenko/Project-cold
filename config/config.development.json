@@ -1,7 +1,7 @@
 {
   "PORT": 3000,
-  "url": "http://localhost:3333/",
-  "publicPath": "http://localhost:3333/assets/",
+  "url": "http://0.0.0.0:3333/",
+  "publicPath": "http://0.0.0.0:3333/assets/",
   "mode": "development",
   "cssName": "styles.css",
   "jsName": "bundle.js",

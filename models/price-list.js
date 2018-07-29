@@ -1,19 +1,14 @@
 import mongoose from '../libs/db';
 
 const schema = mongoose.Schema({
-    name: {
+    service: {
         type: String,
         required: true
     },
-    phone: {
+    price: {
         type: Number,
         required: true
     },
-    created: {
-        type: Date,
-        default: Date.now()
-    }
 });
 
-export default mongoose.model('Custom', schema)
-
+export default mongoose.model('PriceList', schema)
