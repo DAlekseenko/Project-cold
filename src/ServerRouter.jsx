@@ -9,11 +9,11 @@ import {Provider} from "react-redux";
 import {createStore} from 'redux'
 
 import rootReducer from "./rootReducer";
-import logger from "../libs/log"
-import Custom from "../models/custom"
-import {preparePhone} from "../libs/helper"
-import mailer from '../libs/mailer'
-import config from '../config';
+// import logger from "../libs/log"
+// import Custom from "../models/custom"
+// import {preparePhone} from "../libs/helper"
+// import mailer from '../libs/mailer'
+// import config from '../config';
 
 const router = express.Router({})
 
@@ -40,29 +40,29 @@ router.get('*', (req, res) => {
     res.end(Layout.render(content));
 });
 
-router.post('/request-call', async (req, res) => {
-
-    const {phone, name} = req.body
-
-    const mailOptions = {
-        from: 'account.condish@yandex.ru',
-        to: config.get('mailTo'),
-        subject: 'Заявка с сайта кондиционеров',
-        html: 'Перезвоните мне пожалуйста!\n\n' +
-        'Телефон: <b>' + phone + '</b>\n\n' +
-        'Имя: <b>'+name + '</b>'
-    }
-
-    try {
-        await mailer.sendMail(mailOptions)
-        const custom = await new Custom({name, phone: preparePhone(phone)})
-        await custom.save()
-        res.end('Ваша заявка успешно принята!')
-    } catch (e) {
-        logger.error(e)
-        res.end('Ошибка на сервере! Повторите позжее...')
-    }
-})
+// router.post('/request-call', async (req, res) => {
+//
+//     const {phone, name} = req.body
+//
+//     const mailOptions = {
+//         from: 'account.condish@yandex.ru',
+//         to: config.get('mailTo'),
+//         subject: 'Заявка с сайта кондиционеров',
+//         html: 'Перезвоните мне пожалуйста!\n\n' +
+//         'Телефон: <b>' + phone + '</b>\n\n' +
+//         'Имя: <b>'+name + '</b>'
+//     }
+//
+//     try {
+//         await mailer.sendMail(mailOptions)
+//         const custom = await new Custom({name, phone: preparePhone(phone)})
+//         await custom.save()
+//         res.end('Ваша заявка успешно принята!')
+//     } catch (e) {
+//         logger.error(e)
+//         res.end('Ошибка на сервере! Повторите позжее...')
+//     }
+// })
 
 
 export default router;
