@@ -43,7 +43,13 @@ app.use(express.static('public', {
 }));
 
 app.use('*', nocache);
-
+app.use((req, res, next) => {
+    if(/\/.well-known\/*/.test(req.originalUrl)){
+        res.end()
+        return
+    }
+    next();
+});
 app.use('/', Router);
 
 app.listen(PORT, async () => {
