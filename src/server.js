@@ -15,16 +15,15 @@ import logger from '../libs/log';
 
 const app = express();
 
+
 const PORT = config.get('PORT');
 
 LayoutFactory.setUrl(config.get('url'))
-
 if (config.get('mode') === 'production') {
     LayoutFactory
         .setJsFile(manifest['main.js'])
         .setCssFile(manifest['main.css'])
 }
-
 app.use(cookieParser());
 
 app.use(bodyParser.urlencoded({

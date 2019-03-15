@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:8 AS base
 
 MAINTAINER Dan Alekseenko <dalekseenko88@gmail.com>
 

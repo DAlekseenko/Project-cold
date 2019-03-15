@@ -1,7 +1,7 @@
 {
   "PORT": 3000,
   "publicPath": "/assets/",
-  "url": "http://projectcold.ru",
+  "url": "http://62.109.23.8",
   "mode": "production",
   "cssName": "styles-[hash].css",
   "jsName": "bundle-[hash].js",
