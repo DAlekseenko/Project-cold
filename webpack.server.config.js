@@ -1,20 +1,25 @@
-const path = require('path');
 const webpack = require('webpack')
 const config = require('./config')
 const mode = config.get('mode');
+const nodeExternals = require('webpack-node-externals')
 
-
+console.log(config.get('mode'));
 module.exports = {
     entry: [
         'babel-polyfill',
         './src/server.js'
     ],
     output: {
-        path: `${__dirname}/build`,
+        path: process.cwd(),
         filename: './app.js',
     },
     resolve: {
         extensions: ['.json', '.js', '.jsx']
+    },
+    node: {
+        // // Need this when working with express, otherwise the build fails
+         __dirname: false,   // if you don't put this is, __dirname
+        __filename: false,  // and __filename return blank or /
     },
     module: {
         rules: [
@@ -26,10 +31,11 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             'process.env': {
-                NODE_ENV: JSON.stringify(mode)
+                NODE_ENV: JSON.stringify(mode),
+                SERV: JSON.stringify(true)
             }
         }),
     ],
     target: 'node',
-    externals: [/node_modules/]
+    externals: [/node_modules/, nodeExternals()]
 };

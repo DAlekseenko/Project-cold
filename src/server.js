@@ -1,3 +1,4 @@
+import https from 'https';
 import express from 'express'
 import cookieParser from 'cookie-parser'
 import compress from 'compression'
@@ -43,14 +44,14 @@ app.use(express.static('public', {
 }));
 
 app.use('*', nocache);
-app.use((req, res, next) => {
-    if(/\/.well-known\/*/.test(req.originalUrl)){
-        res.end()
-        return
-    }
-    next();
-});
 app.use('/', Router);
+//
+// const options = {
+//     cert: fs.readFileSync('./sslcert/fullchain.pem'),
+//     key: fs.readFileSync('./sslcert/privkey.pem')
+// };
+// express.listen(PORT);
+// https.createServer(null, app).listen(3000);
 
 app.listen(PORT, async () => {
     logger.info(`Server url: ${config.get('url')}`);

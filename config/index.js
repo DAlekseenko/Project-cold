@@ -1,10 +1,16 @@
 const nConf = require('nconf');
 const path = require('path');
 
+function getPath(filename) {
+    return path.join(process.cwd(), 'config', filename)
+}
+
+console.log(process.cwd());
+
 module.exports = nConf
     .argv()
     .env()
-    .file('secret', path.join(__dirname, 'db-secret.json'))
-    .file('mail', path.join(__dirname, 'mail-config.json'))
-    .file('app', path.join(__dirname, `config.${(nConf.get('NODE_ENV') || '').trim()}.json`))
+    .file('secret', getPath('db-secret.json'))
+    .file('mail', getPath('mail-config.json'))
+    .file('app', getPath(`config.${(process.env.NODE_ENV || '').trim()}.json`))
 

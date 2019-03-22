@@ -12,7 +12,7 @@ export default () =>
                     <p>Все права защищены</p>
                 </div>
                 <div className="footer__phone">
-                    +7 (903) 508-07-01
+                    +7 (495) 508-07-01
                 </div>
             </div>
         </footer>
