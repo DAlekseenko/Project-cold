@@ -5,8 +5,6 @@ function getPath(filename) {
     return path.join(process.cwd(), 'config', filename)
 }
 
-console.log(process.cwd());
-
 module.exports = nConf
     .argv()
     .env()

@@ -3,7 +3,6 @@ const config = require('./config')
 const mode = config.get('mode');
 const nodeExternals = require('webpack-node-externals')
 
-console.log(config.get('mode'));
 module.exports = {
     entry: [
         'babel-polyfill',

@@ -2,7 +2,7 @@
   "name": "conditioners",
   "description": "air conditioner sales project",
   "repository": "https://github.com/DAlekseenko/Conditioners.git",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "scripts": {
     "start": "export NODE_ENV=production && node develop.app.js",
     "dev": "export NODE_ENV=development &&  webpack-dev-server --mode development --colors --content-base public --watch --devtool cheap-module-inline-source-map",
