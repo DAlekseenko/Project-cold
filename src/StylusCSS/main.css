@@ -186,6 +186,62 @@
   background: #000;
   background: rgba(0,0,0,0.7);
 }
+.success__message {
+  margin-top: 30px;
+  height: 27px;
+}
+.ReactModal__Content--after-open {
+  width: 790px;
+  margin: 25px auto;
+  padding: 0 !important;
+  height: 620px;
+}
+.modal {
+  width: 790px;
+  height: 620px;
+  padding: 50px 70px 50px;
+  text-align: center;
+  color: #fff;
+  background: #242733;
+  box-sizing: border-box;
+}
+.modal .modal__text {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.modal .modal__form {
+  width: 470px;
+  margin: auto;
+}
+.modal .modal__button {
+  margin-right: auto;
+  margin-left: auto;
+}
+.modal .modal-close {
+  position: absolute;
+  z-index: 8040;
+  top: 15px;
+  right: 15px;
+  width: 27px;
+  height: 27px;
+  cursor: pointer;
+  background-position: -200px 0;
+}
+.lt-ie9 h2 {
+  font-size: 50px;
+}
+.lt-ie9 .header-title__line2 {
+  font-size: 60px;
+}
+.lt-ie9 .header-title__line3 {
+  font-size: 60px;
+}
+.lt-ie9 .diagnostic__subtitle {
+  font-size: 55px;
+}
+.lt-ie9 .advantages__name {
+  font-size: 30px;
+}
 .header {
   height: 734px;
   background: url("/images/header-bg.jpg") 50% 0 no-repeat;
@@ -340,6 +396,12 @@
 .consultation__form {
   width: 470px;
 }
+.consultation__form .success__message {
+  color: #fff;
+  background-color: #242733;
+  padding-left: 20px;
+  width: 494px;
+}
 .consultation__up {
   display: block;
   width: 56px;
@@ -388,62 +450,16 @@ a {
   height: 45px;
   line-height: 45px;
   color: #fff;
+  transition: all 1s ease 0s;
 }
-.menu__href:not(.active):before,
-.menu__href:not(.active):after {
-  content: "";
-  position: absolute;
-  width: 45px;
-  height: 2px;
-  background-color: #fff;
-  opacity: 0;
-  transition: all 0.3s;
-}
-.menu__href:not(.active):before {
-  top: 0;
-  left: 0;
-  transform: rotate(90deg);
-  transform-origin: 0 0;
-}
-.menu__href:not(.active):after {
-  right: 0;
-  bottom: 0;
-  transform: rotate(90deg);
-  transform-origin: 100% 100%;
-}
-.menu__href:not(.active):hover:before {
-  left: 50%;
-  opacity: 0.5;
-  transform: rotate(0deg) translateX(-50%);
-  width: 80%;
-}
-.menu__href:not(.active):hover:after {
-  right: 50%;
-  opacity: 0.5;
-  transform: rotate(0deg) translateX(50%);
-  width: 80%;
+.menu__href:not(.active):hover {
+  opacity: 1;
+  -webkit-box-shadow: 0 0 25px #ccc;
+  -moz-box-shadow: 0 0 25px #ccc;
+  box-shadow: 0 0 25px #ccc;
 }
 .menu__href.active {
   color: #ffd500;
-}
-.menu__href.active:before,
-.menu__href.active:after {
-  content: "";
-  position: absolute;
-  width: 45px;
-  height: 2px;
-  background-color: #ffd500;
-  opacity: 0.8;
-}
-.menu__href.active:before {
-  top: 0;
-  left: 10%;
-  width: 80%;
-}
-.menu__href.active:after {
-  right: 10%;
-  bottom: 0;
-  width: 80%;
 }
 .footer {
   padding: 30px 0 0;
@@ -454,6 +470,9 @@ a {
   float: left;
   width: 25%;
   margin-top: 20px;
+}
+.footer__logo .logo {
+  font-size: 24px;
 }
 .footer__text {
   font-size: 18px;
@@ -499,6 +518,9 @@ a {
 }
 .prices__table td {
   padding: 15px 60px;
+}
+.prices__table td:nth-child(2) {
+  white-space: nowrap;
 }
 .prices__order {
   margin-bottom: 75px;
@@ -693,6 +715,12 @@ a {
   line-height: 1;
   margin-bottom: 80px;
 }
+.job__my {
+  margin-right: 60px;
+}
+.job__image_jpeg {
+  border: 4px solid #fff;
+}
 .jobs__subtitle {
   font-size: 48px;
   display: block;
@@ -767,7 +795,15 @@ a {
   margin-top: 5px;
 }
 .logo:before,
-.consultation__up:before {
+.header__title:before,
+.for__item:before {
+  display: inline-block;
+  content: '';
+  vertical-align: top;
+  background-image: url("/images/icons.png");
+}
+.consultation__up,
+.modal-close {
   display: inline-block;
   content: '';
   vertical-align: top;

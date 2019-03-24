@@ -10,7 +10,7 @@ const mode = config.get('mode');
 const publicPath = config.get('publicPath');
 const cssName = config.get('cssName');
 const jsName = config.get('jsName');
-console.log(cssName);
+
 const plugins = [
     new webpack.DefinePlugin({
         NODE_ENV: JSON.stringify(mode)

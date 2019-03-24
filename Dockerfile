@@ -21,6 +21,8 @@ WORKDIR /app
 
 COPY --from=builder ./app /app
 
+RUN npm install --save babel-polyfill
+
 EXPOSE 3000
 
 ENV NODE_ENV production

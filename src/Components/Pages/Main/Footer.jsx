@@ -8,7 +8,7 @@ export default () =>
                     <div className="logo logo--white">&nbsp;&nbsp;Проект Холод</div>
                 </div>
                 <div className="footer__text">
-                    <p>&copy; 2018</p>
+                    <p>&copy; {(new Date()).getFullYear()}</p>
                     <p>Все права защищены</p>
                 </div>
                 <div className="footer__phone">

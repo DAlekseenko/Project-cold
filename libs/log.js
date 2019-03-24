@@ -1,13 +1,12 @@
 import winston from 'winston';
 import config from '../config';
-import path from "app-root-path"
 
 const mode = config.get('NODE_ENV') && config.get('NODE_ENV').trim();
 const date = (new Date()).toLocaleDateString();
 const options = {
     file: {
         level: 'info',
-        filename: `${path}/logs/${date}.log`,
+        filename: `${process.cwd()}/logs/${date}.log`,
         handleExceptions: true,
         json: true,
         maxsize: 5242880, // 5MB

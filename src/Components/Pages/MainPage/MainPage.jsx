@@ -25,7 +25,7 @@ export class MainPage extends PageComponent {
                     </div>
                     <div className="header__phone">
                         <div className="header__phone-number">
-                            +7 (903) 508-07-01
+                            +7 (495) 508-07-01
                         </div>
                         <Modal isOpen={this.state.isOpen} toggleModal={this.onToggle}/>
                         <span className="i-button i-button--callack" onClick={this.onToggle}>
@@ -55,17 +55,25 @@ export class MainPage extends PageComponent {
                 </div>
             </header>
             <div className="clients__wrap l-wrap">
-                <div className="clients__list">
-                    <img src="/images/clients/1.png" alt="Clients" className="clients__image"/>
-                    <img src="/images/clients/2.png" alt="Clients" className="clients__image"/>
-                    <img src="/images/clients/3.png" alt="Clients" className="clients__image"/>
-                    <img src="/images/clients/4.png" alt="Clients" className="clients__image"/>
-                    <img src="/images/clients/5.png" alt="Clients" className="clients__image"/>
-                    <img src="/images/clients/6.png" alt="Clients" className="clients__image"/>
-                    <img src="/images/clients/7.png" alt="Clients" className="clients__image"/>
-                </div>
+                {/*<div className="clients__list">*/}
+                {/*<img src="/images/clients/1.png" alt="Clients" className="clients__image"/>*/}
+                {/*<img src="/images/clients/2.png" alt="Clients" className="clients__image"/>*/}
+                {/*<img src="/images/clients/3.png" alt="Clients" className="clients__image"/>*/}
+                {/*<img src="/images/clients/4.png" alt="Clients" className="clients__image"/>*/}
+                {/*<img src="/images/clients/5.png" alt="Clients" className="clients__image"/>*/}
+                {/*<img src="/images/clients/6.png" alt="Clients" className="clients__image"/>*/}
+                {/*<img src="/images/clients/7.png" alt="Clients" className="clients__image"/>*/}
+                {/*</div>*/}
             </div>
             <div className="which">
+                <div className="which__wrap l-wrap">
+                    <h2 className="which__title">
+                        О НАС
+                    </h2>
+                    <div className="which__list">
+                        Компания ООО «Проект Холод» специализируется на проектировании, пусконаладочных и монтажных работах, а также поставке оборудования и сервисном обслуживании современных систем вентиляции, аспирации и кондиционирования воздуха в городских инженерных сетях, а также систем холодоснабжения технологического оборудования.
+                    </div>
+                </div>
                 <div className="which__wrap l-wrap">
                     <h2 className="which__title">
                         КАКИЕ СИСТЕМЫ МЫ ОБСЛУЖИВАЕМ

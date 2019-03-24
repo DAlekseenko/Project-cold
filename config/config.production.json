@@ -1,7 +1,7 @@
 {
   "PORT": 3000,
   "publicPath": "/assets/",
-  "url": "http://proekt-xolod.ru",
+  "url": "https://proekt-xolod.ru",
   "mode": "production",
   "cssName": "styles-[hash].css",
   "jsName": "bundle-[hash].js",

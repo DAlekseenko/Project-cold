@@ -1,4 +1,6 @@
+import http from 'http';
 import https from 'https';
+import fs from 'fs';
 import express from 'express'
 import cookieParser from 'cookie-parser'
 import compress from 'compression'
@@ -20,11 +22,7 @@ const app = express();
 const PORT = config.get('PORT');
 
 LayoutFactory.setUrl(config.get('url'))
-if (config.get('mode') === 'production') {
-    LayoutFactory
-        .setJsFile(manifest['main.js'])
-        .setCssFile(manifest['main.css'])
-}
+
 app.use(cookieParser());
 
 app.use(bodyParser.urlencoded({
@@ -45,15 +43,33 @@ app.use(express.static('public', {
 
 app.use('*', nocache);
 app.use('/', Router);
-//
-// const options = {
-//     cert: fs.readFileSync('./sslcert/fullchain.pem'),
-//     key: fs.readFileSync('./sslcert/privkey.pem')
-// };
-// express.listen(PORT);
-// https.createServer(null, app).listen(3000);
 
-app.listen(PORT, async () => {
-    logger.info(`Server url: ${config.get('url')}`);
-    logger.info(`Server listening on port: ${PORT}`);
-});
+if(config.get('mode') === 'production') {
+    LayoutFactory
+        .setJsFile(manifest['main.js'])
+        .setCssFile(manifest['main.css'])
+
+    const credentials = {
+        cert: fs.readFileSync('./ssl/www_proekt-xolod_ru.crt', 'utf8'),
+        key: fs.readFileSync('./ssl/8238528.key', 'utf8'),
+        ca: fs.readFileSync('./ssl/www_proekt-xolod_ru.ca-bundle', 'utf8'),
+    };
+    const httpServer = http.createServer(app);
+    const httpsServer = https.createServer(credentials, app);
+
+    httpServer.listen(80, () => {
+        logger.info(`Server url: ${config.get('url')}`);
+        logger.info(`Server listening on port: 80`);
+    });
+
+    httpsServer.listen(443, () => {
+        logger.info(`Server url: ${config.get('url')}`);
+        logger.info(`Server listening on port: 443`);
+    });
+} else {
+    app.listen(PORT, async () => {
+        logger.info(`Server url: ${config.get('url')}`);
+        logger.info(`Server listening on port: ${PORT}`);
+    });
+}
+

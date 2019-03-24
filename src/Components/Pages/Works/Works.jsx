@@ -331,6 +331,54 @@ export class Works extends PageComponent {
                             </div>
                         </div>
                     </div>
+                    <div className="jobs__item">
+                        <div className="job">
+                            <h4 className="job__title">
+                                Объект №9
+                            </h4>
+                            <div className="job__text">
+                                <p>
+                                   Обслуживание систем кондицилнирования
+                                </p>
+                            </div>
+                            <div className="job__images">
+                                <div className="job__images_wrapper">
+                                    <img src="/images/jobs/roof/obj1.jpg" width="218" height="175" alt=""
+                                         className="job__image job__image_jpeg"/>
+                                </div>
+                                <div className="job__images_wrapper">
+                                    <img src="/images/jobs/roof/obj2.jpg" width="218" height="175" alt=""
+                                         className="job__image job__image_jpeg"/>
+                                </div>
+                                <div className="job__images_wrapper">
+                                    <img src="/images/jobs/roof/obj3.jpg" width="218" height="175" alt=" "
+                                         className="job__image job__image_jpeg"/>
+                                </div>
+                                <div className="job__images_wrapper">
+                                    <img src="/images/jobs/roof/obj4.jpg" width="218" height="175" alt=" "
+                                         className="job__image job__image_jpeg"/>
+                                </div>
+                                <div className="job__images_wrapper">
+                                    <img src="/images/jobs/roof/obj5.jpg" width="218" height="175" alt=" "
+                                         className="job__image job__image_jpeg"/>
+                                </div>
+                                <div className="job__images_wrapper">
+                                    <img src="/images/jobs/roof/obj6.jpg" width="218" height="175" alt=" "
+                                         className="job__image job__image_jpeg"/>
+                                </div>
+
+                                <div className="job__images_wrapper">
+                                    <img src="/images/jobs/roof/obj7.jpg" width="218" height="175" alt=" "
+                                         className="job__image job__image_jpeg"/>
+                                </div>
+
+                                <div className="job__images_wrapper">
+                                    <img src="/images/jobs/roof/obj8.jpg" width="218" height="175" alt=" "
+                                         className="job__image job__image_jpeg"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <h2 className="jobs__title">
                         Выполненные работы
                         <span className="jobs__subtitle">
@@ -454,6 +502,39 @@ export class Works extends PageComponent {
                                     <div className="job__images_wrapper">
                                         <img src="/images/jobs/people/7.jpg" alt=" " className="job__image"/>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="jobs__item">
+                        <div className="job">
+                            <h4 className="job__title">
+                                Объект №6
+                            </h4>
+                            <div className="job__text">
+                                <p>
+                                    Установка сразу 2-ух сплит-систем в доме
+                                </p>
+                            </div>
+                            <div className="job__images">
+                                <div className="job__image job__my">
+                                    <div className="job__images_wrapper">
+                                        <img src="/images/jobs/people2/ch3.jpeg" width="401" height="182"
+                                             alt="Установка у частных лиц" className="job__image job__image_jpeg"/>
+                                    </div>
+                                    <br/>
+                                    <div className="job__images_wrapper">
+                                        <img src="/images/jobs/people2/ch4.jpeg" width="401" height="182"
+                                             alt="Установка у частных лиц" className="job__image job__image_jpeg"/>
+                                    </div>
+                                </div>
+                                <div className="job__images_wrapper">
+                                    <img src="/images/jobs/people2/ch2.jpeg" width="227" height="384"
+                                         alt="Установка у частных лиц" className="job__image job__image_jpeg"/>
+                                </div>
+                                <div className="job__images_wrapper">
+                                    <img src="/images/jobs/people2/ch1.jpeg" width="227" height="384"
+                                         alt="Установка у частных лиц" className="job__image job__image_jpeg"/>
                                 </div>
                             </div>
                         </div>
