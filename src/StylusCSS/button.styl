@@ -9,24 +9,29 @@
   outline: none;
 }
 
-.i-button--callack {
+.i-button__callback
+  display none
   font-size: 24px;
   font-weight: 400;
   padding: 6px 0;
-  color: #242733;
   border: 2px solid #242733;
-}
-
-.i-button--callack:hover {
   color: #fff;
   background: #242733;
-}
+  cursor pointer
+  transition: all 0.5s ease 0s;
+  @media (min-width: 576px)
+    display block
+  &:hover
+    opacity: 1;
+    -webkit-box-shadow: inset 0 0 15px 0  #cccccc
+    -moz-box-shadow: inset 0 0 15px 0  #cccccc;
+    box-shadow: inset 0 0 15px 0  #cccccc;
+
 
 .i-button--yellow {
   font-size: 21px;
   margin-top: 0;
-  padding: 26px 0 20px 0;
-  text-transform: uppercase;
+  padding: 12px 0 12px 0;
   color: #242733;
   border-top: 1px solid #fef270;
   border-bottom: 3px solid #805d03;
@@ -58,7 +63,6 @@
   font-size: 18px;
   margin-top: 0;
   padding: 13px 0 9px 0;
-  text-transform: uppercase;
   color: #242733;
   border-top: 1px solid #fef270;
   border-bottom: 2px solid #805d03;

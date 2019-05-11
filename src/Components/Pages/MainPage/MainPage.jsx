@@ -7,7 +7,6 @@ import Modal from '../../UI/Modal';
 
 export class MainPage extends PageComponent {
 
-
     state = {
         isOpen: false
     }
@@ -28,20 +27,20 @@ export class MainPage extends PageComponent {
                             +7 (495) 508-07-01
                         </div>
                         <Modal isOpen={this.state.isOpen} toggleModal={this.onToggle}/>
-                        <span className="i-button i-button--callack" onClick={this.onToggle}>
+                        <span className="i-button i-button__callback" onClick={this.onToggle}>
                             Заказать звонок
                         </span>
                     </div>
                     <div className="header__title">
                         <h1 className="header-title">
                         <span className="header-title__line1">
-                            Cервисное обслуживание и ремонт систем
+                            Сервисное обслуживание и ремонт систем
                         </span>
                             <span className="header-title__line2">
-                            КОНДИЦИОНИРОВАНИЯ
+                            Кондиционирования
                         </span>
                             <span className="header-title__line3">
-                            и ВЕНТИЛЯЦИИ
+                            и вентиляции
                         </span>
                         </h1>
                     </div>
@@ -68,15 +67,18 @@ export class MainPage extends PageComponent {
             <div className="which">
                 <div className="which__wrap l-wrap">
                     <h2 className="which__title">
-                        О НАС
+                        О нас
                     </h2>
                     <div className="which__list">
-                        Компания ООО «Проект Холод» специализируется на проектировании, пусконаладочных и монтажных работах, а также поставке оборудования и сервисном обслуживании современных систем вентиляции, аспирации и кондиционирования воздуха в городских инженерных сетях, а также систем холодоснабжения технологического оборудования.
+                        Компания ООО «Проект Холод» специализируется на проектировании, пусконаладочных и монтажных
+                        работах, а также поставке оборудования и сервисном обслуживании современных систем вентиляции,
+                        аспирации и кондиционирования воздуха в городских инженерных сетях, а также систем
+                        холодоснабжения технологического оборудования.
                     </div>
                 </div>
                 <div className="which__wrap l-wrap">
                     <h2 className="which__title">
-                        КАКИЕ СИСТЕМЫ МЫ ОБСЛУЖИВАЕМ
+                        Какие системы мы обслуживаем
                     </h2>
                     <div className="which__list">
                         <ul className="list">
@@ -154,17 +156,17 @@ export class MainPage extends PageComponent {
             </div>
             <div className="consultation wide-bg" id="consultation">
                 <div className="consultation__wrap l-wrap">
-                    <h2 className="consultation__title">
-                        Получите бесплатную
-                        <span className="consultation__subtitle">
-                        консультацию
-                    </span>
+                    <h2 className="header-title">
+                        <span className="header-title__line3">
+                             Получите бесплатную
+                        </span>
+                        <span className="header-title__line2">
+                            консультацию
+                        </span>
                     </h2>
-                    <div className="consultation__text">
-                        <p>
-                            ЭКСПЕРТА по сервисному обслуживанию вашей системы
-                        </p>
-                    </div>
+                    <p className="header__text">
+                        ЭКСПЕРТА по сервисному обслуживанию вашей системы
+                    </p>
                     <div className="consultation__form">
                         <FormFeedback
                             formClass="form"

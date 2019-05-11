@@ -1,12 +1,12 @@
 @import "../../../StylusCSS/mixins"
 .what {
-  padding-bottom: 75px;
+  padding-bottom: 60px;
   color: #fff;
   background: url(/images/what-bg.jpg) 0 0 repeat;
 }
 
 .what__title {
-  margin-top: 113px;
+  margin-top: 60px;
 }
 
 .what__text {
@@ -14,19 +14,17 @@
 }
 
 .for {
-  padding: 60px 0 100px;
+  padding: 20px 0 20px;
   background: #ffd500;
 }
 
 .for__text {
   margin-bottom: 45px;
-
 }
 
 .for__list {
   margin: 0;
   padding: 0;
-  width: 945px;
   flex();
 }
 
@@ -41,6 +39,7 @@
   text-transform: uppercase;
   border: 5px solid #242733;
   border-radius: 15px;
+  margin-bottom 15px
   &:before
     display: block;
     content: "";
@@ -97,29 +96,32 @@
 }
 
 .advantages__item--grey-right, .advantages__item--grey-left {
-  position: relative;
   color: #fff;
   background: #242733;
 }
 
-.advantages__item--grey-right:before {
+.advantages__item--white-right, .advantages__item--white-left {
+  position: relative;
+}
+
+.advantages__content--right:after {
   position: absolute;
   content: '';
   width: 0;
   height: 0;
   border-top: 284px solid #242733;
-  top: 0;
-  left: -150px;
+  top: -10px;
+  right: -115px;
   border-left: 150px solid transparent;
 }
-.advantages__item--grey-left:before {
+.advantages__content--left:after {
   position: absolute;
   content: '';
   width: 0;
   height: 0;
   border-bottom: 284px solid #242733;
-  top:0;
-  right:-150px;
+  top: -294px;
+  left:-115px;
   border-right: 150px solid transparent;
 }
 
@@ -150,7 +152,7 @@
 }
 
 .guarantee {
-  padding-bottom: 60px;
+  padding-bottom: 20px;
   color: #fff;
   background: #242733;
 }

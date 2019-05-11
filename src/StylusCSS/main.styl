@@ -11,15 +11,11 @@
 @import "../Components/Pages/What/what";
 @import "../Components/Pages/Works/works";
 
-
-.logo,
-.header__title,
 .logo,
 .for__item
   &:before
     display: inline-block
     content: ''
-    vertical-align: top
     background-image: url(/images/icons.png)
 
 .consultation__up,
@@ -48,7 +44,6 @@ html
   font-family: 'webAgoraSansPro', sans-serif;
   font-size: 24px;
   font-weight: 100;
-  min-width: 960px;
   color: #242733;
 
 .l-clearfix,
@@ -66,31 +61,24 @@ html
     content: ' ';
     clear: both;
 
-.l-clearfix, .list, .menu, .how__list, .l-wrap, .jobs__item, .advantages__line *{
-  zoom:1;
-}
 
-.l-wrap {
-  width: 960px;
+.l-wrap
   margin: auto;
   padding: 0 10px;
-}
+  @media screen and (min-width 960px)
+    width: 960px;
 
 .l-hidden {
   display: none;
 }
 
-h2 {
-  font-size: 60px;
-  font-weight: 900;
-  line-height: 72px;
-
-  text-transform: uppercase;
-}
-
-.list {
-  padding-left: 60px;
-}
+h2
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  @media screen and (min-width 775px)
+    font-size: 45px;
+    line-height: 72px;
 
 .list__item
   line-height: 1.5;

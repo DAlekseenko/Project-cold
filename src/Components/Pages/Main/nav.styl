@@ -1,71 +1,159 @@
 @import "../../../StylusCSS/colors"
 
-.main-menu {
-  position: fixed;
-  z-index: 500;
-  top: 0;
-  right: 0;
-  left: 0;
-  color: #fff;
-  background: #242733;
-}
+.color_wrapper
+  background-color main-color
+
+.nav-logo
+  background-color white
+  height 30px
+  width 35px
+  margin-left: 15px
+
+.nav-logo::before
+  vertical-align baseline
+
+
+.top-nav
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: main-color;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #FFF;
+  height 50px
+  width 100%
+  @media (min-width: 960px)
+    width 960px
+    margin auto
 
 .menu {
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 48px;
-  width: 70%;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  margin-right: 15px;
   padding: 0;
-  list-style: none;
-  margin: auto;
 }
 
-.menu__item {
-  float: left;
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
 }
 
-.menu__item--phone {
+#menu-toggle {
   display: none;
 }
 
-a {
-  color: inherit;
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
 }
 
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
 .menu__href
-  display: inline-block;
-  padding: 0 16px;
-  position: relative;
+  display: block;
   text-decoration: none;
-  height: 45px;
-  line-height: 45px;
-  color: #ffffff;
+  height: 52px;
+  padding: 0 7px;
+  line-height: 50px;
+  color: #fff;
   transition: all 1s ease 0s;
+  vertical-align: middle;
+
   &:not(.active)
     &:hover
-      opacity:1;
-      -webkit-box-shadow: 0 0 25px #cccccc
-      -moz-box-shadow: 0 0 25px #cccccc;
-      box-shadow: 0 0 25px #cccccc;
-
+      opacity: 1;
+      -webkit-box-shadow: 0 0 15px #cccccc
+      -moz-box-shadow: 0 0 15px #cccccc;
+      box-shadow: 0 0 15px #cccccc;
 
 .menu__href.active
-  color:color-yellow;
-  //&:before ,&:after
-  //    content: "";
-  //    position: absolute;
-  //    width: 45px;
-  //    height: 2px;
-  //    background-color: color-yellow;
-  //    opacity: 0.8;
-  //  &:before
-  //    top: 0;
-  //    left: 10%;
-  //    width 80%
-  //  &:after
-  //    right: 10%;
-  //    bottom: 0;
-  //    width 80%
+  color: color-yellow;
 
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
 
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
 
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 950px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle ~ .menu li a {
+    display: none
+    width: 100%;
+    text-align: center;
+  }
+  .menu__href {
+    height: 49px;
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    height 50px
+    z-index 1
+  }
+  #menu-toggle:checked ~ .menu li a {
+    display: block
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: main-color;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}

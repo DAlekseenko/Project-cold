@@ -63,8 +63,7 @@ export class What extends PageComponent {
                             <br/>Отели
                         </li>
                         <li className="for__item for__item--4">
-                            Гос.<br/>
-                            организации
+                            <br/>Гос. организации
                         </li>
                         <li className="for__item for__item--5">
                             Крупные<br/>
@@ -76,28 +75,22 @@ export class What extends PageComponent {
             <div key={3} className="guarantee" id="guarantee">
                 <div className="guarantee__wrap l-wrap">
                     <h2 className="guarantee__title">
-                        <span className="guarantee__uptitle">Реальная гарантия</span>
-                        <br/>
-                        на выполненные работы
+                        <span className="header-title__line2">Реальная гарантия</span>
+                        <span className="header-title__line3">на выполненные работы</span>
                     </h2>
                     <div className="guarantee__text">
                         <p>
-                            Мы даем гарантию на произведенные работы от 3-х месяцев до 3-x лет.
-                        </p>
-                        <p>
-                            Наши клиенты на самом деле удивляются уровнем сервиса.
+                            Мы даем гарантию на произведенные работы до 3-x лет.
                         </p>
                     </div>
                 </div>
             </div>,
             <div key={4} className="advantages" id="advantages">
                 <h2 className="advantages__title">
-                    <span className="advantages__uptitle">90% КЛИЕНТОВ</span>
-                    <br/>
-                    СТАНОВЯТСЯ ПОСТОЯННЫМИ
+                    <span className="header-title__line3">90% КЛИЕНТОВ<br/>СТАНОВЯТСЯ ПОСТОЯННЫМИ</span>
                 </h2>
                 <div className="advantages__line">
-                    <div className="advantages__item">
+                    <div className="advantages__item advantages__item--white-right">
                         <div className="advantages__content advantages__content--right">
                             <div className="advantages__name">
                                 Опыт наших<br/>
@@ -141,7 +134,7 @@ export class What extends PageComponent {
                             </div>
                         </div>
                     </div>
-                    <div className="advantages__item">
+                    <div className="advantages__item advantages__item--white-left">
                         <div className="advantages__content advantages__content--left">
                             <div className="advantages__name">
                                 Оборудование<br/>
@@ -157,7 +150,7 @@ export class What extends PageComponent {
                     </div>
                 </div>
                 <div className="advantages__line">
-                    <div className="advantages__item">
+                    <div className="advantages__item advantages__item--white-left">
                         <div className="advantages__content advantages__content--right">
                             <div className="advantages__name">
                                 Замена запчастей
