@@ -1,7 +1,7 @@
 import React from 'react';
-import PageLayout from "Components/Decorators/PageLayout";
-import PageComponent from "Components/Decorators/PageComponent";
-import Modal from 'Components/UI/Modal';
+import PageLayout from "../../Decorators/PageLayout";
+import PageComponent from "../../Decorators/PageComponent";
+import Modal from '../../UI/Modal';
 
 export class Price extends PageComponent {
 
