@@ -54,15 +54,6 @@ export class MainPage extends PageComponent {
                 </div>
             </header>
             <div className="clients__wrap l-wrap">
-                {/*<div className="clients__list">*/}
-                {/*<img src="/images/clients/1.png" alt="Clients" className="clients__image"/>*/}
-                {/*<img src="/images/clients/2.png" alt="Clients" className="clients__image"/>*/}
-                {/*<img src="/images/clients/3.png" alt="Clients" className="clients__image"/>*/}
-                {/*<img src="/images/clients/4.png" alt="Clients" className="clients__image"/>*/}
-                {/*<img src="/images/clients/5.png" alt="Clients" className="clients__image"/>*/}
-                {/*<img src="/images/clients/6.png" alt="Clients" className="clients__image"/>*/}
-                {/*<img src="/images/clients/7.png" alt="Clients" className="clients__image"/>*/}
-                {/*</div>*/}
             </div>
             <div className="which">
                 <div className="which__wrap l-wrap">

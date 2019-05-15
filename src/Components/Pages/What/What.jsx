@@ -90,7 +90,7 @@ export class What extends PageComponent {
                     <span className="header-title__line3">90% КЛИЕНТОВ<br/>СТАНОВЯТСЯ ПОСТОЯННЫМИ</span>
                 </h2>
                 <div className="advantages__line">
-                    <div className="advantages__item advantages__item--white-right">
+                    <div className="advantages__item advantages__item--white-left">
                         <div className="advantages__content advantages__content--right">
                             <div className="advantages__name">
                                 Опыт наших<br/>
@@ -123,8 +123,7 @@ export class What extends PageComponent {
                     <div className="advantages__item advantages__item--grey-left">
                         <div className="advantages__content advantages__content--right">
                             <div className="advantages__name">
-                                в вечернее время<br/>
-                                и Выходные
+                                В вечернее время и выходные дни
                             </div>
                             <div className="advantages__text">
                                 <p>
@@ -134,7 +133,7 @@ export class What extends PageComponent {
                             </div>
                         </div>
                     </div>
-                    <div className="advantages__item advantages__item--white-left">
+                    <div className="advantages__item advantages__item--white-right">
                         <div className="advantages__content advantages__content--left">
                             <div className="advantages__name">
                                 Оборудование<br/>

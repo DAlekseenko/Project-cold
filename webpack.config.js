@@ -34,7 +34,6 @@ if (mode === 'production') {
     plugins.push(new webpack.optimize.OccurrenceOrderPlugin());
 }
 
-
 module.exports = {
     entry: ['babel-polyfill', './src/client.js'],
     resolve: {
@@ -46,7 +45,6 @@ module.exports = {
         filename: jsName,
         publicPath
     },
-
     devServer: {
         port: 3333,
         inline: true,

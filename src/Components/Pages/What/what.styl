@@ -1,4 +1,6 @@
 @import "../../../StylusCSS/mixins"
+@import "../../../StylusCSS/colors"
+
 .what {
   padding-bottom: 60px;
   color: #fff;
@@ -11,6 +13,7 @@
 
 .what__text {
   margin-bottom: 45px;
+  text()
 }
 
 .for {
@@ -19,6 +22,7 @@
 }
 
 .for__text {
+  text();
   margin-bottom: 45px;
 }
 
@@ -26,6 +30,7 @@
   margin: 0;
   padding: 0;
   flex();
+  justify-content: center;
 }
 
 .for__item
@@ -39,7 +44,6 @@
   text-transform: uppercase;
   border: 5px solid #242733;
   border-radius: 15px;
-  margin-bottom 15px
   &:before
     display: block;
     content: "";
@@ -84,71 +88,83 @@
   background: #242733;
 }
 
-//.advantages__line {
-//  margin-bottom: 40px;
-//}
-
-.advantages__item {
-  float: left;
-  width: 50%;
-  height: 264px;
+.advantages__item
+  height 284px
   padding: 10px 0;
-}
+  @media (min-width 575px)
+    height 200px
+  @media (min-width 825px)
+    height: 284px;
+    float: left;
+    width: 50%;
 
-.advantages__item--grey-right, .advantages__item--grey-left {
+.advantages__item--grey-right, .advantages__item--grey-left
   color: #fff;
   background: #242733;
-}
+  padding-left 20px
+  @media (min-width 825px)
+    padding 0
+    border-bottom none
 
-.advantages__item--white-right, .advantages__item--white-left {
+.advantages__item--white-right, .advantages__item--white-left
   position: relative;
-}
+  padding-left 20px
+  @media (min-width 825px)
+    padding 0
 
-.advantages__content--right:after {
+
+.advantages__item--white-right:after
   position: absolute;
-  content: '';
-  width: 0;
-  height: 0;
-  border-top: 284px solid #242733;
-  top: -10px;
-  right: -115px;
-  border-left: 150px solid transparent;
-}
-.advantages__content--left:after {
-  position: absolute;
-  content: '';
   width: 0;
   height: 0;
   border-bottom: 284px solid #242733;
-  top: -294px;
-  left:-115px;
+  top: 0;
+  left: 0;
   border-right: 150px solid transparent;
-}
+  @media (min-width 825px)
+    content: '';
 
-.advantages__content {
-  width: 360px;
-}
+.advantages__item--white-left:after
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 284px solid #242733;
+  top: 0;
+  right: 0;
+  border-left: 150px solid transparent;
+  @media (min-width 825px)
+    content: '';
 
-.advantages__content--right {
-  float: right;
-  margin-right: 115px;
-}
+.advantages__content
+  width 90%
+  @media (min-width 825px)
+    width: 300px;
+  @media (min-width 995px)
+    width: 360px;
 
-.advantages__content--left {
-  float: left;
-  margin-left: 115px;
-}
 
-.advantages__name {
-  font-size: 36px;
+.advantages__content--right
+  margin-right: 110px;
+  @media (min-width 825px)
+    margin-right: 152px;
+    float: right;
+
+.advantages__content--left
+  margin-left: 0;
+  @media (min-width 825px)
+    float: left;
+    margin-left: 152px;
+
+.advantages__name
+  font-size: 28px;
   font-weight: 100;
   margin-bottom: 20px;
-  text-transform: uppercase;
-}
+  @media (min-width 995px)
+    font-size: 36px;
 
 .advantages__text {
-  font-size: 18px;
-  line-height: 27px;
+  text();
+  line-height 23px
 }
 
 .guarantee {

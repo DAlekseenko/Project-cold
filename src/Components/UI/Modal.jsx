@@ -8,10 +8,8 @@ export default function Modal({isOpen, toggleModal}) {
         <ReactModal isOpen={isOpen} onRequestClose={toggleModal} ariaHideApp={false}>
             <div className="modal">
                 <div className="modal__text">
-                    <p>
                         Получите бесплатную консультацию специалиста
                         по сервисному обслуживанию вашей системы
-                    </p>
                 </div>
                 <div className="modal__form">
                     <FormFeedback

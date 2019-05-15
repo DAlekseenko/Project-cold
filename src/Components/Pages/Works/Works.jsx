@@ -8,22 +8,17 @@ export class Works extends PageComponent {
         return (
             <div key={1} className="jobs" id="jobs">
                 <div className="jobs__wrap l-wrap">
-                    <h2 className="jobs__title">
-                        Выполненные работы
-                        <span className="jobs__subtitle">
-                        Для корпоративных клиентов
-                    </span>
+                    <h2 className="clients_title">
+                        <span className="header-title__line3">Выполненные работы</span>
+                        <span className="header-title__line2">Для корпоративных клиентов</span>
                     </h2>
                     <div className="jobs__item">
                         <div className="job">
                             <h4 className="job__title">
-                                Объект №1
+                                Склад и продуктовый магазин
                             </h4>
                             <div className="job__text">
-                                <p>
-                                    Проектирование и проведение работ по переоснащению холодильным оборудованием. Работы
-                                    ведутся на данный момент.
-                                </p>
+                                Проектирование и проведение работ по переоснащению холодильным оборудованием.
                             </div>
                             <div className="job__images">
                                 <div className="job__images_wrapper">
@@ -56,7 +51,7 @@ export class Works extends PageComponent {
                     <div className="jobs__item">
                         <div className="job">
                             <h4 className="job__title">
-                                Объект №2
+                                Производственное предприятие
                             </h4>
                             <div className="job__text">
                                 <p>
@@ -88,7 +83,7 @@ export class Works extends PageComponent {
                     <div className="jobs__item">
                         <div className="job">
                             <h4 className="job__title">
-                                Объект №3
+                                Железнодорожные станции
                             </h4>
                             <div className="job__text">
                                 <p>
@@ -99,15 +94,6 @@ export class Works extends PageComponent {
                             </div>
                             <div className="jobs__line">
                                 <div className="jobs__half">
-                                    <div className="job__subtitle">
-                                        Станция №1
-                                    </div>
-                                    <div className="job__text">
-                                        <p>
-                                            Проведение срочного ремонта сплит-<br/>
-                                            системы билетной кассы станции<br/>
-                                        </p>
-                                    </div>
                                     <div className="job__images">
                                         <div className="job__images_wrapper">
                                             <img src="/images/jobs/rzd/1.jpg" width="222" height="124"
@@ -119,20 +105,6 @@ export class Works extends PageComponent {
                                                  alt="оао цппк (ржд)"
                                                  className="job__image"/>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="jobs__half">
-                                    <div className="job__subtitle">
-                                        №2
-                                    </div>
-                                    <div className="job__text">
-                                        <p>
-                                            Усановка новой сплит-системы в<br/>
-                                            билетную кассу
-                                            <br/>
-                                        </p>
-                                    </div>
-                                    <div className="job__images">
                                         <div className="job__images_wrapper">
                                             <img src="/images/jobs/rzd/3.jpg" width="222" height="124"
                                                  alt="оао цппк (ржд)"
@@ -145,17 +117,7 @@ export class Works extends PageComponent {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="jobs__line">
                                 <div className="jobs__half">
-                                    <div className="job__subtitle">
-                                        №3
-                                    </div>
-                                    <div className="job__text">
-                                        <p>
-                                            Установка 3-ех новых сплит-систем
-                                        </p>
-                                    </div>
                                     <div className="job__images">
                                         <div className="job__images_wrapper">
                                             <img src="/images/jobs/rzd/5.jpg" width="222" height="124"
@@ -167,18 +129,6 @@ export class Works extends PageComponent {
                                                  alt="оао цппк (ржд)"
                                                  className="job__image"/>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="jobs__half">
-                                    <div className="job__subtitle">
-                                        №4
-                                    </div>
-                                    <div className="job__text">
-                                        <p>
-                                            Установка новой сплит-системы
-                                        </p>
-                                    </div>
-                                    <div className="job__images">
                                         <div className="job__images_wrapper">
                                             <img src="/images/jobs/rzd/7.jpg" width="222" height="124"
                                                  alt="оао цппк (ржд)"
@@ -195,17 +145,17 @@ export class Works extends PageComponent {
                         </div>
                     </div>
                     <div className="jobs__item">
-                        <div className="jobs__line">
-                            <div className="jobs__half">
-                                <div className="job">
-                                    <div className="job__title">
-                                        Объект №4
-                                    </div>
-                                    <div className="job__text">
-                                        <p>
-                                            Сервисное обслуживание и ремонт сплит-систем и холодильного оборудования.
-                                        </p>
-                                    </div>
+                        <div className="job">
+                            <h4 className="job__title">
+                                Промышленное предприятие
+                            </h4>
+                            <div className="job__text">
+                                <p>
+                                    Сервисное обслуживание и ремонт сплит-систем холодильного оборудования.
+                                </p>
+                            </div>
+                            <div className="jobs__line">
+                                <div className="jobs__half">
                                     <div className="job__images">
                                         <div className="job__images_wrapper">
                                             <img src="/images/jobs/milk/1.jpg" width="222" height="124" alt=""
@@ -217,18 +167,7 @@ export class Works extends PageComponent {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="jobs__half">
-                                <div className="job">
-                                    <div className="job__title">
-                                        Объект №5
-                                    </div>
-                                    <div className="job__text">
-                                        <p>
-                                            Сервисное обслуживание и ремонт сплит-систем
-                                        </p>
-                                    </div>
-                                    <br/>
+                                <div className="jobs__half">
                                     <div className="job__images">
                                         <div className="job__images_wrapper">
                                             <img src="/images/jobs/spec/1.jpg" width="222" height="124" alt="ООО "
@@ -244,40 +183,24 @@ export class Works extends PageComponent {
                         </div>
                     </div>
                     <div className="jobs__item">
-                        <div className="jobs__line">
-                            <div className="jobs__half">
-                                <div className="job">
-                                    <div className="job__title">
-                                        Объект №6
-                                        <span className="job__title-subline"> </span>
-                                    </div>
-                                    <div className="job__text">
-                                        <p>
-                                            <br/>
-                                            Диагностика чиллера (холодильной установки) ледовой арены дворца спорта
-                                        </p>
-                                    </div>
-                                    <div className="job__images">
-                                        <div className="job__images_wrapper">
-                                            <img src="/images/jobs/bagration/1.jpg" width="451" height="253" alt=""
-                                                 className="job__image"/>
-                                        </div>
+                        <div className="job">
+                            <h4 className="job__title">
+                                Дворец спорта
+                            </h4>
+                            <div className="job__text">
+                                <p>
+                                    Диагностика чиллера (холодильной установки) ледовой арены.
+                                    Провдение диагностики 9-ти рефконтейнеров
+                                </p>
+                            </div>
+                            <div className="jobs__line">
+                                <div className="jobs__half">
+                                    <div className="job__images_wrapper">
+                                        <img src="/images/jobs/bagration/1.jpg" width="451" height="253" alt=""
+                                             className="job__image"/>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="jobs__half">
-                                <div className="job">
-                                    <div className="job__title">
-                                        Объект №7
-                                        <span className="job__title-subline"> </span>
-                                    </div>
-                                    <div className="job__text">
-                                        <p>
-                                            <br/>
-                                            Провдение диагностики 9-ти рефконтейнеров<br/>
-                                            <br/>
-                                        </p>
-                                    </div>
+                                <div className="jobs__half">
                                     <div className="job__images">
                                         <div className="job__images_wrapper">
                                             <img src="/images/jobs/custom/1.jpg" width="451" height="253" alt=" "
@@ -291,7 +214,7 @@ export class Works extends PageComponent {
                     <div className="jobs__item">
                         <div className="job">
                             <h4 className="job__title">
-                                Объект №8
+                                Продуктовые магазины
                             </h4>
                             <div className="job__text">
                                 <p>
@@ -334,11 +257,11 @@ export class Works extends PageComponent {
                     <div className="jobs__item">
                         <div className="job">
                             <h4 className="job__title">
-                                Объект №9
+                                Офисное здание
                             </h4>
                             <div className="job__text">
                                 <p>
-                                   Обслуживание систем кондицилнирования
+                                    Обслуживание систем кондиционирования
                                 </p>
                             </div>
                             <div className="job__images">
@@ -379,11 +302,9 @@ export class Works extends PageComponent {
                             </div>
                         </div>
                     </div>
-                    <h2 className="jobs__title">
-                        Выполненные работы
-                        <span className="jobs__subtitle">
-                        Для частных лиц
-                    </span>
+                    <h2 className="clients_title">
+                        <span className="header-title__line3">Выполненные работы</span>
+                        <span className="header-title__line2">Для частных клиентов</span>
                     </h2>
                     <div className="jobs__item">
                         <div className="jobs__line">
@@ -392,9 +313,8 @@ export class Works extends PageComponent {
                                     <div className="job__title">
                                         Объект №1
                                     </div>
-                                    <div className="job__text">
+                                    <div className="job__text --with-height">
                                         <p>
-                                            <br/>
                                             Установка бу сплит-системы, которую клиент самостоятельно демонтировал у
                                             себя из офиса.
                                         </p>
@@ -418,12 +338,9 @@ export class Works extends PageComponent {
                                         Объект №2
                                         <span className="job__title-subline"> </span>
                                     </div>
-                                    <div className="job__text">
+                                    <div className="job__text --with-height">
                                         <p>
-                                            <br/>
-                                            Установка сразу 4-ех сплит-систем Daikin в доме и гостевом доме
-                                            <br/>
-                                            <br/>
+                                            Установка 4-ех сплит-систем Daikin в доме и гостевом доме
                                         </p>
                                     </div>
                                     <div className="job__images">
@@ -450,13 +367,12 @@ export class Works extends PageComponent {
                                     </div>
                                     <div className="job__text">
                                         <p>
-                                            <br/>
                                             Установка новой сплит-систем Daikin
                                         </p>
                                     </div>
                                     <div className="job__images">
                                         <div className="job__images_wrapper">
-                                            <img src="/images/jobs/people/5.jpg" alt="   " className="job__image"/>
+                                            <img src="/images/jobs/people/5.jpg" alt="" className="job__image --ipad"/>
                                         </div>
                                     </div>
                                 </div>
@@ -468,13 +384,12 @@ export class Works extends PageComponent {
                                     </div>
                                     <div className="job__text">
                                         <p>
-                                            <br/>
-                                            Ремонт сплит-системы
+                                            Ремонт сплит-системы Mitsubishi
                                         </p>
                                     </div>
                                     <div className="job__images">
                                         <div className="job__images_wrapper">
-                                            <img src="/images/jobs/people/6.jpg" alt="Боровики" className="job__image"/>
+                                            <img src="/images/jobs/people/6.jpg" alt="Боровики" className="job__image --ipad"/>
                                         </div>
                                     </div>
                                 </div>
@@ -513,28 +428,40 @@ export class Works extends PageComponent {
                             </h4>
                             <div className="job__text">
                                 <p>
-                                    Установка сразу 2-ух сплит-систем в доме
+                                    Установка 2-ух сплит-систем в доме
                                 </p>
                             </div>
-                            <div className="job__images">
-                                <div className="job__image job__my">
-                                    <div className="job__images_wrapper">
-                                        <img src="/images/jobs/people2/ch3.jpeg" width="401" height="182"
-                                             alt="Установка у частных лиц" className="job__image job__image_jpeg"/>
-                                    </div>
-                                    <br/>
-                                    <div className="job__images_wrapper">
-                                        <img src="/images/jobs/people2/ch4.jpeg" width="401" height="182"
-                                             alt="Установка у частных лиц" className="job__image job__image_jpeg"/>
+                            <div className="jobs__half pre_last_image_half">
+                                <div className="jobs__half">
+                                    <div className="job__image">
+                                        <div className="job__images_wrapper">
+                                            <img src="/images/jobs/people2/ch1.jpeg" width="227" height="384"
+                                                 alt="Установка у частных лиц" className="job__image job__image_jpeg"/>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="job__images_wrapper">
-                                    <img src="/images/jobs/people2/ch2.jpeg" width="227" height="384"
-                                         alt="Установка у частных лиц" className="job__image job__image_jpeg"/>
+                                <div className="jobs__half">
+                                    <div className="job__image">
+                                        <div className="job__images_wrapper">
+                                            <img src="/images/jobs/people2/ch3.jpeg" width="401" height="177"
+                                                 alt="Установка у частных лиц" className="job__image job__image_jpeg"/>
+                                        </div>
+                                    </div>
+                                    <div className="job__image">
+                                        <div className="job__images_wrapper">
+                                            <img src="/images/jobs/people2/ch4.jpeg" width="401" height="177"
+                                                 alt="Установка у частных лиц" className="job__image job__image_jpeg"/>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="job__images_wrapper">
-                                    <img src="/images/jobs/people2/ch1.jpeg" width="227" height="384"
-                                         alt="Установка у частных лиц" className="job__image job__image_jpeg"/>
+                            </div>
+                            <div className="jobs__half last_image_half">
+                                <div className="job__image">
+                                    <div className="job__images_wrapper last_image">
+                                        <img src="/images/jobs/people2/ch2.jpeg"
+                                             width="434" height="384"
+                                             alt="Установка у частных лиц" className="job__image job__image_jpeg"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>

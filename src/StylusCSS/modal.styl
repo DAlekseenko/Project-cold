@@ -1,27 +1,49 @@
+@import "./mixins"
+
 .ReactModal__Content--after-open
-  width: 790px
-  margin 25px auto
+  margin 0 auto
   padding 0 !important
-  height 620px
+  top: 0 !important
+  left: 0 !important
+  right: 0 !important
+  bottom: 0 !important
+  @media (min-width: 775px)
+    width: 790px
+    height 500px
+    margin 25px auto
+    top: 40px !important
+    left: 40px !important
+    right: 40px !important
+    bottom: 40px !important
 
 .modal
-  width 790px
-  height 620px
-  padding 50px 70px 50px
+  padding 45px 7px 5px
   text-align center
   color #fff
   background #242733
   box-sizing border-box
+  height 100%
+  @media (min-width: 775px)
+   width 790px
+   height 500px
+   padding 50px 70px 50px
+
   .modal__text
-    font-size: 30px
+    font-size: 18px
     margin-bottom: 30px
+    text()
+
   .modal__form
-    width: 470px
     margin: auto
+    text()
+    @media (min-width: 775px)
+      width: 470px
+
   .modal__button
     margin-right: auto
     margin-left: auto
-  .modal-close 
+
+  .modal-close
     position: absolute
     z-index: 8040
     top: 15px
@@ -30,3 +52,7 @@
     height: 27px
     cursor: pointer
     background-position: -200px 0
+    background-color: white;
+    border-radius: 50%;
+
+

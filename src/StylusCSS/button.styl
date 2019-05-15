@@ -1,3 +1,4 @@
+@import "mixins.styl"
 .i-button {
   font-family: 'webAgoraSansPro', sans-serif;
   font-weight: 100;
@@ -29,7 +30,6 @@
 
 
 .i-button--yellow {
-  font-size: 21px;
   margin-top: 0;
   padding: 12px 0 12px 0;
   color: #242733;
@@ -41,6 +41,7 @@
   background: linear-gradient(to bottom, #fcc701 0%, #e8a804 100%);
   -webkit-box-shadow: inset 0 -1px 0 0 #d9c262;
   box-shadow: inset 0 -1px 0 0 #d9c262;
+  text()
 }
 
 .i-button--yellow:hover {
