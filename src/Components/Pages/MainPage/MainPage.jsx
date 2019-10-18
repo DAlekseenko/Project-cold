@@ -24,7 +24,7 @@ export class MainPage extends PageComponent {
                     </div>
                     <div className="header__phone">
                         <div className="header__phone-number">
-                            +7 (495) 508-07-01
+                            +7(909)953-43-67
                         </div>
                         <Modal isOpen={this.state.isOpen} toggleModal={this.onToggle}/>
                         <span className="i-button i-button__callback" onClick={this.onToggle}>

@@ -1,7 +1,7 @@
 @import "mixins.styl"
 .i-button {
   font-family: 'webAgoraSansPro', sans-serif;
-  font-weight: 100;
+  font-weight: 400;
   display: inline-block;
   width: 100%;
   text-align: center;
@@ -15,18 +15,22 @@
   font-size: 24px;
   font-weight: 400;
   padding: 6px 0;
-  border: 2px solid #242733;
-  color: #fff;
-  background: #242733;
+  border: 1px solid #242733;
+  color: #242733;
+  background: #e8a804;
   cursor pointer
   transition: all 0.5s ease 0s;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fcc701), to(#e8a804));
+  background: -webkit-linear-gradient(top, #fcc701 0%, #e8a804 100%);
+  background: linear-gradient(to bottom, #fcc701 0%, #e8a804 100%);
   @media (min-width: 576px)
     display block
   &:hover
     opacity: 1;
-    -webkit-box-shadow: inset 0 0 15px 0  #cccccc
-    -moz-box-shadow: inset 0 0 15px 0  #cccccc;
-    box-shadow: inset 0 0 15px 0  #cccccc;
+    background: #fcc701;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fcc701), to(#fbbf24));
+    background: -webkit-linear-gradient(top, #fcc701 0%, #fbbf24 100%);
+    background: linear-gradient(to bottom, #fcc701 0%, #fbbf24 100%);
 
 
 .i-button--yellow {

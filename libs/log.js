@@ -6,7 +6,7 @@ const date = (new Date()).toLocaleDateString();
 const options = {
     file: {
         level: 'info',
-        filename: `${process.cwd()}/logs/${date}.log`,
+        filename: `${__dirname}/../logs/${date}.log`,
         handleExceptions: true,
         json: true,
         maxsize: 5242880, // 5MB

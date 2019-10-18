@@ -72,7 +72,7 @@ export class Price extends PageComponent {
                                 <div>2000</div>
                             </div>
                             <div className="price__tr">
-                                <div>Мойка наружного блока мойкой высокого давления (типа Керхер)</div>
+                                <div>Мойка наружного блока, мойкой высокого давления (типа Керхер)</div>
                                 <div>1500</div>
                             </div>
                             <div className="price__tr">
@@ -148,7 +148,7 @@ export class Price extends PageComponent {
                             </div>
                         </div>
                     </div>
-                    <h3 className="prices__quotient">Для корпоратичных клиентов</h3>
+                    <h3 className="prices__quotient">Для корпоративных клиентов</h3>
                     <hr className="prices__hr"/>
                     <div className="prices__content">
                         <div className="prices__text">

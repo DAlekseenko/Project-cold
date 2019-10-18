@@ -10,7 +10,7 @@ export default () =>
                     </div>
                 </div>
                 <div className="footer__phone">
-                    +7 (495) 508-07-01
+                    +7 (909) 953-43-67
                 </div>
             </div>
         </footer>

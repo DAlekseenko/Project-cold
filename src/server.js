@@ -13,14 +13,12 @@ import nocache from './express/nocache'
 import bodyParser from 'body-parser'
 
 import config from '../config';
-
 import logger from '../libs/log';
 
 const app = express();
 
-
 const PORT = config.get('PORT');
-
+const PROD = config.get('mode') === 'production';
 LayoutFactory.setUrl(config.get('url'))
 
 app.use(cookieParser());
@@ -41,10 +39,27 @@ app.use(express.static('public', {
     maxage: '1Y',
 }));
 
+app.use((req, res, next) => {
+    const redirect = (res) => {
+        res.writeHead(
+            302,
+            {location: 'https://proekt-xolod.ru/'}
+        )
+        res.end();
+    }
+    const host = req.headers.host;
+    if (host.includes('www')) {
+        return redirect(res)
+    }
+    if (PROD && req.protocol === 'http') {
+        return redirect(res)
+    }
+    next();
+})
 app.use('*', nocache);
 app.use('/', Router);
 
-if(config.get('mode') === 'production') {
+if (PROD) {
     LayoutFactory
         .setJsFile(manifest['main.js'])
         .setCssFile(manifest['main.css'])

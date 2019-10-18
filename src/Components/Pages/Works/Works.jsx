@@ -190,7 +190,7 @@ export class Works extends PageComponent {
                             <div className="job__text">
                                 <p>
                                     Диагностика чиллера (холодильной установки) ледовой арены.
-                                    Провдение диагностики 9-ти рефконтейнеров
+                                    Проведение диагностики 9-ти рефконтейнеров
                                 </p>
                             </div>
                             <div className="jobs__line">
