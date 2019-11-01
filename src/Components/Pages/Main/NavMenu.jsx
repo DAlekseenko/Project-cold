@@ -4,7 +4,7 @@ import {NavLink} from 'react-router-dom';
 export default class Main extends Component {
     render() {
         return (
-            <div className="color_wrapper">
+            <div className="color_wrapper fixed-nav">
                 <section className="top-nav">
                     <div className='logo nav-logo'/>
                     <input id="menu-toggle" type="checkbox"/>

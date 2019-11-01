@@ -576,6 +576,11 @@
 .color_wrapper {
   background-color: #242733;
 }
+.fixed-nav {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
 .nav-logo {
   background-color: #fff;
   height: 30px;
@@ -1236,6 +1241,19 @@
 }
 .--ipad {
   width: 100%;
+}
+.not_found {
+  height: calc(100vh - 108px);
+}
+.not_found__number {
+  margin: 125px auto 0 auto;
+  width: 400px;
+  font-size: 200px;
+  height: 200px;
+}
+.not_found__text {
+  margin: 0 auto;
+  width: 550px;
 }
 .logo:before,
 .for__item:before {

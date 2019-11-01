@@ -25,8 +25,10 @@ router.get('*', (req, res) => {
 
     const context = {
         pageTitleSetter: (title) => {
+            console.log(title);
             Layout.setTitle(title)
         }, setNotFound: () => {
+            console.log('404');
             res.writeHead(404)
         }
     };

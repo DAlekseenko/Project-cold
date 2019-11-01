@@ -1,0 +1,8 @@
+.not_found {
+  height: calc(100vh - 108px);
+}
+.not_found_title {
+  margin: 125px auto;
+  width: 400px;
+  font-size: 200px;
+}

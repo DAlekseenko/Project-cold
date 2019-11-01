@@ -25,7 +25,7 @@ const routes = [
     {
         path: '/prices',
         component: Price,
-        title: 'Наши работы',
+        title: 'Стоимость',
     },
     {
         path: '*',

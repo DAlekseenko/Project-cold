@@ -18,7 +18,7 @@ export class Price extends PageComponent {
         return (
             <div className="prices" id="prices">
                 <div className="prices__wrap l-wrap">
-                    <h2 className="prices__title">
+                    <h2 className="prices__title what__title">
                         СТОИОМОСТЬ УСЛУГ
                     </h2>
                     <h3 className="prices__quotient">Для физических лиц</h3>
