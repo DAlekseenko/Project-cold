@@ -19,11 +19,13 @@ const routes = [
     },
     {
         path: '/works',
+        exact: true,
         component: Works,
         title: 'Наши работы',
     },
     {
         path: '/prices',
+        exact: true,
         component: Price,
         title: 'Стоимость',
     },

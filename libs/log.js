@@ -2,7 +2,17 @@ import winston from 'winston';
 import config from '../config';
 
 const mode = config.get('NODE_ENV') && config.get('NODE_ENV').trim();
-const date = (new Date()).toLocaleDateString();
+
+const d = new Date();
+
+const day = d.getDate();
+
+const month = d.getMonth() + 1;
+
+const year = d.getFullYear();
+
+const date = `${year}-${month}-${day}`
+
 const options = {
     file: {
         level: 'info',

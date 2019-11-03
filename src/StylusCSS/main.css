@@ -1243,17 +1243,41 @@
   width: 100%;
 }
 .not_found {
-  height: calc(100vh - 108px);
+  height: calc(100vh - 145px);
+}
+@media (min-width: 529px) {
+  .not_found {
+    height: calc(100vh - 108px);
+  }
 }
 .not_found__number {
   margin: 125px auto 0 auto;
-  width: 400px;
-  font-size: 200px;
-  height: 200px;
+  width: 170px;
+  font-size: 100px;
+  height: 100px;
+}
+@media (min-width: 768px) {
+  .not_found__number {
+    width: 357px;
+    font-size: 200px;
+    height: 200px;
+  }
 }
 .not_found__text {
+  width: 300px;
+  font-size: 27px;
   margin: 0 auto;
-  width: 550px;
+}
+@media (min-width: 768px) {
+  .not_found__text {
+    width: 540px;
+    font-size: 50px;
+  }
+}
+.-main-link {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
 }
 .logo:before,
 .for__item:before {

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /login
+Sitemap: https://proekt-xolod.ru/sitemap.xml

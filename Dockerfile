@@ -7,11 +7,11 @@ WORKDIR /app
 COPY package*.json ./
 
 RUN npm i npm@latest -g
-RUN npm install
+RUN npm install --only=production
 
 COPY ./ /app
 
-RUN npm run build
+RUN npm run front-build
 RUN npm run server-build
 RUN rm -rf node_modules
 
