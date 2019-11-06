@@ -12,7 +12,8 @@ const month = d.getMonth() + 1;
 const year = d.getFullYear();
 
 const date = `${year}-${month}-${day}`
-
+console.log(__dirname);
+console.log(`${__dirname}/../logs/${date}.log`)
 const options = {
     file: {
         level: 'info',

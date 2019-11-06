@@ -13,6 +13,7 @@ COPY ./ /app
 
 RUN npm run front-build
 RUN npm run server-build
+RUN ll -a
 RUN rm -rf node_modules
 
 FROM node:alpine
