@@ -2,9 +2,11 @@ import Layout from './Layout'
 
 export default new class LayoutFactory {
 
-    url = '';
-    cssFile = 'assets/styles.css';
-    jsFile = 'assets/bundle.js';
+    constructor() {
+        this.url = '';
+        this.cssFile = 'assets/styles.css';
+        this.jsFile = 'assets/bundle.js';
+    }
 
     setUrl(url) {
         this.url = url;
@@ -28,6 +30,7 @@ export default new class LayoutFactory {
         this.cssFile = fileName;
         return this;
     }
+
     /**
      * @return {Layout}
      */

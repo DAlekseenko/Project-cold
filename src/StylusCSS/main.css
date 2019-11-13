@@ -1279,6 +1279,29 @@
   width: 300px;
   margin: 0 auto;
 }
+@media (min-width: 775px) {
+  .contacts_layout {
+    height: calc(100vh - 108px);
+  }
+}
+.contacts_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.map_wrapper {
+  min-height: 320px;
+  margin-left: -10px;
+}
+@media (min-width: 340px) {
+  .map_wrapper {
+    margin-left: 0;
+  }
+}
+@media (min-width: 775px) {
+  .map_wrapper {
+    margin-left: 20px;
+  }
+}
 .logo:before,
 .for__item:before {
   display: inline-block;

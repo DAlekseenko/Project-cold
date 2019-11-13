@@ -1,0 +1,11 @@
+.contacts_wrapper {
+  display: flex;
+}
+.map_wrapper {
+  margin-left: -10px;
+}
+@media (min-width: 340px) {
+  .map_wrapper {
+    margin-left: 0;
+  }
+}

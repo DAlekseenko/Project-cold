@@ -1,15 +1,12 @@
 export default class Layout {
 
-    store = null;
-    url = '';
-    title = '';
-    jsFile = '';
-    cssFile = '';
-
     constructor(jsFile, cssFile, url) {
+        this.store = null;
         this.jsFile = jsFile;
         this.cssFile = cssFile;
         this.url = url;
+        this.title = '';
+
     }
 
     setStore(store) {
@@ -30,7 +27,8 @@ export default class Layout {
                 <meta name="google-site-verification" content="a_Z_vZQpCBCsW5ynHVzODUQHfKhPlE43TE5OGFF-kuM"/>
                 <link rel="shortcut icon" href="${this.url}/images/favicon.ico" type="image/x-icon">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <meta name="description" 
+                <meta 
+                name="description" 
                 content="Ремонт, сервисное обслуживание, а также поставка оборудования всех марок по Москве и МО. Низкие цены и гарантия качества. Работают только профессионалы.">
                 <meta name="keywords" content="сервисное обслуживание кондиционеров, ремонт кондиционеров, монтаж сервисное обслуживание кондиционеров, сервисное обслуживание кондиционера москва, кондиционер ремонт обслуживание, кондиционер сервис техническое обслуживание кондиционеров, техническое обслуживание кондиционеров цена, стоимость технического обслуживания кондиционеров, кондиционер техобслуживание">
                 <title>${this.title}</title>

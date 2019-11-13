@@ -34,7 +34,7 @@ export class MainPage extends PageComponent {
                     <div className="header__title">
                         <h1 className="header-title">
                         <span className="header-title__line1">
-                            Сервисное обслуживание и ремонт систем
+                            Проектирование, сервисное обслуживание и ремонт систем
                         </span>
                             <span className="header-title__line2">
                             Кондиционирования
