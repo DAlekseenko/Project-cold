@@ -3,6 +3,7 @@ import What from './Components/Pages/What/What'
 import Works from './Components/Pages/Works/Works'
 import NotFound from './Components/Pages/NotFound/NotFound'
 import Price from "./Components/Pages/Price/Price";
+import Contacts from "./Components/Pages/Contacts/Contacts"
 
 const routes = [
     {
@@ -28,6 +29,13 @@ const routes = [
         exact: true,
         component: Price,
         title: 'Стоимость',
+    },
+    {
+        path: '/contacts',
+        exact: true,
+        component: Contacts,
+        title: 'Установка и Ремонт Кондиционеров в Москве - Контакты',
+        description: 'Сервисное обслуживание систем вентиляции, и кондиционирования воздуха в городских инженерных сетях'
     },
     {
         path: '*',

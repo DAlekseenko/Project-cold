@@ -1,5 +1,6 @@
 import winston from 'winston';
 import config from '../config';
+import path from 'path';
 
 const mode = config.get('NODE_ENV') && config.get('NODE_ENV').trim();
 
@@ -16,7 +17,7 @@ const date = `${year}-${month}-${day}`
 const options = {
     file: {
         level: 'error',
-        filename: `${__dirname}/logs/${date}.log`,
+        filename: path.join(process.cwd(), 'logs', `${date}.log`),
         handleExceptions: true,
         json: true,
         maxsize: 5242880, // 5MB
