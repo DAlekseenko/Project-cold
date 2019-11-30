@@ -25,7 +25,7 @@ const options = {
         colorize: false,
     },
     console: {
-        level: mode === 'development' ? null : 'warn',
+        level: mode === 'development' ? 'debug' : 'warn',
         handleExceptions: true,
         json: false,
         colorize: true,

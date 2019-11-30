@@ -19,9 +19,7 @@ export class MainPage extends PageComponent {
         return <Fragment>
             <header className="header wide-bg" id="header">
                 <div className="header__wrap l-wrap">
-                    <div className="header__logo">
-                        <div className="logo">Проект Холод</div>
-                    </div>
+                    <div className="header__logo"/>
                     <div className="header__phone">
                         <div className="header__phone-number">
                             +7(909)953-43-67

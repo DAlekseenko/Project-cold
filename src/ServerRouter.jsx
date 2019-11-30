@@ -24,8 +24,9 @@ router.get('*', (req, res) => {
     const store = createStore(rootReducer);
 
     const context = {
-        pageTitleSetter: (title) => {
+        pageTagsSetter: (title, description) => {
             Layout.setTitle(title)
+            Layout.setDescription(description)
         }, setNotFound: () => {
             res.writeHead(404)
         }

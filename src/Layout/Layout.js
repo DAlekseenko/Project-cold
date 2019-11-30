@@ -6,7 +6,7 @@ export default class Layout {
         this.cssFile = cssFile;
         this.url = url;
         this.title = '';
-
+        this.description = '';
     }
 
     setStore(store) {
@@ -15,6 +15,10 @@ export default class Layout {
 
     setTitle(title) {
         this.title = title;
+    }
+
+    setDescription(description) {
+        this.description = description;
     }
 
     render(componentHtml) {
@@ -29,7 +33,7 @@ export default class Layout {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <meta 
                 name="description" 
-                content="Ремонт, сервисное обслуживание, а также поставка оборудования всех марок по Москве и МО. Низкие цены и гарантия качества. Работают только профессионалы.">
+                content="${this.description}">
                 <meta name="keywords" content="сервисное обслуживание кондиционеров, ремонт кондиционеров, монтаж сервисное обслуживание кондиционеров, сервисное обслуживание кондиционера москва, кондиционер ремонт обслуживание, кондиционер сервис техническое обслуживание кондиционеров, техническое обслуживание кондиционеров цена, стоимость технического обслуживания кондиционеров, кондиционер техобслуживание">
                 <title>${this.title}</title>
                 <link rel="stylesheet" href="${this.cssFile}">
