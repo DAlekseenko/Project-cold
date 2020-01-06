@@ -1,0 +1,38 @@
+version: '2'
+services:
+  conditioner:
+    image: localhost:5000/project-cold:latest
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./logs:/app/logs
+    links:
+      - mongoDB:mongo
+    depends_on:
+      - mongoDB
+
+  mongoDB:
+    image: mongo
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${{USERNAME}}
+      - MONGO_INITDB_ROOT_PASSWORD=${{PASWWORD}}
+    ports:
+      - 27017:27017
+    volumes:
+      - ./db:/data/db
+    command: mongod
+
+  registry:
+    restart: always
+    image: registry:2
+    ports:
+      - 5000:5000
+    environment:
+      REGISTRY_AUTH: htpasswd
+      REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
+      REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
+    volumes:
+      - /path/data:/var/lib/registry
+      - /path/auth:/auth

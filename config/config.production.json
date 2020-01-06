@@ -5,7 +5,7 @@
   "mode": "production",
   "cssName": "styles-[hash].css",
   "jsName": "bundle-[hash].js",
-  "mailTo": "5080701@list.ru",
+  "mailTo": "info@proekt-xolod.ru",
   "mongo": {
     "prefix": "mongodb://",
     "port": 27017,

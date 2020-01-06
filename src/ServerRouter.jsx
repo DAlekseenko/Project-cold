@@ -46,12 +46,12 @@ router.post('/request-call', async (req, res) => {
     const {phone, name} = req.body
 
     const mailOptions = {
-        from: 'account.condish@yandex.ru',
+        from: 'robot@proekt-xolod.ru',
         to: config.get('mailTo'),
         subject: 'Заявка с сайта кондиционеров',
-        html: 'Перезвоните мне пожалуйста!\n\n' +
-        'Телефон: <b>' + phone + '</b>\n\n' +
-        'Имя: <b>'+name + '</b>'
+        html: `Перезвоните мне пожалуйста!\n\n` +
+            `Телефон: <b>${phone}</b>\n\n` +
+            `Имя: <b>${name}</b>`
     }
 
     try {

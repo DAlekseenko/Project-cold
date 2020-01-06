@@ -2,16 +2,16 @@
   "name": "conditioners",
   "description": "Air conditioner sales project",
   "repository": "https://github.com/DAlekseenko/Conditioners.git",
-  "version": "2.0.4",
+  "version": "2.0.8",
   "scripts": {
     "start": "export NODE_ENV=production && node develop.app.js",
     "dev": "export NODE_ENV=development &&  webpack-dev-server --mode development --colors --content-base public --watch --devtool cheap-module-inline-source-map",
     "front-build": "export NODE_ENV=production && webpack -p",
     "server-build": "export NODE_ENV=production && webpack -p --progress --config ./webpack.server.config.js",
     "nodemon": "export NODE_ENV=development && nodemon develop.app.js",
-    "docker:build": "docker build -t project-cold:$npm_package_version .",
-    "docker:tag": "docker tag project-cold:$npm_package_version 62.109.23.8:5000/project-cold:$npm_package_version",
-    "docker:push": "docker push 62.109.23.8:5000/project-cold:$npm_package_version",
+    "docker:build": "docker build -t project-cold:latest .",
+    "docker:tag": "docker tag project-cold:latest 62.109.23.8:5000/project-cold:latest",
+    "docker:push": "docker push 62.109.23.8:5000/project-cold:latest",
     "docker:publish": "npm run docker:build && npm run docker:tag && npm run docker:push"
   },
   "dependencies": {

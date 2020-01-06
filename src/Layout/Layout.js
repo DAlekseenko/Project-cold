@@ -27,7 +27,7 @@ export default class Layout {
         <html lang="ru">
             <head>
                 <meta charset="utf-8">
-                <meta name="yandex-verification" content="2d6d60ee527ebcc4"/>
+                <meta name="yandex-verification" content="939609526306d3f8" />
                 <meta name="google-site-verification" content="a_Z_vZQpCBCsW5ynHVzODUQHfKhPlE43TE5OGFF-kuM"/>
                 <link rel="shortcut icon" href="${this.url}/images/favicon.ico" type="image/x-icon">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
