@@ -21,7 +21,6 @@ jobs:
         sudo cp daemon.json /etc/docker
         cat /etc/docker/daemon.json
         sudo service docker restart
-        docker login -u root --password test https://${{ env.HOST }}   
         docker build -t ${{ env.HOST }}/${{ env.TAG }} .
         docker push ${{ env.HOST }}/${{ env.TAG }}
         
