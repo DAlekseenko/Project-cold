@@ -1,0 +1,30 @@
+name: Delivery
+
+env:
+  REGISTRY: "62.109.23.8:5000"
+  TAG: project-cold:latest
+on: 
+  push:
+    branches: 
+      - master
+    
+   
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps: 
+    - uses: actions/checkout@v1
+    - name: Run build & push application
+      run: |
+        docker login -u root -p test ${{ env.TAG }} 
+        docker build -t ${{ env.TAG }} .
+        docker tag ${{ env.TAG }} ${{ env.HOST }}/${{ env.TAG }}
+        docker push ${{ env.HOST }}:${{ env.PORT }}/${{ env.TAG }}
+        
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build] 
+    steps:
+      - name: Start app in server
+        run: echo ${{ env }}
+   
