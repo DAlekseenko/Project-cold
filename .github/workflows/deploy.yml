@@ -18,7 +18,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run build & push application
       run: |
-        docker login -u root -p test ${{ env.HOST }} 
+        docker login -u root --password test http://${{ env.HOST }}   
         docker build -t ${{ env.HOST }}/${{ env.TAG }} .
         docker push ${{ env.HOST }}/${{ env.TAG }}
         
