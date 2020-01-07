@@ -1,3 +1,4 @@
+require('dotenv').config()
 import mongoose from 'mongoose';
 import config from '../config'
 import logger from "./log"
@@ -6,7 +7,6 @@ const {
     MONGO_USER,
     MONGO_PASS
 } = process.env;
-
 const uri = `mongodb://${MONGO_USER}:${MONGO_PASS}@${config.get('mongo:host')}`;
 
 (async () => {

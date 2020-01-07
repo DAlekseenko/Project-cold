@@ -21,7 +21,7 @@ WORKDIR /app
 
 COPY --from=builder ./app /app
 
-RUN npm install --save babel-polyfill dotenv
+RUN npm install --save babel-polyfill
 
 EXPOSE 3000
 
