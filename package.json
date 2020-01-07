@@ -29,6 +29,7 @@
     "compression": "^1.7.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
     "express": "~4.15.5",
     "history": "^4.7.2",
     "immutable": "^3.8.2",

@@ -7,10 +7,7 @@
   "jsName": "bundle.js",
   "mailTo": "dalekseenko88@gmail.com",
   "mongo": {
-    "prefix": "mongodb://",
-    "port": 27017,
-    "host": "0.0.0.0",
-    "base": "admin",
+    "host": "0.0.0.0:27017:admin",
     "options": {
       "useNewUrlParser": true,
       "reconnectTries": 30,

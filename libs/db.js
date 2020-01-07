@@ -2,8 +2,12 @@ import mongoose from 'mongoose';
 import config from '../config'
 import logger from "./log"
 
-const uri = `${config.get('mongo:prefix')}${config.get('mongo:user')}:${config.get('mongo:password')}@` +
-    `${config.get('mongo:host')}:${config.get('mongo:port')}/${config.get('mongo:base')}`;
+const {
+    MONGO_USER,
+    MONGO_PASS
+} = process.env;
+
+const uri = `mongodb://${MONGO_USER}:${MONGO_PASS}@${config.get('mongo:host')}`;
 
 (async () => {
     try {

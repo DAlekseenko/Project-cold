@@ -7,15 +7,17 @@
   "jsName": "bundle-[hash].js",
   "mailTo": "info@proekt-xolod.ru",
   "mongo": {
-    "prefix": "mongodb://",
-    "port": 27017,
-    "host": "mongo",
-    "base": "admin",
+    "host": "mongo:27017:admin",
     "options": {
       "useNewUrlParser": true,
       "reconnectTries": 30,
       "reconnectInterval": 500,
       "bufferMaxEntries": 0
     }
+  },
+  "yandex": {
+    "host": "smtp.yandex.ru",
+    "port": 465,
+    "secure": true
   }
 }

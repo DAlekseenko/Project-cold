@@ -7,5 +7,4 @@ index.htm
 style.css
 dist/
 ssl/
-config/db-secret.json
-config/mail-config.json
+.env
