@@ -17,7 +17,7 @@ export default class Main extends Component {
                         <li><NavLink to="/works" className="menu__href">Наши работы</NavLink></li>
                         <li><NavLink to="/prices" className="menu__href">Стоимость</NavLink></li>
                         <li><NavLink to="/contacts" className="menu__href">Контакты</NavLink></li>
-                        <li><a href="#how" className="menu__href goto">Отзывы</a></li>
+                        {/*<li><a href="#how" className="menu__href goto">Отзывы</a></li>*/}
                     </ul>
                 </section>
             </div>
