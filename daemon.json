@@ -1,5 +1,7 @@
 {
+  "storage-driver": "aufs",
+  "debug": true,
   "insecure-registries": [
-    "62.109.63.8:5000"
+    "62.109.23.8:5000"
   ]
 }
