@@ -7,7 +7,7 @@
   "jsName": "bundle-[hash].js",
   "mailTo": "info@proekt-xolod.ru",
   "mongo": {
-    "host": "mongo:27017:admin",
+    "host": "mongo:27017/admin",
     "options": {
       "useNewUrlParser": true,
       "reconnectTries": 30,

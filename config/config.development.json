@@ -7,7 +7,7 @@
   "jsName": "bundle.js",
   "mailTo": "dalekseenko88@gmail.com",
   "mongo": {
-    "host": "0.0.0.0:27017:admin",
+    "host": "0.0.0.0:27017/admin",
     "options": {
       "useNewUrlParser": true,
       "reconnectTries": 30,
