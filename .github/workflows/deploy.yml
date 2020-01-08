@@ -12,30 +12,31 @@ on:
     
    
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps: 
-    - uses: actions/checkout@v1
-    - name: Run build & push application
-      run: |
-        sudo cp daemon.json /etc/docker
-        cat /etc/docker/daemon.json
-        sudo service docker restart
-        docker login -u ${{ secrets.REGISTRY_USER }} -p ${{ secrets.REGISTRY_PASSWORD }} https://${{ env.HOST }}
-        docker build -t ${{ env.HOST }}/${{ env.TAG }} .
-        docker push ${{ env.HOST }}/${{ env.TAG }}
-        
+#  build:
+  #    runs-on: ubuntu-latest
+  #    steps:
+  #    - uses: actions/checkout@v1
+  #    - name: Run build & push application
+  #      run: |
+  #        sudo cp daemon.json /etc/docker
+  #        cat /etc/docker/daemon.json
+  #        sudo service docker restart
+  #        docker login -u ${{ secrets.REGISTRY_USER }} -p ${{ secrets.REGISTRY_PASSWORD }} https://${{ env.HOST }}
+  #        docker build -t ${{ env.HOST }}/${{ env.TAG }} .
+  #        docker push ${{ env.HOST }}/${{ env.TAG }}
+
   deploy:
     runs-on: ubuntu-latest
-    needs: [build] 
+    #    needs: [build]
     steps:
       - uses: actions/checkout@v1
       - name: Start app in server
         run: |
           'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-          eval $(ssh-agent -s)
-          echo ${{ secrets.SSH_PRIVATE_KEY }} | tr -d '\r' | ssh-add -
           mkdir -p ~/.ssh
+          eval $(ssh-agent -s)
+          '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+          echo ${{ secrets.SSH_PRIVATE_KEY }} | tr -d '\r' | ssh-add -
           chmod 700 ~/.ssh
           ssh root@$62.109.23.8
           docker-compose pull conditioner
