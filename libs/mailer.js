@@ -1,4 +1,4 @@
-import {parsed} from './helper'
+import {parsed} from './servUtils'
 import mailer from "nodemailer"
 import config from '../config'
 
