@@ -1,0 +1,236 @@
+.what {
+  padding-bottom: 60px;
+  color: #fff;
+  background: url("/images/what-bg.jpg") 0 0 repeat;
+}
+.what__title {
+  margin-top: 60px;
+}
+.what__text {
+  margin-bottom: 45px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .what__text {
+    font-size: 24px;
+  }
+}
+.for {
+  padding: 20px 0 20px;
+  background: #ffd500;
+}
+.for__text {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 45px;
+}
+@media (min-width: 768px) {
+  .for__text {
+    font-size: 24px;
+  }
+}
+.for__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.for__item {
+  font-size: 18px;
+  line-height: 1;
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  text-align: center;
+  vertical-align: top;
+  text-transform: uppercase;
+  border: 5px solid #242733;
+  border-radius: 15px;
+}
+.for__item:before {
+  display: block;
+  content: "";
+  vertical-align: top;
+  background: url("/images/icons.png");
+  width: 100px;
+  height: 100px;
+  margin: 10px auto 0;
+}
+.for__item--1:before {
+  background-position: 0 -50px;
+}
+.for__item--2:before {
+  background-position: -100px -50px;
+}
+.for__item--3:before {
+  background-position: -200px -50px;
+}
+.for__item--4:before {
+  background-position: 0 -150px;
+}
+.for__item--5:before {
+  background-position: -100px -150px;
+}
+.advantages__title {
+  font-size: 56px;
+  text-align: center;
+}
+.advantages__uptitle {
+  font-size: 105px;
+  display: inline-block;
+  height: 70px;
+  margin-bottom: 40px;
+  padding: 15px 20px;
+  color: #fff;
+  background: #242733;
+}
+.advantages__item {
+  height: 284px;
+  padding: 10px 0;
+}
+@media (min-width: 575px) {
+  .advantages__item {
+    height: 200px;
+  }
+}
+@media (min-width: 825px) {
+  .advantages__item {
+    height: 284px;
+    float: left;
+    width: 50%;
+  }
+}
+.advantages__item--grey-right,
+.advantages__item--grey-left {
+  color: #fff;
+  background: #242733;
+  padding-left: 20px;
+}
+@media (min-width: 825px) {
+  .advantages__item--grey-right,
+  .advantages__item--grey-left {
+    padding: 0;
+    border-bottom: none;
+  }
+}
+.advantages__item--white-right,
+.advantages__item--white-left {
+  position: relative;
+  padding-left: 20px;
+}
+@media (min-width: 825px) {
+  .advantages__item--white-right,
+  .advantages__item--white-left {
+    padding: 0;
+  }
+}
+.advantages__item--white-right:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 284px solid #242733;
+  top: 0;
+  left: 0;
+  border-right: 150px solid transparent;
+}
+@media (min-width: 825px) {
+  .advantages__item--white-right:after {
+    content: '';
+  }
+}
+.advantages__item--white-left:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 284px solid #242733;
+  top: 0;
+  right: 0;
+  border-left: 150px solid transparent;
+}
+@media (min-width: 825px) {
+  .advantages__item--white-left:after {
+    content: '';
+  }
+}
+.advantages__content {
+  width: 90%;
+}
+@media (min-width: 825px) {
+  .advantages__content {
+    width: 300px;
+  }
+}
+@media (min-width: 995px) {
+  .advantages__content {
+    width: 360px;
+  }
+}
+.advantages__content--right {
+  margin-right: 110px;
+}
+@media (min-width: 825px) {
+  .advantages__content--right {
+    margin-right: 152px;
+    float: right;
+  }
+}
+.advantages__content--left {
+  margin-left: 0;
+}
+@media (min-width: 825px) {
+  .advantages__content--left {
+    float: left;
+    margin-left: 152px;
+  }
+}
+.advantages__name {
+  font-size: 28px;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+@media (min-width: 995px) {
+  .advantages__name {
+    font-size: 36px;
+  }
+}
+.advantages__text {
+  font-size: 18px;
+  line-height: 1.4;
+  line-height: 23px;
+}
+@media (min-width: 768px) {
+  .advantages__text {
+    font-size: 24px;
+  }
+}
+.guarantee {
+  padding-bottom: 20px;
+  color: #fff;
+  background: #242733;
+}
+.guarantee__title {
+  font-size: 45px;
+  line-height: 1;
+  margin-top: 60px;
+  margin-bottom: 24px;
+  padding-left: 20px;
+}
+.guarantee__uptitle {
+  font-size: 60px;
+  line-height: 40px;
+  display: inline-block;
+  height: 40px;
+  margin-left: -20px;
+  padding: 10px 20px;
+  color: #242733;
+  background: #ffd500;
+}
+.guarantee__text {
+  margin-left: 20px;
+}
+.guarantee__text p {
+  padding-bottom: 10px;
+}

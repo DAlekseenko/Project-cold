@@ -13,14 +13,13 @@ export class Price extends PageComponent {
         this.setState({isOpen: !this.state.isOpen})
     }
 
-
     render() {
         return (
             <div className="prices" id="prices">
                 <div className="prices__wrap l-wrap">
-                    <h2 className="prices__title what__title">
-                        СТОИОМОСТЬ УСЛУГ
-                    </h2>
+                    <h1 className="prices__title what__title">
+                        <span className="header-title__line2">{this.h1}</span>
+                    </h1>
                     <h3 className="prices__quotient">Для физических лиц</h3>
                     <hr className="prices__hr"/>
                 </div>

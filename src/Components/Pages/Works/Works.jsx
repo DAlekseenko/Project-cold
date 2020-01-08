@@ -8,10 +8,9 @@ export class Works extends PageComponent {
         return (
             <div key={1} className="jobs" id="jobs">
                 <div className="jobs__wrap l-wrap">
-                    <h2 className="clients_title">
-                        <span className="header-title__line3">Выполненные работы</span>
-                        <span className="header-title__line2">Для корпоративных клиентов</span>
-                    </h2>
+                    <h1 className="clients_title">
+                        <span className="header-title__line2">{this.h1}</span>
+                    </h1>
                     <div className="jobs__item">
                         <div className="job">
                             <h4 className="job__title">

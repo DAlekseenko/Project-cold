@@ -8,9 +8,9 @@ export class What extends PageComponent {
         return [
             <div key={1} className="what" id="what">
                 <div className="what__wrap l-wrap">
-                    <h2 className="what__title">
-                        ЧТО МЫ ДЕЛАЕМ
-                    </h2>
+                    <h1 className="what__title">
+                        <span className="header-title__line2">{this.h1}</span>
+                    </h1>
                     <div className="what__text">
                         <p>
                             Наша компания проводит весь комплекс работ по обслуживанию и ремонту <br/>
