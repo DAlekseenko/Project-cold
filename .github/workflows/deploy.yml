@@ -3,10 +3,9 @@ name: Delivery
 env:
   HOST: "62.109.23.8:5000"
   TAG: project-cold:latest
-on: 
-  push:
-    tags:
-      - v*
+on:
+  release:
+    types: [published]
 
 
 jobs:
@@ -30,7 +29,7 @@ jobs:
       - name: Start app in server
         run: |
           sshpass -V
-          sshpass -p ${{ secrets.SSH_PASSWORD }} ssh -o StrictHostKeychecking=no root@62.109.23.8 "cd app && docker-compose pull conditioner &&  docker-compose up -d --force-recreate conditioner && exit"
+          sshpass -p ${{ secrets.SSH_PASSWORD }} ssh -o StrictHostKeychecking=no root@62.109.23.8 "cd app && docker-compose pull conditioner && docker-compose up -d --force-recreate conditioner && exit"
 
 
 
