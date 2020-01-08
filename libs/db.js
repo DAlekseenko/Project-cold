@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import config from '../config'
 import logger from "./log"
 
+require('dotenv').config({debug: true});
 const result = dotenv.config({debug: true})
 
 if (result.error) {
@@ -10,7 +11,7 @@ if (result.error) {
 }
 
 console.log(result.parsed)
-
+console.log(process.env);
 const {
     MONGO_USER,
     MONGO_PASS
