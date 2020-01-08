@@ -1,7 +1,15 @@
-require('dotenv').config()
+import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import config from '../config'
 import logger from "./log"
+
+const result = dotenv.config({debug: true})
+
+if (result.error) {
+    throw result.error
+}
+
+console.log(result.parsed)
 
 const {
     MONGO_USER,
