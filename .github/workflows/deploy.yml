@@ -33,11 +33,11 @@ jobs:
       - name: Start app in server
         run: |
           which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
-          mkdir -p ~/.ssh
           eval $(ssh-agent -s)
-          [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-          echo ${{ secrets.SSH_PRIVATE_KEY }} | tr -d '\r' | ssh-add -
+          ssh-add <(echo ${{ secrets.SSH_PRIVATE_KEY }})
+          mkdir -p ~/.ssh
           chmod 700 ~/.ssh
-          ssh root@$62.109.23.8
-          docker-compose pull conditioner
-          docker-compose up -d --force-recreate conditioner
+          [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+          ssh root@$62.109.23.8 "docker-compose pull conditioner &&  docker-compose up -d --force-recreate conditioner && exit"
+
+
