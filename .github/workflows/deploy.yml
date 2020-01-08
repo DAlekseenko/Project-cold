@@ -32,12 +32,14 @@ jobs:
       - uses: actions/checkout@v1
       - name: Start app in server
         run: |
-          which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
-          eval $(ssh-agent -s)
-          echo ${{ secrets.SSH_PRIVATE_KEY }} | tr -d '\r' | ssh-add -
-          mkdir -p ~/.ssh
-          chmod 700 ~/.ssh
-          [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+          sshpass -V
+          export SSHPASS=${{ secrets.SSH_PASSWORD }}
           ssh root@$62.109.23.8 "docker-compose pull conditioner &&  docker-compose up -d --force-recreate conditioner && exit"
+#          which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )
+#          eval $(ssh-agent -s)
+#          echo ${{ secrets.SSH_PRIVATE_KEY }} | tr -d '\r' | ssh-add -
+#          mkdir -p ~/.ssh
+#          chmod 700 ~/.ssh
+#          [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
 
 
