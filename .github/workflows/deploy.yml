@@ -4,8 +4,9 @@ env:
   HOST: "62.109.23.8:5000"
   TAG: project-cold:latest
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - v*
 
 
 jobs:
