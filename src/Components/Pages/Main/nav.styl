@@ -59,6 +59,7 @@
 .menu-button,
 .menu-button::before,
 .menu-button::after {
+  content: '';
   display: block;
   background-color: #fff;
   position: absolute;
@@ -69,14 +70,13 @@
 }
 
 .menu-button::before {
-  content: '';
   margin-top: -8px;
 }
 
 .menu-button::after {
-  content: '';
   margin-top: 8px;
 }
+
 .menu__href
   display: block;
   text-decoration: none;
@@ -137,7 +137,7 @@
 
 
 #menu-toggle:checked + .menu-button-container .menu-button::before {
-  margin-top: 0px;
+  margin-top: 0;
   transform: rotate(405deg);
 }
 
@@ -146,7 +146,7 @@
 }
 
 #menu-toggle:checked + .menu-button-container .menu-button::after {
-  margin-top: 0px;
+  margin-top: 0;
   transform: rotate(-405deg);
 }
 
@@ -154,6 +154,7 @@
   .menu-button-container {
     display: flex;
   }
+
   .menu {
     position: absolute;
     top: 0;
@@ -164,6 +165,7 @@
     justify-content: center;
     align-items: center;
   }
+
   #menu-toggle ~ .menu li {
     height: 0;
     margin: 0;
@@ -171,23 +173,70 @@
     border: 0;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
+
   #menu-toggle ~ .menu li a {
     display: none
     width: 100%;
     text-align: center;
   }
+
   .menu__href {
     height: 49px;
   }
+
   #menu-toggle:checked ~ .menu li {
     border: 1px solid #333;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
     height 50px
     z-index 1
   }
+
   #menu-toggle:checked ~ .menu li a {
     display: block
   }
+
+  .sub-menu-toggle {
+    position: absolute;
+    right: 23px
+    top: 23px
+    width 20px
+    height 20px
+  }
+
+  .sub-menu-toggle:before,
+  .sub-menu-toggle:after {
+    content: '';
+    background-color: #fff;
+    height: 3px;
+    width: 15px;
+    border-radius: 2px;
+  }
+  .sub-control-visible:before,
+  .sub-control-visible:after {
+    display block
+  }
+
+  .sub-menu-toggle::before {
+    transform: rotate(310deg);
+    margin-left 8px
+    margin-top 2px
+  }
+
+  .sub-menu-toggle::after {
+    transform: rotate(-310deg);
+    margin-top -3px
+  }
+
+  .sub-control-open::before {
+    transform: rotate(405deg);
+    margin-top 0
+  }
+
+  .sub-control-open::after {
+    transform: rotate(-405deg);
+    margin-top: -3px;
+  }
+
   .menu > li {
     display: flex;
     justify-content: center;
@@ -197,7 +246,50 @@
     color: white;
     background-color: main-color;
   }
+
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
+  }
+
+  .dropdown {
+    display none
+    visibility unset
+    opacity 1
+    margin-top: 50px;
+    background #242733
+    width 100%
+  }
+
+  .dropdown li {
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    width 100%
+    transition none !important
+    display none
+  }
+
+  .my-node-enter-done li {
+    display block
+  }
+
+  .dropdown-open {
+    height 500px !important
+  }
+
+  .menu-dropdown-open {
+    height calc(100vh - 50px)
+    overflow-y scroll
+    display block
+  }
+
+  .my-node-enter-done li {
+    border: 1px solid #333 !important;
+    height 33px !important
+  }
+
+  .sub-control-visible {
+    display block
   }
 }

@@ -4,7 +4,7 @@ import Works from './Components/Pages/Works/Works'
 import NotFound from './Components/Pages/NotFound/NotFound'
 import Price from "./Components/Pages/Price/Price";
 import Contacts from "./Components/Pages/Contacts/Contacts"
-import Container from "./Components/Pages/WhatSubPages/Container"
+import Container from "./Components/Pages/WhatSubPages/Design"
 
 const routes = [
     {

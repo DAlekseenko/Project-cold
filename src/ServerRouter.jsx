@@ -14,6 +14,7 @@ import Custom from "../models/custom"
 import {preparePhone} from "../libs/helper"
 import mailer from '../libs/mailer'
 import config from '../config';
+import createBrowserHistory from "history/createBrowserHistory"
 
 const router = express.Router({})
 
@@ -31,11 +32,12 @@ router.get('*', (req, res) => {
             res.writeHead(404)
         }
     };
+
     const content = renderToString(
         <Provider store={store}>
-            <StaticRouter location={req.url} context={context}>
-                {renderRoutes(routes)}
-            </StaticRouter>
+                <StaticRouter location={req.url} context={context}>
+                    {renderRoutes(routes)}
+                </StaticRouter>
         </Provider>
     );
     res.end(Layout.render(content));

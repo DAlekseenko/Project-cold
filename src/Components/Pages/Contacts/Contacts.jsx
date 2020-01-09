@@ -23,7 +23,7 @@ export class Contacts extends PageComponent {
     render() {
         return (<div className="contacts_layout">
                 <div className="prices__wrap l-wrap">
-                    <h1 className="prices__title what__title">
+                    <h1 className="what__title">
                         <span className="header-title__line2">{this.h1}</span>
                     </h1>
                     <div className="contacts_wrapper">
