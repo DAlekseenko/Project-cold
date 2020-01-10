@@ -44,7 +44,6 @@ router.get('*', (req, res) => {
 });
 
 router.post('/request-call', async (req, res) => {
-
     const {phone, name} = req.body
 
     const mailOptions = {

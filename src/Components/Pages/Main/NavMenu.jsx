@@ -38,56 +38,69 @@ export default function Main() {
                         <CSSTransition in={open} timeout={200} classNames="my-node">
                             <ul className="dropdown">
                                 <li>
-                                    <NavLink to="/what/design" className="menu__href">Проектирование
-                                        вентиляции</NavLink>
+                                    <NavLink to="/what/design" className="menu__href">
+                                        Проектирование систем вентиляции
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/what/ventilation-installation" className="menu__href">Монтаж
-                                        вентиляции</NavLink>
+                                    <NavLink to="/what/ventilation-installation" className="menu__href">
+                                        Монтаж систем вентиляции
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/what/ventilation-service" className="menu__href">Обслуживание систем
-                                        вентиляции</NavLink>
+                                    <NavLink to="/what/ventilation-service" className="menu__href">
+                                        Обслуживание систем вентиляции
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/what/ventilation-repair" className="menu__href">Ремонт систем
-                                        вентиляции</NavLink>
+                                    <NavLink to="/what/ventilation-repair" className="menu__href">
+                                        Ремонт систем вентиляции
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/what/ventilation-install" className="menu__href">Установка
-                                        кондиционеров</NavLink>
+                                    <NavLink to="/what/install-conditioners" className="menu__href">
+                                        Установка кондиционеров
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/what/diagnostics-conditioners" className="menu__href">Ремонт
-                                        кондиционеров</NavLink>
+                                    <NavLink to="/what/diagnostics-conditioners" className="menu__href">
+                                        Ремонт кондиционеров
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/what/clean-conditioners" className="menu__href">Чистка
-                                        кондиционеров</NavLink>
+                                    <NavLink to="/what/clean-conditioners" className="menu__href">
+                                        Чистка кондиционеров
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/what/service-conditioners" className="menu__href">Заправка
-                                        кондиционеров</NavLink>
+                                    <NavLink to="/what/service-conditioners" className="menu__href">
+                                        Заправка кондиционеров
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/what/vrv-service" className="menu__href">Монтаж и ремонт VRV и VRF
-                                        Систем</NavLink>
+                                    <NavLink to="/what/vrv-service" className="menu__href">
+                                        Монтаж и ремонт VRV и VRF систем
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/what/refrigeration-service" className="menu__href">Ремонт холодильного
-                                        оборудования</NavLink>
+                                    <NavLink to="/what/refrigeration-service" className="menu__href">
+                                        Ремонт холодильного оборудования
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/what/chillers-service" className="menu__href">Ремонт чиллеров и
-                                        файнколов</NavLink>
+                                    <NavLink to="/what/chillers-service" className="menu__href">
+                                        Ремонт чиллеров и файнколов
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/what/chiller-install" className="menu__href">Монтаж чиллеров и
-                                        файнколов</NavLink>
+                                    <NavLink to="/what/chiller-install" className="menu__href">
+                                        Монтаж чиллеров и файнколов
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/what/split-install" className="menu__href">Установка сплит
-                                        систем</NavLink>
+                                    <NavLink to="/what/split-install" className="menu__href">
+                                        Установка сплит систем
+                                    </NavLink>
                                 </li>
                             </ul>
                         </CSSTransition>

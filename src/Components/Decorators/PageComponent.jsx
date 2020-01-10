@@ -14,7 +14,7 @@ export default class PageComponent extends PureComponent {
         return typeof document !== 'undefined';
     }
 
-    componentWillMount() {
+    componentDidMount() {
         if (this.isBrowser()) {
             window.scrollTo(0, 0);
             document.title = this.title;

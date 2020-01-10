@@ -215,6 +215,7 @@
   border-radius: 5px;
   background: #000;
   background: rgba(0,0,0,0.7);
+  height: 20px;
 }
 .success__message {
   margin-top: 30px;
@@ -1404,13 +1405,14 @@
 }
 .sub_service_image {
   width: 100%;
+  margin-top: 0;
 }
 .design-img {
   height: 250px;
 }
 @media (min-width: 450px) {
   .design-img {
-    height: 400px;
+    height: 440px;
   }
 }
 .for__item:before {

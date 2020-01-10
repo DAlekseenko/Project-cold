@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-
+const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
@@ -37,7 +37,7 @@ if (mode === 'production') {
 module.exports = {
     entry: ['babel-polyfill', './src/client.js'],
     resolve: {
-        modules: ['node_modules','src'],
+        modules: ['node_modules', 'src'],
         extensions: ['.json', '.js', '.jsx', '.styl']
     },
     output: {
@@ -45,10 +45,13 @@ module.exports = {
         filename: jsName,
         publicPath
     },
+    devtool: 'eval-source-map',
     devServer: {
         port: 3333,
         inline: true,
-        headers: {'Access-Control-Allow-Origin': '*'}
+        headers: {'Access-Control-Allow-Origin': '*'},
+        contentBase: [path.join(process.cwd(), 'public')],
+        host: '0.0.0.0',
     },
     module: {
         rules: [
@@ -80,6 +83,8 @@ module.exports = {
                 loader: 'json-loader'
             },
         ]
-    },
+    }
+    ,
     plugins
-};
+}
+;

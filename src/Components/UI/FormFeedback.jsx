@@ -24,10 +24,6 @@ export class FormFeedback extends PureComponent {
         errors: {}
     };
 
-    componentWillReceiveProps(nextProps) {
-        nextProps.errors && this.setState({errors: nextProps.errors});
-    }
-
     _onChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value,
@@ -66,6 +62,7 @@ export class FormFeedback extends PureComponent {
     render() {
         const {formClass, inputWrapClass, inputClass, buttonWrapClass, buttonClass, message, loading} = this.props;
 
+        const {errors} = this.state
         return (
             <form className={formClass} onSubmit={this._onSubmit} onInvalid={this._onInValid}>
                 <div className={inputWrapClass}>
@@ -73,31 +70,31 @@ export class FormFeedback extends PureComponent {
                            onChange={this._onChange}
                            className={classNames({
                                [inputClass]: !!inputClass,
-                               'form__input--error': this.state.errors['name']
+                               'form__input--error': !!errors.name
                            })}
                            required
                            maxLength={50}
                            name="name"
-                           disabled={!!message || loading}
+                           disabled={loading}
                            placeholder="Имя"/>
-                    {this.state.errors['name'] && <label className="error">{this.state.errors['name']}</label>}
+                    {errors && errors.name && <label className="error">{errors.name}</label>}
                 </div>
                 <div className="form__line">
                     <InputMask
                         mask={"+7 (999) 999-99-99"}
                         className={classNames({
                             [inputClass]: !!inputClass,
-                            'form__input--error': this.state.errors['phone']
+                            'form__input--error': !!errors.phone
                         })}
                         name="phone"
                         type="tel"
                         placeholder={"+7 (***) ***-**-**"}
                         value={this.state.value}
-                        disabled={!!message || loading}
+                        disabled={loading}
                         maskChar='*'
                         required
                         onChange={this._onChange}/>
-                    {this.state.errors['phone'] && <label className="error">{this.state.errors['phone']}</label>}
+                    {errors && errors.phone && <label className="error">{errors.phone}</label>}
                 </div>
                 <div className={buttonWrapClass}>
                     <button className={buttonClass} disabled={!!message || loading}>Оставить заявку</button>
@@ -111,7 +108,6 @@ export class FormFeedback extends PureComponent {
 export default connect(
     ({feedBack}) => ({
         loading: feedBack.get('loading'),
-        errors: feedBack.get('errors'),
         message: feedBack.get('successMessage'),
     }), {requestCall}
 )(FormFeedback);

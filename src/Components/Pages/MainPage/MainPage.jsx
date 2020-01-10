@@ -2,7 +2,6 @@ import React, {Fragment} from 'react';
 import PageLayout from "../../Decorators/PageLayout";
 
 import PageComponent from "../../Decorators/PageComponent";
-import FormFeedback from "../../UI/FormFeedback";
 import Modal from '../../UI/Modal';
 import Consultation from "../../UI/Consultation"
 

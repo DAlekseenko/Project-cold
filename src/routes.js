@@ -4,7 +4,16 @@ import Works from './Components/Pages/Works/Works'
 import NotFound from './Components/Pages/NotFound/NotFound'
 import Price from "./Components/Pages/Price/Price";
 import Contacts from "./Components/Pages/Contacts/Contacts"
-import Container from "./Components/Pages/WhatSubPages/Design"
+import Design from "./Components/Pages/WhatSubPages/Design"
+import VentilationInstall from "./Components/Pages/WhatSubPages/VentilationInstall"
+import VentilationService from "./Components/Pages/WhatSubPages/VentilationService"
+import VentilationRepair from "./Components/Pages/WhatSubPages/VentilationRepair"
+import ConditionersInstall from "./Components/Pages/WhatSubPages/ConditionersInstall"
+import ConditionerService from "./Components/Pages/WhatSubPages/ConditionerService"
+import ConditionerClean from "./Components/Pages/WhatSubPages/ConditionerClean"
+import ConditionerRefueling from "./Components/Pages/WhatSubPages/ConditionerRefueling"
+import VRV from "./Components/Pages/WhatSubPages/VRV"
+import Container from "./Components/Pages/WhatSubPages/New"
 
 const routes = [
     {
@@ -26,7 +35,7 @@ const routes = [
     {
         path: '/what/design',
         exact: true,
-        component: Container,
+        component: Design,
         title: 'Проектирование Вентиляции в Москве и Области',
         description: 'Проводим проектирование вентиляции для обьектов и зданий &#9997 Компания Проект Холод предоставляет большой спектр услуг в сфере вентиляционных систем &#10054',
         h1: 'Проектирование Вентиляции'
@@ -34,7 +43,7 @@ const routes = [
     {
         path: '/what/ventilation-installation',
         exact: true,
-        component: Container,
+        component: VentilationInstall,
         title: 'Монтаж Вентиляции в Москве | Расчет Естественной Вентиляции',
         description: 'Сделаем монтаж вентиляции быстро и качественно &#9996 Компания Проект Холод предоставляет большой спектр услуг в сфере вентиляционных систем &#10054',
         h1: 'Монтаж Вентиляции'
@@ -42,7 +51,7 @@ const routes = [
     {
         path: '/what/ventilation-service',
         exact: true,
-        component: Container,
+        component: VentilationService,
         title: 'Обслуживание Вентиляции | Дезинфекция Воздуховодов',
         description: 'Проводим полное сервисное обслуживание вентиляции &#9997 Компания Проект Холод предоставляет большой спектр услуг в сфере вентиляционных систем &#10054',
         h1: 'Обслуживание Систем Вентиляции'
@@ -50,15 +59,15 @@ const routes = [
     {
         path: '/what/ventilation-repair',
         exact: true,
-        component: Container,
+        component: VentilationRepair,
         title: 'Ремонт Систем Вентиляции в Москве - Диагностика Неисправностей',
         description: 'Проводим ремонт вентиляции быстро и качественно &#9996 Компания Проект Холод предоставляет большой спектр услуг в сфере вентиляционных систем &#10054',
         h1: 'Ремонт Систем Вентиляции'
     },
     {
-        path: '/what/ventilation-install',
+        path: '/what/install-conditioners',
         exact: true,
-        component: Container,
+        component: ConditionersInstall,
         title: 'Установка Кондиционеров в Москве и Области',
         description: 'Проводим монтаж кондиционеров для объектов и зданий &#9997 Компания Проект Холод предоставляет большой спектр услуг в сфере вентиляционных систем &#10054',
         h1: 'Установка Кондиционеров'
@@ -66,7 +75,7 @@ const routes = [
     {
         path: '/what/diagnostics-conditioners',
         exact: true,
-        component: Container,
+        component: ConditionerService,
         title: 'Ремонт Кондиционеров в Москве - Диагностика Неисправностей',
         description: 'Проводим ремонт кондиционеров быстро и качественно &#9996 Компания Проект Холод предоставляет большой спектр услуг в сфере кондиционирования &#10054',
         h1: 'Ремонт Кондиционеров'
@@ -74,7 +83,7 @@ const routes = [
     {
         path: '/what/clean-conditioners',
         exact: true,
-        component: Container,
+        component: ConditionerClean,
         title: 'Чистка Кондиционеров в Москве и Области',
         description: 'Проводим чистку и полную дезинфекцию кондиционеров &#9997 Компания Проект Холод предоставляет большой спектр услуг в сфере кондиционирования &#10054',
         h1: 'Чистка Кондиционеров'
@@ -82,7 +91,7 @@ const routes = [
     {
         path: '/what/service-conditioners',
         exact: true,
-        component: Container,
+        component: ConditionerRefueling,
         title: 'Заправка Кондиционера Фреоном по Доступным Ценам',
         description: 'Опытные мастера проведут заправку кондиционеров быстро и качественно &#9996 Компания Проект Холод предоставляет полный цикл обслуживания кондиционеров &#10054',
         h1: 'Заправка Кондиционеров'
@@ -90,7 +99,7 @@ const routes = [
     {
         path: '/what/vrv-service',
         exact: true,
-        component: Container,
+        component: VRV,
         title: 'Монтаж VRV Систем | Ремонт VRF Систем Кондиционирования',
         description: 'Проводим монтаж и ремонт VRF и VRF систем кондиционирования &#9997 Компания Проект Холод предоставляет большой спектр услуг в сфере вентиляционных систем &#10054',
         h1: 'Монтаж и Ремонт VRV и VRF Систем'

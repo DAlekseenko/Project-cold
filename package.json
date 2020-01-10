@@ -5,7 +5,7 @@
   "version": "3.0.5",
   "scripts": {
     "start": "export NODE_ENV=production && node develop.app.js",
-    "dev": "export NODE_ENV=development &&  webpack-dev-server --mode development --colors --content-base public --watch --devtool cheap-module-inline-source-map",
+    "dev": "export NODE_ENV=development &&  webpack-dev-server --mode development --watch",
     "nodemon": "export NODE_ENV=development && nodemon develop.app.js",
     "front-build": "export NODE_ENV=production && webpack -p",
     "server-build": "export NODE_ENV=production && webpack -p --progress --config ./webpack.server.config.js"
@@ -38,8 +38,8 @@
     "pug": "2.0.0-beta11",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-input-mask": "^2.0.2",
-    "react-modal": "^3.5.1",
+    "react-input-mask": "^2.0.4",
+    "react-modal": "^3.11.1",
     "react-redux": "^5.0.7",
     "react-router": "^5.1.2",
     "react-router-config": "^5.1.1",
