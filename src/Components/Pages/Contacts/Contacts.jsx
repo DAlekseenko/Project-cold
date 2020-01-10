@@ -1,5 +1,13 @@
 import * as React from 'react';
-import {YMaps, Map, Placemark} from "react-yandex-maps";
+import {
+    FullscreenControl,
+    GeolocationControl,
+    Map,
+    Placemark,
+    RouteButton,
+    YMaps,
+    ZoomControl
+} from "react-yandex-maps";
 import PageComponent from "../../Decorators/PageComponent"
 import PageLayout from "../../Decorators/PageLayout"
 
@@ -36,6 +44,10 @@ export class Contacts extends PageComponent {
                             <YMaps>
                                 <Map state={mapData}>
                                     {coordinates.map((coordinate, i) => <Placemark key={i} geometry={coordinate}/>)}
+                                    <ZoomControl/>
+                                    <RouteButton/>
+                                    <FullscreenControl/>
+                                    <GeolocationControl/>
                                 </Map>
                             </YMaps>
                         </div>
