@@ -7,6 +7,7 @@ import Img from "./Components/Img"
 import PriceList from "./Components/PriceList"
 import Content from "./Components/Content"
 import Consultation from "../../UI/Consultation"
+import Breadcrumbs from "../../UI/Breadcrumbs"
 
 class ConditionerClean extends PageComponent {
 
@@ -14,7 +15,7 @@ class ConditionerClean extends PageComponent {
 
     priceList = [
         {
-            name: 'в зависимости от сложности',
+            name: 'зависит от сложности',
             price: 'от 550 руб'
         },
     ];
@@ -23,6 +24,7 @@ class ConditionerClean extends PageComponent {
         return (
             <Container>
                 <Header h1={this.h1}/>
+                <Breadcrumbs title={this.h1}/>
                 <Img src={this.src} addClass={'design-img'} title={this.h1}/>
                 <PriceList header='Стоимость чистки кондиционера' list={this.priceList}/>
                 <Content>
@@ -82,7 +84,6 @@ class ConditionerClean extends PageComponent {
 
                     <h3>У кого можно заказать чистку кондиционеров в Москве?</h3>
                     <p>
-
                         Наша компания поможет избавить климатическую систему любой сложности и назначения от жира, пыли,
                         бактерий и прочих инородных накоплений, препятствующих нормальной работе и создающих угрозу
                         санитарному состоянию объекта. У нас можно недорого заказать очистку домашнего и промышленного

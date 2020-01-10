@@ -12,8 +12,11 @@ import ConditionersInstall from "./Components/Pages/WhatSubPages/ConditionersIns
 import ConditionerService from "./Components/Pages/WhatSubPages/ConditionerService"
 import ConditionerClean from "./Components/Pages/WhatSubPages/ConditionerClean"
 import ConditionerRefueling from "./Components/Pages/WhatSubPages/ConditionerRefueling"
+import RefrigerationService from "./Components/Pages/WhatSubPages/RefrigerationService"
+import ChillerService from "./Components/Pages/WhatSubPages/ChillerService"
+import ChillerInstall from "./Components/Pages/WhatSubPages/ChillerInstall"
+import SplitInstall from "./Components/Pages/WhatSubPages/SplitInstall"
 import VRV from "./Components/Pages/WhatSubPages/VRV"
-import Container from "./Components/Pages/WhatSubPages/New"
 
 const routes = [
     {
@@ -107,7 +110,7 @@ const routes = [
     {
         path: '/what/refrigeration-service',
         exact: true,
-        component: Container,
+        component: RefrigerationService,
         title: 'Монтаж и Ремонт Холодильного Оборудования в Москве и Области',
         description: 'Ремонт и монтаж промышленных холодильников быстро и качественно &#9996 Компания Проект Холод предоставляет услуги сервиса в сфере холодильного оборудования &#10054',
         h1: 'Ремонт Холодильного Оборудования'
@@ -115,7 +118,7 @@ const routes = [
     {
         path: '/what/chillers-service',
         exact: true,
-        component: Container,
+        component: ChillerService,
         title: 'Ремонт Чиллеров и Файнколов в Москве и Области',
         description: 'Проводим ремонт и диагностику чиллеров и файнколов &#9997 Компания Проект Холод предоставляет большой спектр услуг в сфере вентиляционных систем &#10054',
         h1: 'Ремонт Чиллеров и Файнколов'
@@ -123,7 +126,7 @@ const routes = [
     {
         path: '/what/chiller-install',
         exact: true,
-        component: Container,
+        component: ChillerInstall,
         title: 'Монтаж Чиллера Цена | Установка Файнколов в Москве и Области',
         description: 'Установка чиллеров и файнколов быстро и качественно &#9997 Компания Проект Холод - это большой спектр услуг в сфере вентиляционных систем &#10054',
         h1: 'Монтаж Чиллеров и Файнколов'
@@ -131,7 +134,7 @@ const routes = [
     {
         path: '/what/split-install',
         exact: true,
-        component: Container,
+        component: SplitInstall,
         title: 'Установка Сплит Систем в Москве и Области',
         description: 'Установка и ремонт сплит-систем для обьектов и зданий &#9997 Компания Проект Холод предоставляет большой спектр услуг в сфере вентиляционных систем &#10054',
         h1: 'Установка Сплит Систем'

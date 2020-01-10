@@ -7,6 +7,7 @@ import Img from "./Components/Img"
 import PriceList from "./Components/PriceList"
 import Content from "./Components/Content"
 import Consultation from "../../UI/Consultation"
+import Breadcrumbs from "../../UI/Breadcrumbs"
 
 class ConditionersInstall extends PageComponent {
 
@@ -23,6 +24,7 @@ class ConditionersInstall extends PageComponent {
         return (
             <Container>
                 <Header h1={this.h1}/>
+                <Breadcrumbs title={this.h1}/>
                 <Img src={this.src} addClass={'design-img'} title={this.h1}/>
                 <PriceList header='Стоимость установочных работ' list={this.priceList}/>
                 <Content>
