@@ -24,12 +24,13 @@ const contactData = [
     'ООО "ПРОЕКТ ХОЛОД"',
     'Адрес: 125367, г Москва, проезд Врачебный, 10',
     '+7 (909) 953-43-67',
-    '5080701@list.ru'
+    'info@proekt-xolod.ru'
 ]
 
 export class Contacts extends PageComponent {
     render() {
-        return (<div className="contacts_layout">
+        return (
+            <div className="contacts_layout">
                 <div className="prices__wrap l-wrap">
                     <h1 className="what__title">
                         <span className="header-title__line2">{this.h1}</span>
