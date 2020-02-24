@@ -1,21 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-<url>
-  <loc>https://proekt-xolod.ru/</loc>
-</url>
-<url>
-  <loc>https://proekt-xolod.ru/what</loc>
-</url>
-<url>
-  <loc>https://proekt-xolod.ru/works</loc>
-</url>
-<url>
-  <loc>https://proekt-xolod.ru/prices</loc>
-</url>
-
+    <url>
+        <loc>https://proekt-xolod.ru/</loc>
+    </url>
+    <url>
+        <loc>https://proekt-xolod.ru/what</loc>
+    </url>
+    <url>
+        <loc>https://proekt-xolod.ru/works</loc>
+    </url>
+    <url>
+        <loc>https://proekt-xolod.ru/prices</loc>
+    </url>
+    <url>
+        <loc>https://proekt-xolod.ru/what/design</loc>
+    </url>
+    <url>
+        <loc>https://proekt-xolod.ru/what/ventilation-installation</loc>
+    </url>
+    <url>
+        <loc>https://proekt-xolod.ru/what/ventilation-service</loc>
+    </url>
+    <url>
+        <loc>https://proekt-xolod.ru/what/ventilation-repair</loc>
+    </url>
+    <url>
+        <loc>https://proekt-xolod.ru/what/install-conditioners</loc>
+    </url>
+    <url>
+        <loc>https://proekt-xolod.ru/what/diagnostics-conditioners</loc>
+    </url>
+    <url>
+        <loc>https://proekt-xolod.ru/what/clean-conditioners</loc>
+    </url>
+    <url>
+        <loc>https://proekt-xolod.ru/what/service-conditioners</loc>
+    </url>
+    <url>
+        <loc>https://proekt-xolod.ru/what/vrv-service</loc>
+    </url>
+    <url>
+        <loc>https://proekt-xolod.ru/what/refrigeration-service</loc>
+    </url>
+    <url>
+        <loc>https://proekt-xolod.ru/what/chillers-service</loc>
+    </url>
+    <url>
+        <loc>https://proekt-xolod.ru/what/chiller-install</loc>
+    </url>
+    <url>
+        <loc>https://proekt-xolod.ru/what/split-install</loc>
+    </url>
 </urlset>
