@@ -11,7 +11,6 @@ import Breadcrumbs from "../../UI/Breadcrumbs"
 
 class ChillerInstall extends PageComponent {
 
-
     src = "/images/service/fon_block1.jpg"
 
     priceList = [
