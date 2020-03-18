@@ -21,6 +21,11 @@ const PORT = config.get('PORT');
 const PROD = config.get('mode') === 'production';
 LayoutFactory.setUrl(config.get('url'))
 
+const redirect = (res) => {
+    res.writeHead(302, {location: 'https://proekt-xolod.ru/'})
+    res.end();
+}
+
 app.use(cookieParser());
 
 app.use(bodyParser.urlencoded({
@@ -40,20 +45,12 @@ app.use(express.static('public', {
 }));
 
 app.use((req, res, next) => {
-    const redirect = (res) => {
-        res.writeHead(
-            302,
-            {location: 'https://proekt-xolod.ru/'}
-        )
-        res.end();
-    }
-    const host = req.headers.host;
-    if (host.includes('www')) {
-        return redirect(res)
-    }
-    if (PROD && req.protocol === 'http') {
-        return redirect(res)
-    }
+    // if (PROD) {
+    //     const host = req.headers.host;
+    //     if (req.protocol === 'http' || host.includes('www')){
+    //         return redirect(res)
+    //     }
+    // }
     next();
 })
 app.use('*', nocache);
