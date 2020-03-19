@@ -45,12 +45,12 @@ app.use(express.static('public', {
 }));
 
 app.use((req, res, next) => {
-    // if (PROD) {
-    //     const host = req.headers.host;
-    //     if (req.protocol === 'http' || host.includes('www')){
-    //         return redirect(res)
-    //     }
-    // }
+    if (PROD) {
+        const host = req.headers.host;
+        if (req.protocol === 'http' || host.includes('www')) {
+            return redirect(res)
+        }
+    }
     next();
 })
 app.use('*', nocache);
