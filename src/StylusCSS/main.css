@@ -44,6 +44,7 @@
   text-decoration: none;
   border: 0;
   outline: none;
+  box-shadow: 0 0 10px #242733;
 }
 .i-button__callback {
   display: none;
@@ -361,10 +362,13 @@
   }
 }
 .header__phone-number {
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 28px;
+  font-weight: 500;
   margin-bottom: 40px;
   letter-spacing: 1px;
+  background: #e8a804;
+  color: #242733;
+  box-shadow: 0 0 10px #242733;
 }
 .header__title {
   position: relative;
@@ -860,13 +864,6 @@
     margin: auto;
   }
 }
-.footer__logo {
-  width: 300px;
-  margin-top: 20px;
-}
-.footer__logo .logo {
-  font-size: 24px;
-}
 .cp {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -876,16 +873,26 @@
     margin-bottom: 20px;
   }
 }
-.footer__phone {
-  width: 210px;
+
+.footer__info {
+  font-size: 28px;
   margin-bottom: 20px;
 }
+
 @media (min-width: 575px) {
-  .footer__phone {
+  .footer__info {
     margin-top: 20px;
-    margin-bottom: 0;
   }
 }
+
+.footer__info:first-child {
+  margin-top: 20px;
+}
+
+.footer__copy {
+  margin-left: 10px;
+}
+
 .social {
   width: 50px;
   height: 50px;
@@ -893,6 +900,7 @@
   background-image: url("/images/social.png");
   background-position: -100px -50px;
 }
+
 .prices__hr {
   height: 4px;
   border: none;
@@ -1360,11 +1368,11 @@
   width: 100%;
 }
 .not_found {
-  height: calc(100vh - 145px);
+  height: calc(100vh - 175px);
 }
 @media (min-width: 529px) {
   .not_found {
-    height: calc(100vh - 108px);
+    height: calc(100vh - 72px);
   }
 }
 .not_found__number {
@@ -1398,7 +1406,7 @@
 }
 @media (min-width: 775px) {
   .contacts_layout {
-    height: calc(100vh - 108px);
+    height: calc(100vh - 72px);
   }
 }
 .contacts_wrapper {

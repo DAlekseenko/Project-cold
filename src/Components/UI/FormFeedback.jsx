@@ -36,7 +36,7 @@ export class FormFeedback extends PureComponent {
         e.preventDefault();
         if (this._validatePhone(state.phone)) {
             if (window.ym) {
-                window.ym(52948192, 'reachGoal', 'request');
+                window.ym(52948192, 'reachGoal', 'call');
             }
             props.requestCall(this.state);
         }
