@@ -3,15 +3,13 @@ import PageLayout from "../../Decorators/PageLayout";
 import PageComponent from "../../Decorators/PageComponent";
 import Container from "./Components/Contaner"
 import Header from "./Components/Header"
-import Img from "./Components/Img"
 import PriceList from "./Components/PriceList"
 import Content from "./Components/Content"
 import Consultation from "../../UI/Consultation"
 import Breadcrumbs from "../../UI/Breadcrumbs"
+import ImagesBlock from "../../UI/ImagesBlock"
 
 class VentilationInstall extends PageComponent {
-
-    src = "/images/service/Get-Ready-for-HVAC-Installation-1024x675.jpg"
 
     priceList = [
         {
@@ -33,8 +31,11 @@ class VentilationInstall extends PageComponent {
             <Container>
                 <Header h1={this.h1}/>
                 <Breadcrumbs title={this.h1}/>
-                <Img src={this.src} addClass={'design-img'} title={this.h1}/>
                 <PriceList header='Стоимость монтажных работ' list={this.priceList}/>
+                <div className="works__link">
+                    <a href='#works'>Примеры наших работ&nbsp;<i className="fa fa-link fa-sm"/></a>
+                </div>
+                <Consultation/>
                 <Content>
                     <h2>Установка и монтаж систем вентиляции</h2>
                     <p>
@@ -108,7 +109,9 @@ class VentilationInstall extends PageComponent {
                         пределах гарантийного срока осуществляется ее бесплатный ремонт и обслуживание.
                     </p>
                 </Content>
-                <Consultation/>
+                <ImagesBlock images={
+                    ['/msv/1.jpeg', '/msv/2.jpeg', '/msv/3.jpeg', '/msv/4.jpeg']
+                } alt='Установка и монтаж систем вентиляции'/>
             </Container>
         )
     }

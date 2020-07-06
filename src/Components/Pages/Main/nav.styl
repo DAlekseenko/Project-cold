@@ -89,10 +89,14 @@
 
   &:not(.active)
     &:hover
+      transition all 1s, color 1s;
       opacity: 1;
-      -webkit-box-shadow: 0 0 15px #cccccc
-      -moz-box-shadow: 0 0 15px #cccccc;
-      box-shadow: 0 0 15px #cccccc;
+      background: color-yellow;
+      color: #242733;
+
+//-webkit-box-shadow: 0 0 15px #cccccc
+//-moz-box-shadow: 0 0 15px #cccccc;
+//box-shadow: 0 0 15px #cccccc;
 
 .menu__href.active
   color: color-yellow;
@@ -211,6 +215,7 @@
     width: 15px;
     border-radius: 2px;
   }
+
   .sub-control-visible:before,
   .sub-control-visible:after {
     display block

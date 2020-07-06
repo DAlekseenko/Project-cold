@@ -11,10 +11,10 @@
   margin-top: 80px;
 }
 .header__phone-number {
-  font-size: 24px;
-  font-weight: 300;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
 }
 .header__title {
   position: relative;
@@ -30,20 +30,20 @@
   background-position: -300px 0;
 }
 .header__text {
-  font-size: 24px;
-  display: inline-block;
-  margin-bottom: 30px;
-  padding: 4px 8px;
-  color: #fff;
-  background: #242733;
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 4px 8px;
+    color: #fff;
+    background: #242733;
 }
 .header__button {
   width: 310px;
 }
 .logo {
-  font-size: 36px;
-  font-weight: 100;
-  font-style: italic;
+    font-size: 28px;
+    font-weight: 100;
+    font-style: italic;
 }
 .logo:before {
   width: 34px;

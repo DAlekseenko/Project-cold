@@ -45,7 +45,7 @@ module.exports = {
         filename: jsName,
         publicPath
     },
-    devtool: 'eval-source-map',
+    devtool: 'source-map',
     devServer: {
         port: 3333,
         inline: true,

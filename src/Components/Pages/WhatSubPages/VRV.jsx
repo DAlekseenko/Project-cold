@@ -3,15 +3,13 @@ import PageLayout from "../../Decorators/PageLayout";
 import PageComponent from "../../Decorators/PageComponent";
 import Container from "./Components/Contaner"
 import Header from "./Components/Header"
-import Img from "./Components/Img"
 import PriceList from "./Components/PriceList"
 import Content from "./Components/Content"
 import Consultation from "../../UI/Consultation"
 import Breadcrumbs from "../../UI/Breadcrumbs"
+import ImagesBlock from "../../UI/ImagesBlock"
 
 class ConditionerClean extends PageComponent {
-
-    src = "/images/service/6ca56917-6b0a-4e5e-aab9-f7904e14dcf6.jpeg"
 
     priceList = [
         {
@@ -25,8 +23,11 @@ class ConditionerClean extends PageComponent {
             <Container>
                 <Header h1={this.h1}/>
                 <Breadcrumbs title={this.h1}/>
-                <Img src={this.src} addClass={'design-img'} title={this.h1}/>
                 <PriceList header='Стоимость монтажа VRF/VRV системы' list={this.priceList}/>
+                <div className="works__link">
+                    <a href='#works'>Примеры наших работ&nbsp;<i className="fa fa-link fa-sm"/></a>
+                </div>
+                <Consultation/>
                 <Content>
                     <h2>VRF/VRV системы кондиционирования: монтаж и ремонт</h2>
                     <p>
@@ -95,7 +96,9 @@ class ConditionerClean extends PageComponent {
                         выполнении заказов по монтажу и обслуживанию не только бытовых, но и промышленных
                         кондиционеров. </p>
                 </Content>
-                <Consultation/>
+                <ImagesBlock images={
+                    ['/vrv/1.jpeg', '/vrv/2.jpeg', '/vrv/3.jpeg', '/vrv/4.jpeg']
+                } alt='VRF/VRV системы кондиционирования: монтаж и ремонт'/>
             </Container>
         )
     }

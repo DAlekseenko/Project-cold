@@ -30,12 +30,15 @@
 
 .header__phone-number
   font-size: 28px;
-  font-weight: 500;
   margin-bottom: 40px;
   letter-spacing: 1px;
-  background: #e8a804;
+  padding 5px;
+  background: #e8a804
+  background: -webkit-gradient(linear, left top, left bottom, from(#fcc701), to(#e8a804));
+  background: -webkit-linear-gradient(top, #fcc701 0%, #e8a804 100%);
+  background: linear-gradient(to bottom, #fcc701 0%, #e8a804 100%);
   color: #242733;
-  box-shadow: 0 0 10px #242733
+  box-shadow: 0 0 10px #242733;
 
 
 .header__title
@@ -178,12 +181,11 @@
       margin 0
 
 .consultation
-  height: 625px;
+  height: 585px;
   background: url(/images/consultation-bg.jpg) 50% -7% no-repeat;
   @media (min-width: 768px)
-    height: 730px;
+    height: 585px;
     background: url(/images/consultation-bg.jpg) 50% 100% no-repeat;
-
 
 
 .consultation__form
@@ -215,3 +217,6 @@
 .consultation__up:hover {
   background-color: rgba(255, 255, 255, .3);
 }
+
+.list__item__link
+  text-decoration unset

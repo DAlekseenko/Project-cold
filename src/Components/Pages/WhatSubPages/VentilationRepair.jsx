@@ -3,15 +3,12 @@ import PageLayout from "../../Decorators/PageLayout";
 import PageComponent from "../../Decorators/PageComponent";
 import Container from "./Components/Contaner"
 import Header from "./Components/Header"
-import Img from "./Components/Img"
 import PriceList from "./Components/PriceList"
 import Content from "./Components/Content"
 import Consultation from "../../UI/Consultation"
 import Breadcrumbs from "../../UI/Breadcrumbs"
 
 class VentilationRepair extends PageComponent {
-
-    src = "/images/service/obsluzhivane.jpg"
 
     priceList = [
         {
@@ -33,8 +30,8 @@ class VentilationRepair extends PageComponent {
             <Container>
                 <Header h1={this.h1}/>
                 <Breadcrumbs title={this.h1}/>
-                <Img src={this.src} addClass={'design-img'} title={this.h1}/>
                 <PriceList header='Стоимость диагностики вентиляции' list={this.priceList}/>
+                <Consultation/>
                 <Content>
                     <h2>Ремонт и диагностика вентиляционных систем</h2>
                     <p>
@@ -115,7 +112,6 @@ class VentilationRepair extends PageComponent {
                         отдельного объекта.
                     </p>
                 </Content>
-                <Consultation/>
             </Container>
         )
     }

@@ -60,7 +60,6 @@ export default class Layout {
                 
                     gtag('config', 'UA-136874169-1');
                 </script>
-
             </head>
             <body>
             <noscript><div><img src="https://mc.yandex.ru/watch/52948192" style="position:absolute; left:-9999px;" alt="" /></div></noscript>

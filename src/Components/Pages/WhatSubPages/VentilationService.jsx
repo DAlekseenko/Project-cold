@@ -3,15 +3,13 @@ import PageLayout from "../../Decorators/PageLayout";
 import PageComponent from "../../Decorators/PageComponent";
 import Container from "./Components/Contaner"
 import Header from "./Components/Header"
-import Img from "./Components/Img"
 import PriceList from "./Components/PriceList"
 import Content from "./Components/Content"
 import Consultation from "../../UI/Consultation"
 import Breadcrumbs from "../../UI/Breadcrumbs"
+import ImagesBlock from "../../UI/ImagesBlock"
 
 class VentilationService extends PageComponent {
-
-    src = "/images/service/_13.png"
 
     priceList = [
         {
@@ -33,8 +31,11 @@ class VentilationService extends PageComponent {
             <Container>
                 <Header h1={this.h1}/>
                 <Breadcrumbs title={this.h1}/>
-                <Img src={this.src} addClass={'design-img'} title={this.h1}/>
                 <PriceList header='Стоимость обслуживания вентиляции' list={this.priceList}/>
+                <div className="works__link">
+                    <a href='#works'>Примеры наших работ&nbsp;<i className="fa fa-link fa-sm"/></a>
+                </div>
+                <Consultation/>
                 <Content>
                     <h2>Обслуживание и чистка вентиляции</h2>
                     <p>
@@ -125,12 +126,16 @@ class VentilationService extends PageComponent {
                         <li>Понятный и прозрачный механизм формирования стоимости</li>
                         <li>Обходительное и вежливое обращение с заказчиком</li>
                         <li>Высокое качество выполнения всех работ</li>
-                        <li>Отсутствие навязанных услуг: клиент может не заказывать чистку воздуховодов, если хочет починить только вентилятор</li>
+                        <li>Отсутствие навязанных услуг: клиент может не заказывать чистку воздуховодов, если хочет
+                            починить только вентилятор
+                        </li>
                         <li>Современное оборудование</li>
                         <li>Квалифицированный, опытный и учтивый персонал.</li>
                     </ul>
                 </Content>
-                <Consultation/>
+                <ImagesBlock images={
+                    ['/vs/2.jpeg', '/vs/3.jpeg', '/vs/4.jpeg', '/vs/7.jpeg', '/vs/5.jpeg', '/vs/6.jpeg', '/vs/1.jpeg', '/vs/9.jpeg',]
+                } alt='Обслуживание и чистка вентиляции'/>
             </Container>
         )
     }

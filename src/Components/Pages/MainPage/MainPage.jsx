@@ -4,6 +4,7 @@ import PageLayout from "../../Decorators/PageLayout";
 import PageComponent from "../../Decorators/PageComponent";
 import Modal from '../../UI/Modal';
 import Consultation from "../../UI/Consultation"
+import {Link} from "react-router-dom"
 
 export class MainPage extends PageComponent {
 
@@ -26,7 +27,7 @@ export class MainPage extends PageComponent {
                         </div>
                         <Modal isOpen={this.state.isOpen} toggleModal={this.onToggle}/>
                         <span className="i-button i-button__callback" onClick={this.onToggle}>
-                            Заказать звонок
+                            Обратный звонок
                         </span>
                     </div>
                     <div className="header__title">
@@ -65,26 +66,24 @@ export class MainPage extends PageComponent {
                     <div className="which__list">
                         <ul className="list">
                             <li className="list__item">
-                                Фреоновое холодильное оборудование: от холодильных витрин до промышленных
-                                многокомпрессорных станций.
+                                <Link className="list__item__link" to="/what/ventilation-service">
+                                    Приточно-вытяжные системы вентиляции и кондиционирования воздуха.
+                                </Link>
                             </li>
                             <li className="list__item">
-                                Приточно-вытяжные системы вентиляции и кондиционирования воздуха.
+                                <Link className="list__item__link" to="/what/vrv-service">
+                                    Локальные и мультизональные климатические системы (сплит-системы и VRF системы).
+                                </Link>
                             </li>
                             <li className="list__item">
-                                Локальные и мультизональные климатические системы (сплит-системы и VRF системы).
+                                <Link className="list__item__link" to="/what/ventilation-service">
+                                    Холодильные машины центральных систем вентиляции и холодоснабжения.
+                                </Link>
                             </li>
                             <li className="list__item">
-                                Холодильные машины центральных систем вентиляции и холодоснабжения.
-                            </li>
-                            <li className="list__item">
-                                Системы подпора воздуха и дымоудаления.
-                            </li>
-                            <li className="list__item">
-                                Воздушные завесы и системы воздушного отопления.
-                            </li>
-                            <li className="list__item">
-                                Локальные и центральные систем автоматики и управления вентиляцией.
+                                <Link className="list__item__link" to="/what/ventilation-repair">
+                                    Локальные и центральные систем автоматики и управления вентиляцией.
+                                </Link>
                             </li>
                         </ul>
                     </div>

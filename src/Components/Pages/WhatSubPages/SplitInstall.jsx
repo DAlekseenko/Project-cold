@@ -3,11 +3,11 @@ import PageLayout from "../../Decorators/PageLayout";
 import PageComponent from "../../Decorators/PageComponent";
 import Container from "./Components/Contaner"
 import Header from "./Components/Header"
-import Img from "./Components/Img"
 import PriceList from "./Components/PriceList"
 import Content from "./Components/Content"
 import Consultation from "../../UI/Consultation"
 import Breadcrumbs from "../../UI/Breadcrumbs"
+import ImagesBlock from "../../UI/ImagesBlock"
 
 class SplitInstall extends PageComponent {
 
@@ -25,8 +25,11 @@ class SplitInstall extends PageComponent {
             <Container>
                 <Header h1={this.h1}/>
                 <Breadcrumbs title={this.h1}/>
-                <Img src={this.src} addClass={'design-img'} title={this.h1}/>
                 <PriceList header='Стоимость монтажа спилт систем' list={this.priceList}/>
+                <div className="works__link">
+                    <a href='#works'>Примеры наших работ&nbsp;<i className="fa fa-link fa-sm"/></a>
+                </div>
+                <Consultation/>
                 <Content>
                     <h2>
                         Монтаж и ремонт сплит систем
@@ -108,7 +111,9 @@ class SplitInstall extends PageComponent {
                         несложно посчитать сразу.
                     </p>
                 </Content>
-                <Consultation/>
+                <ImagesBlock images={
+                    ['/mss/1.jpeg', '/mss/2.jpeg', '/mss/3.jpeg', '/mss/4.jpeg']
+                } alt='Монтаж и ремонт сплит систем'/>
             </Container>
         )
     }

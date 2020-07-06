@@ -17,12 +17,12 @@
   margin: 0;
 }
 .form__input {
-  font-family: 'webAgoraSansPro', sans-serif;
-  font-weight: 100;
-  width: 100%;
-  padding: 26px 0 26px 40px;
-  border: 1px solid #ccc;
-  outline: none;
+    font-family: 'webAgoraSansPro', sans-serif;
+    font-weight: 100;
+    width: 100%;
+    padding: 16px 0 16px 16px;
+    border: 1px solid #ccc;
+    outline: none;
 }
 .form__input--error {
   border-color: #f00;

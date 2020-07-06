@@ -14,6 +14,22 @@ export default function Main() {
         }
     }
 
+    const list = [
+        {text: 'Проектирование систем вентиляции', link: 'design'},
+        {text: 'Монтаж систем вентиляции', link: 'ventilation-installation'},
+        {text: 'Обслуживание систем вентиляции', link: 'ventilation-service'},
+        {text: 'Ремонт систем вентиляции', link: 'ventilation-repair'},
+        {text: 'Установка кондиционеров', link: 'install-conditioners'},
+        {text: 'Ремонт кондиционеров', link: 'diagnostics-conditioners'},
+        {text: 'Чистка кондиционеров', link: 'clean-conditioners'},
+        {text: 'Заправка кондиционеров', link: 'service-conditioners'},
+        {text: 'Монтаж и ремонт VRV и VRF систем', link: 'vrv-service'},
+        {text: 'Ремонт чиллеров и файнколов', link: 'chillers-service'},
+        {text: 'Монтаж чиллеров и файнколов', link: 'chiller-install'},
+        {text: 'Установка сплит систем', link: 'split-install'},
+    ]
+
+
     return (
         <div className="color_wrapper fixed-nav">
             <section className="top-nav">
@@ -28,7 +44,7 @@ export default function Main() {
                         <div
                             className={classNames(
                                 "sub-menu-toggle",
-                                {"sub-control-visible":checked, "sub-control-open":open})
+                                {"sub-control-visible": checked, "sub-control-open": open})
                             }
                             onClick={() => {
                                 setOpen(!open)
@@ -37,75 +53,18 @@ export default function Main() {
                         <NavLink to="/what" className="menu__href">Услуги</NavLink>
                         <CSSTransition in={open} timeout={200} classNames="my-node">
                             <ul className="dropdown">
-                                <li>
-                                    <NavLink to="/what/design" className="menu__href">
-                                        Проектирование систем вентиляции
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/what/ventilation-installation" className="menu__href">
-                                        Монтаж систем вентиляции
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/what/ventilation-service" className="menu__href">
-                                        Обслуживание систем вентиляции
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/what/ventilation-repair" className="menu__href">
-                                        Ремонт систем вентиляции
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/what/install-conditioners" className="menu__href">
-                                        Установка кондиционеров
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/what/diagnostics-conditioners" className="menu__href">
-                                        Ремонт кондиционеров
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/what/clean-conditioners" className="menu__href">
-                                        Чистка кондиционеров
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/what/service-conditioners" className="menu__href">
-                                        Заправка кондиционеров
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/what/vrv-service" className="menu__href">
-                                        Монтаж и ремонт VRV и VRF систем
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/what/refrigeration-service" className="menu__href">
-                                        Ремонт холодильного оборудования
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/what/chillers-service" className="menu__href">
-                                        Ремонт чиллеров и файнколов
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/what/chiller-install" className="menu__href">
-                                        Монтаж чиллеров и файнколов
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/what/split-install" className="menu__href">
-                                        Установка сплит систем
-                                    </NavLink>
-                                </li>
+                                {list.map(({text, link}) =>
+                                    (
+                                        <li key={link}>
+                                            <NavLink to={`/what/${link}`} className="menu__href">
+                                                {text}
+                                            </NavLink>
+                                        </li>
+                                    ))
+                                }
                             </ul>
                         </CSSTransition>
                     </li>
-                    <li><NavLink to="/works" className="menu__href">Наши работы</NavLink></li>
                     <li><NavLink to="/prices" className="menu__href">Стоимость</NavLink></li>
                     <li><NavLink to="/contacts" className="menu__href">Контакты</NavLink></li>
                 </ul>

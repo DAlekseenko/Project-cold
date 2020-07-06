@@ -3,15 +3,12 @@ import PageLayout from "../../Decorators/PageLayout";
 import PageComponent from "../../Decorators/PageComponent";
 import Container from "./Components/Contaner"
 import Header from "./Components/Header"
-import Img from "./Components/Img"
 import PriceList from "./Components/PriceList"
 import Content from "./Components/Content"
 import Consultation from "../../UI/Consultation"
 import Breadcrumbs from "../../UI/Breadcrumbs"
 
 class ConditionerClean extends PageComponent {
-
-    src = "/images/service/zapravke.jpg"
 
     priceList = [
         {
@@ -29,8 +26,8 @@ class ConditionerClean extends PageComponent {
             <Container>
                 <Header h1={this.h1}/>
                 <Breadcrumbs title={this.h1}/>
-                <Img src={this.src} addClass={'design-img'} title={this.h1}/>
                 <PriceList header='Стоимость заправки кондиционера' list={this.priceList}/>
+                <Consultation/>
                 <Content>
                     <h2>Заправка и обслуживание кондиционеров</h2>
                     <p>
@@ -105,7 +102,6 @@ class ConditionerClean extends PageComponent {
                         <li>обходительное отношение к заказчику, всесторонний учет его пожеланий</li>
                     </ul>
                 </Content>
-                <Consultation/>
             </Container>
         )
     }

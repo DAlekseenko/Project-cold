@@ -3,7 +3,6 @@ import PageLayout from "../../Decorators/PageLayout";
 import PageComponent from "../../Decorators/PageComponent";
 import Container from "./Components/Contaner"
 import Header from "./Components/Header"
-import Img from "./Components/Img"
 import PriceList from "./Components/PriceList"
 import Content from "./Components/Content"
 import Consultation from "../../UI/Consultation"
@@ -25,8 +24,8 @@ class ConditionerService extends PageComponent {
             <Container>
                 <Header h1={this.h1}/>
                 <Breadcrumbs title={this.h1}/>
-                <Img src={this.src} addClass={'design-img'} title={this.h1}/>
                 <PriceList header='Стоимость ремонта кондиционера' list={this.priceList}/>
+                <Consultation/>
                 <Content>
                     <h2>Диагностика и ремонт кондиционеров</h2>
                     <p>
@@ -118,7 +117,6 @@ class ConditionerService extends PageComponent {
                         </li>
                     </ul>
                 </Content>
-                <Consultation/>
             </Container>
         )
     }

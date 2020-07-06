@@ -3,15 +3,13 @@ import PageLayout from "../../Decorators/PageLayout";
 import PageComponent from "../../Decorators/PageComponent";
 import Container from "./Components/Contaner"
 import Header from "./Components/Header"
-import Img from "./Components/Img"
 import PriceList from "./Components/PriceList"
 import Content from "./Components/Content"
 import Consultation from "../../UI/Consultation"
 import Breadcrumbs from "../../UI/Breadcrumbs"
+import ImagesBlock from "../../UI/ImagesBlock"
 
 class ConditionerClean extends PageComponent {
-
-    src = "/images/service/vnt24-title-konditsionery-service-cleaning.jpg"
 
     priceList = [
         {
@@ -25,8 +23,11 @@ class ConditionerClean extends PageComponent {
             <Container>
                 <Header h1={this.h1}/>
                 <Breadcrumbs title={this.h1}/>
-                <Img src={this.src} addClass={'design-img'} title={this.h1}/>
                 <PriceList header='Стоимость чистки кондиционера' list={this.priceList}/>
+                <div className="works__link">
+                    <a href='#works'>Примеры наших работ&nbsp;<i className="fa fa-link fa-sm"/></a>
+                </div>
+                <Consultation/>
                 <Content>
                     <h2>Чистка и дезинфекция кондиционера</h2>
                     <p>
@@ -103,7 +104,11 @@ class ConditionerClean extends PageComponent {
                         </li>
                     </ul>
                 </Content>
-                <Consultation/>
+
+                <ImagesBlock images={
+                    ['/cc/2.jpeg', '/cc/6.jpeg', '/cc/3.jpeg', '/cc/4.jpeg',
+                        '/cc/5.jpeg', '/cc/1.jpeg']
+                } alt='Чистка и дезинфекция кондиционера'/>
             </Container>
         )
     }

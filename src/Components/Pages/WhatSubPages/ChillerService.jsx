@@ -3,11 +3,11 @@ import PageLayout from "../../Decorators/PageLayout";
 import PageComponent from "../../Decorators/PageComponent";
 import Container from "./Components/Contaner"
 import Header from "./Components/Header"
-import Img from "./Components/Img"
 import PriceList from "./Components/PriceList"
 import Content from "./Components/Content"
 import Consultation from "../../UI/Consultation"
 import Breadcrumbs from "../../UI/Breadcrumbs"
+import ImagesBlock from "../../UI/ImagesBlock"
 
 class ChillerService extends PageComponent {
 
@@ -25,8 +25,11 @@ class ChillerService extends PageComponent {
             <Container>
                 <Header h1={this.h1}/>
                 <Breadcrumbs title={this.h1}/>
-                <Img src={this.src} addClass={'design-img'} title={this.h1}/>
                 <PriceList header='Стоимость диагностики чиллеров и файнколов' list={this.priceList}/>
+                <div className="works__link">
+                    <a href='#works'>Примеры наших работ&nbsp;<i className="fa fa-link fa-sm"/></a>
+                </div>
+                <Consultation/>
                 <Content>
                     <h2>
                         Обслуживание, диагностика и ремонт чиллеров и фанкойлов
@@ -108,7 +111,9 @@ class ChillerService extends PageComponent {
                         </p>
                     </ul>
                 </Content>
-                <Consultation/>
+                <ImagesBlock images={
+                    ['/chs/1.jpeg', '/chs/2.jpeg', '/chs/3.jpeg', '/chs/4.jpeg',]
+                } alt='Обслуживание, диагностика и ремонт чиллеров и фанкойлов'/>
             </Container>
         )
     }
