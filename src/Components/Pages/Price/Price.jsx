@@ -32,7 +32,7 @@ export class Price extends PageComponent {
                             </div>
                             <div className="price__tr">
                                 <div>Выезд ремонтной бригады</div>
-                                <div>2500 руб</div>
+                                <div>3000 руб</div>
                             </div>
                             <div className="price__tr">
                                 <div>Диагностика настенного кондиционера мощностью 7-15 Btu/h (от семёрки до

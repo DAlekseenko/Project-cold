@@ -16,7 +16,7 @@ class SplitInstall extends PageComponent {
     priceList = [
         {
             name: 'в зависимости от оборудования',
-            price: 'от 6000 руб'
+            price: 'от 8000 руб'
         },
     ];
 

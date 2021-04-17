@@ -13,7 +13,7 @@ class ConditionersInstall extends PageComponent {
     priceList = [
         {
             name: 'в зависимости от модели',
-            price: 'от 6000 руб'
+            price: 'от 8000 руб'
         },
     ];
 

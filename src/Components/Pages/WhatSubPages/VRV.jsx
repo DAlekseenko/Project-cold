@@ -14,7 +14,7 @@ class ConditionerClean extends PageComponent {
     priceList = [
         {
             name: 'в зависимости от сложности',
-            price: 'от 6000 руб'
+            price: 'от 8000 руб'
         },
     ];
 
