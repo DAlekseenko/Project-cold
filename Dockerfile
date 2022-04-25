@@ -1,4 +1,4 @@
-FROM node:8 AS builder
+FROM node:12 AS builder
 
 MAINTAINER Dan Alekseenko <dalekseenko88@gmail.com>
 
