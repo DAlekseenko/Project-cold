@@ -62,9 +62,9 @@ if (PROD) {
         .setCssFile(manifest['main.css'])
 
     const credentials = {
-        cert: fs.readFileSync('./ssl/www_proekt-xolod_ru.crt', 'utf8'),
-        key: fs.readFileSync('./ssl/8238528.key', 'utf8'),
-        ca: fs.readFileSync('./ssl/www_proekt-xolod_ru.ca-bundle', 'utf8'),
+        cert: fs.readFileSync('./ssl/cert.pem', 'utf8'),
+        key: fs.readFileSync('./ssl/privkey.pem', 'utf8'),
+        ca: fs.readFileSync('./ssl/chain.pem', 'utf8'),
     };
     const httpServer = http.createServer(app);
     const httpsServer = https.createServer(credentials, app);
