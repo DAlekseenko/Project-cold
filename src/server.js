@@ -47,7 +47,7 @@ app.use(express.static('public', {
 app.use((req, res, next) => {
     if (PROD) {
         const host = req.headers.host;
-        if (req.protocol === 'http' || host.includes('www')) {
+        if (!/.well-known/.exec(req.path) && (req.protocol === 'http' || host.includes('www'))) {
             return redirect(res)
         }
     }
