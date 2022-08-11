@@ -22,13 +22,10 @@ export class MainPage extends PageComponent {
                 <div className="header__wrap l-wrap">
                     <div className="header__logo"/>
                     <div className="header__phone">
-                        <div className="header__phone-number">
-                            +7(909)953-43-67
-                        </div>
                         <Modal isOpen={this.state.isOpen} toggleModal={this.onToggle}/>
-                        <span className="i-button i-button__callback" onClick={this.onToggle}>
-                            Обратный звонок
-                        </span>
+                        {/*<span className="i-button i-button__callback" onClick={this.onToggle}>*/}
+                        {/*    Обратный звонок*/}
+                        {/*</span>*/}
                     </div>
                     <div className="header__title">
                         <h1 className="header-title">

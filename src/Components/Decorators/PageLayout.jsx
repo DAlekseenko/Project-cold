@@ -1,6 +1,6 @@
 import React from 'react'
-import NavMenu from "../Pages/Main/NavMenu"
-import Footer from "../Pages/Main/Footer"
+import NavMenu from "../UI/Header/NavMenu"
+import Footer from "../UI/Footer/Footer"
 
 export default (Component) => (props) =>
     <div>

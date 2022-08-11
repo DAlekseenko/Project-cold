@@ -13,7 +13,6 @@ export default function Main() {
             setOpen(false)
         }
     }
-
     const list = [
         {text: 'Проектирование систем вентиляции', link: 'design'},
         {text: 'Монтаж систем вентиляции', link: 'ventilation-installation'},
@@ -29,11 +28,19 @@ export default function Main() {
         {text: 'Установка сплит систем', link: 'split-install'},
     ]
 
+    const handleCall = () => {
+        if (window.ym) {
+            window.ym(52948192, 'reachGoal', 'call');
+        }
+    }
 
     return (
         <div className="color_wrapper fixed-nav">
             <section className="top-nav">
                 <div className='nav-logo'/>
+                <div className="header__phone-number" onTouchStart={handleCall}>
+                    +7(909)953-43-67
+                </div>
                 <input id="menu-toggle" type="checkbox" onChange={toggleSubMenu}/>
                 <label className='menu-button-container' htmlFor="menu-toggle">
                     <div className='menu-button'/>
