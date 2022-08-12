@@ -3207,7 +3207,7 @@
     display: block;
   }
   .dropdown-open {
-    height: 500px !important;
+    height: 469px !important;
   }
   .menu-dropdown-open {
     height: calc(100vh - 50px);
