@@ -22,7 +22,8 @@ const PROD = config.get('mode') === 'production';
 LayoutFactory.setUrl(config.get('url'))
 
 const redirect = (res) => {
-    res.writeHead(302, {location: 'https://proekt-xolod.ru/'})
+    const location =  'https://' + req.hostname + '/'
+    res.writeHead(302, {location})
     res.end();
 }
 
