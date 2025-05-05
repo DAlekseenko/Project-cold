@@ -35,7 +35,7 @@
     "nodemailer": "^4.6.7",
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.1",
-    "pug": "2.0.0-beta11",
+    "pug": "3.0.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-input-mask": "^2.0.4",
